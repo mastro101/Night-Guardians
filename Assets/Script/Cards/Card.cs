@@ -6,10 +6,41 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour {
 
     public CardsData Data;
+    public AudioSource soundCreature;
+    public DropZoneType Zone;
+    [HideInInspector]
+    public CombatManager combatManager;
     [HideInInspector]
     public CardType Type;
     [HideInInspector]
     public int Attack;
+    bool isAlive = true;
+    public bool IsAlive
+    {
+        get { return isAlive; }
+        set
+        {
+            isAlive = value;
+            if (!isAlive)
+            {
+                Debug.Log(Data.Name + " is death");
+            }
+        }
+    }
+    bool isPurificato;
+    public bool IsPurificato
+    {
+        get { return isPurificato; }
+        set
+        {
+            isPurificato = value;
+            if (isPurificato)
+            {
+                combatManager.InCombat = false;
+                Debug.Log(Data.Name + " è stato purificato");
+            }
+        }
+    }
     int life;
     public int Life
     {
@@ -21,7 +52,7 @@ public class Card : MonoBehaviour {
             lifeText.text = life.ToString();
             if (life <= 0)
             {
-                Debug.Log(Data.Name + " è morto");
+                isAlive = false;
             }
         }
     }
@@ -33,6 +64,9 @@ public class Card : MonoBehaviour {
         set
         {
             purificationOrDarkness = value;
+            purificationOrDarknessText.text = purificationOrDarkness.ToString();
+            if (purificationOrDarkness == 0)
+                IsPurificato = true;
         }
     }
 
@@ -41,9 +75,16 @@ public class Card : MonoBehaviour {
     Image imageCard, imageCover;
     [SerializeField]
     Text nameText, attackText, lifeText, purificationOrDarknessText, descriptionText;
-    
+
+    private void Awake()
+    {
+        soundCreature = FindObjectOfType<AudioSource>();
+        combatManager = FindObjectOfType<CombatManager>();
+    }
+
     private void Start()
     {
+        Zone = transform.parent.GetComponent<DropZone>().Type;
         Type = Data.Type;
         Attack = Data.Attack;
         Life = Data.Life;
@@ -80,5 +121,11 @@ public class Card : MonoBehaviour {
         {
             Life--;
         }
+    }
+
+    public void PlaySound()
+    {
+        soundCreature.clip = Data.SoundCreature;
+        soundCreature.Play();
     }
 }

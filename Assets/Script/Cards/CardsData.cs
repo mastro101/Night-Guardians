@@ -12,6 +12,7 @@ public class CardsData : ScriptableObject {
     public int PurificationOrDarkness;
     public string Description;
     public Sprite SpriteImage;
+    public AudioClip SoundCreature;
 }
 
 public enum CardType
