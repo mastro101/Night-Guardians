@@ -14,6 +14,6 @@ public class Deck : MonoBehaviour {
     public void Draw()
     {
         Instantiate(card, Hand.transform);
-        card.GetComponent<Card>().Data = Cards[Random.Range(0, Cards.Length + 1)];
+        card.GetComponent<Card>().Data = Cards[Random.Range(0, Cards.Length)];
     }
 }
