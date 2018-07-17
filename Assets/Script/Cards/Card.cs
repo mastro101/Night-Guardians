@@ -6,7 +6,17 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour {
 
-    public CardsData Data;
+    [SerializeField]
+    CardsData data;
+    public CardsData Data
+    {
+        get { return data; }
+        set
+        {
+            data = value;
+            insertData();
+        }
+    }
     public AudioSource soundCreature;
     public DropZoneType Zone;
     [HideInInspector]
@@ -74,7 +84,7 @@ public class Card : MonoBehaviour {
         {
             purificationOrDarkness = value;
             purificationOrDarknessText.text = purificationOrDarkness.ToString();
-            if (purificationOrDarkness == 0)
+            if (purificationOrDarkness == 0 && Data.Type == CardType.Nightmare)
                 IsPurificato = true;
         }
     }
@@ -97,6 +107,18 @@ public class Card : MonoBehaviour {
     private void Start()
     {
         Zone = transform.parent.GetComponent<DropZone>().Type;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Life--;
+        }
+    }
+
+    void insertData()
+    {
         Type = Data.Type;
         Attack = Data.Attack;
         Life = Data.Life;
@@ -109,17 +131,24 @@ public class Card : MonoBehaviour {
         descriptionText.text = Data.Description;
         if (Type == CardType.Guardian)
         {
+            TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            imageCard.transform.rotation = Quaternion.Euler(0, 0, 0);
             nameText.color = Color.black;
+            nameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             descriptionText.color = Color.black;
+            descriptionObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             attackText.color = Color.black;
+            attackObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             lifeText.color = Color.black;
+            lifeObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             purificationOrDarknessText.color = Color.black;
+            purificationOrDarknessObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCover.sprite = Covers[0];
         }
         else if (Type == CardType.Nightmare)
         {
-            imageCard.transform.rotation = Quaternion.Euler(0, 0, 180);
             TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 180);
+            imageCard.transform.rotation = Quaternion.Euler(0, 0, 0);
             nameText.color = Color.white;
             nameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             descriptionText.color = Color.white;
@@ -131,14 +160,6 @@ public class Card : MonoBehaviour {
             purificationOrDarknessText.color = Color.white;
             purificationOrDarknessObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCover.sprite = Covers[1];
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Life--;
         }
     }
 

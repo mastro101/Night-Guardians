@@ -17,8 +17,10 @@ public class Deck : MonoBehaviour {
         switch (Type)
         {
             case DeckType.PlayerDeck:
+                Draw(5);
                 break;
             case DeckType.EnemyDeck:
+                Draw(1);
                 break;
             default:
                 break;
@@ -36,12 +38,14 @@ public class Deck : MonoBehaviour {
                 card.GetComponent<Card>().Data = Cards[0];
                 for (int n = 0; n < Cards.Length; n++)
                 {
-                    Cards[n] = Cards[n + 1];
+                    if (n != Cards.Length - 1)
+                        Cards[n] = Cards[n + 1];
+                    else
+                        Cards[n] = null;
                 }
             }
         }
     }
-
 }
 
 public enum DeckType

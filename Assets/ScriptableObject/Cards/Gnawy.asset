@@ -9,13 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: TheBoss
+  m_Name: Gnawy
   m_EditorClassIdentifier: 
   Type: 1
-  Name: The Boss
-  Attack: 20
-  Life: 20
-  PurificationOrDarkness: 20
-  Description: The mentor of serpente nudo
-  SpriteImage: {fileID: 0}
+  Supporto: 0
+  Name: Gnawy
+  Attack: 2
+  Life: 3
+  PurificationOrDarkness: 4
+  Description: Dente mannaro
+  SpriteImage: {fileID: 21300000, guid: 660b4f5db3fb6854bb8ee2596fdc7e97, type: 3}
   SoundCreature: {fileID: 0}

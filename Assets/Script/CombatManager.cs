@@ -20,7 +20,7 @@ public class CombatManager : MonoBehaviour
 
     private void Start()
     {
-        if (zoneEnemy.transform.GetChild(0) != null)
+        if (zoneEnemy.transform.childCount != 0)
             Enemy = zoneEnemy.transform.GetChild(0).GetComponent<Card>();
     }
 

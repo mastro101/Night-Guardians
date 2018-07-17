@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 5fb8531394b4f344b9bd2641ceb1b083
+timeCreated: 1531859170
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Snubnose DEMO
+  fontNames:
+  - Snubnose DEMO
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
