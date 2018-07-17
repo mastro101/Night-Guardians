@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public DropZoneType Type;
+    public int CardLimit;
     CombatManager combatManager;
 
     private void Awake()
@@ -36,6 +37,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         {
             d.placeholderParent = d.parentToReturnTo;
         }
+        d.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -43,14 +45,20 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         Debug.Log(eventData.pointerDrag.name + " was dropped on " + gameObject.name);
 
         Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
-        Card cardDropped = eventData.pointerDrag.GetComponent<Card>();
-        if (d != null)
+        Card cardDropped = d.GetComponent<Card>();
+        if (d != null && transform.childCount <= CardLimit)
         {
             d.parentToReturnTo = this.transform;
             if (cardDropped != null && !combatManager.InCombat)
             {
                 cardDropped.Zone = Type;
+                if (cardDropped.Zone == DropZoneType.Enemy)
+                    combatManager.Enemy = cardDropped;
+                if (cardDropped.Zone == DropZoneType.Support)
+                    cardDropped.transform.rotation = Quaternion.Euler(0, 0, 90);
+                
             }
+
         }
         
 
@@ -62,4 +70,5 @@ public enum DropZoneType
     Hand,
     Enemy,
     Field,
+    Support,
 }

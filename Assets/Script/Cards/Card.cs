@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,8 +13,16 @@ public class Card : MonoBehaviour {
     public CombatManager combatManager;
     [HideInInspector]
     public CardType Type;
-    [HideInInspector]
-    public int Attack;
+    int attack;
+    public int Attack
+    {
+        get { return attack; }
+        set
+        {
+            attack = value;
+            attackText.text = attack.ToString();
+        }
+    }
     bool isAlive = true;
     public bool IsAlive
     {
@@ -70,11 +79,14 @@ public class Card : MonoBehaviour {
         }
     }
 
-
+    [SerializeField]
+    GameObject TextAndImageObject, nameObject, attackObject, lifeObject, purificationOrDarknessObject, descriptionObject;
+    [SerializeField]
+    Sprite[] Covers;
     [SerializeField]
     Image imageCard, imageCover;
     [SerializeField]
-    Text nameText, attackText, lifeText, purificationOrDarknessText, descriptionText;
+    TextMeshProUGUI nameText, attackText, lifeText, purificationOrDarknessText, descriptionText;
 
     private void Awake()
     {
@@ -102,16 +114,23 @@ public class Card : MonoBehaviour {
             attackText.color = Color.black;
             lifeText.color = Color.black;
             purificationOrDarknessText.color = Color.black;
-            imageCover.color = Color.white;
+            imageCover.sprite = Covers[0];
         }
         else if (Type == CardType.Nightmare)
         {
+            imageCard.transform.rotation = Quaternion.Euler(0, 0, 180);
+            TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 180);
             nameText.color = Color.white;
+            nameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             descriptionText.color = Color.white;
+            descriptionObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             attackText.color = Color.white;
+            attackObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             lifeText.color = Color.white;
+            lifeObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             purificationOrDarknessText.color = Color.white;
-            imageCover.color = Color.black;
+            purificationOrDarknessObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            imageCover.sprite = Covers[1];
         }
     }
 

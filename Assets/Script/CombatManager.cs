@@ -4,9 +4,10 @@ using System.Collections;
 public class CombatManager : MonoBehaviour
 {
     [SerializeField]
-    DropZone zoneField, zoneEnemy;
+    DropZone zoneField, zoneEnemy, zoneSupport;
     public Card[] cardInField;
     public Card Enemy;
+    public Card Support;
     [HideInInspector]
     public bool InCombat = false;
     int numberOfCardInField;
@@ -23,33 +24,67 @@ public class CombatManager : MonoBehaviour
             Enemy = zoneEnemy.transform.GetChild(0).GetComponent<Card>();
     }
 
+    public void ButtonCombat()
+    {
+        if (zoneEnemy.transform.childCount != 0 && zoneField.transform.childCount != 0)
+        Combat();
+    }
+
     public void Combat()
     {
         InCombat = true;
         Debug.Log("MORTAL COMBAAAAAAT");
-
+        if (zoneSupport.transform.childCount != 0)
+            Support = zoneSupport.transform.GetChild(0).gameObject.GetComponent<Card>();
+        Enemy = zoneEnemy.transform.GetChild(0).GetComponent<Card>();
         numberOfCardInField = zoneField.transform.childCount;
         // Prendo i componenti delle carte in campo 
         for (int i = 0; i < numberOfCardInField; i++)
         {
             cardInField[i] = zoneField.transform.GetChild(i).gameObject.GetComponent<Card>();
-        }
-
-        do
-        {    
-            CardDestroied = 3 - numberOfCardInField;
-            for (int i = 0; i < 3; i++)
+            if (Support != null)
             {
-                if (cardInField[i] != null)
+                switch (Support.Data.Supporto)
                 {
-                    if (Enemy.IsAlive)
-                    {
-                        Attack(i);
-                        Purifica(i);
-                    }
+                    case Buff.Attack:
+                        cardInField[i].Attack++;
+                        break;
+                    case Buff.Life:
+                        cardInField[i].Life++;
+                        break;
+                    case Buff.Purification:
+                        cardInField[i].PurificationOrDarkness++;
+                        break;
+                    default:
+                        Debug.Log("No buff");
+                        break;
                 }
             }
-        } while (InCombat && CardDestroied < 3);
+        }
+
+        if (Enemy != null)
+        {
+            do
+            {
+                CardDestroied = 3 - numberOfCardInField;
+                for (int i = 0; i < 3; i++)
+                {
+                    if (cardInField[i] != null)
+                    {
+                        if (Enemy.IsAlive)
+                        {
+                            Attack(i);
+                            Purifica(i);
+                        }
+                    }
+                }
+            } while (InCombat && CardDestroied < 3);
+        }
+        else
+        {
+            Debug.Log("Non ci sono nemici");
+        }
+
         InCombat = false;
     }
 
@@ -63,7 +98,10 @@ public class CombatManager : MonoBehaviour
     void CheckLifeAndDestroy(int _cardInField)
     {
         if (!Enemy.IsAlive)
+        {
             InCombat = false;
+            Destroy(Enemy.gameObject);
+        }
         if (!cardInField[_cardInField].IsAlive)
         {
             Destroy(cardInField[_cardInField].gameObject);

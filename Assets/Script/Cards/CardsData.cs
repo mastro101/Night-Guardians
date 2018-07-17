@@ -6,6 +6,7 @@ using UnityEngine;
 public class CardsData : ScriptableObject {
 
     public CardType Type;
+    public Buff Supporto;
     public string Name;
     public int Attack;
     public int Life;
@@ -19,4 +20,11 @@ public enum CardType
 {
     Guardian,
     Nightmare,
+}
+
+public enum Buff
+{
+    Attack,
+    Life,
+    Purification,
 }

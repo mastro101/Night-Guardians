@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Name: qwerty
   m_EditorClassIdentifier: 
   Type: 0
+  Supporto: 1
   Name: qwerty
   Attack: 1
   Life: 2
   PurificationOrDarkness: 3
   Description: buh
   SpriteImage: {fileID: 21300000, guid: 63c96fc3c8afe384ab034c13550a4324, type: 3}
+  SoundCreature: {fileID: 0}
