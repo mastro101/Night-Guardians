@@ -52,11 +52,6 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             if (cardDropped != null && !combatManager.InCombat)
             {
                 cardDropped.Zone = Type;
-                if (cardDropped.Zone == DropZoneType.Enemy)
-                    combatManager.Enemy = cardDropped;
-                if (cardDropped.Zone == DropZoneType.Support)
-                    cardDropped.transform.rotation = Quaternion.Euler(0, 0, 90);
-                
             }
 
         }

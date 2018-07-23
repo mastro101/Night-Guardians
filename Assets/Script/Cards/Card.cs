@@ -90,13 +90,13 @@ public class Card : MonoBehaviour {
     }
 
     [SerializeField]
-    GameObject TextAndImageObject, nameObject, attackObject, lifeObject, purificationOrDarknessObject, descriptionObject;
+    GameObject TextAndImageObject = null, nameObject = null, statisticObject = null, attackObject = null, lifeObject = null, purificationOrDarknessObject = null, descriptionObject = null;
     [SerializeField]
-    Sprite[] Covers;
+    Sprite[] Covers = null;
     [SerializeField]
-    Image imageCard, imageCover;
+    Image imageCard = null, imageCover = null;
     [SerializeField]
-    TextMeshProUGUI nameText, attackText, lifeText, purificationOrDarknessText, descriptionText;
+    TextMeshProUGUI nameText = null, attackText = null, lifeText = null, purificationOrDarknessText = null, descriptionText = null;
 
     private void Awake()
     {
@@ -132,6 +132,7 @@ public class Card : MonoBehaviour {
         if (Type == CardType.Guardian)
         {
             TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            statisticObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCard.transform.rotation = Quaternion.Euler(0, 0, 0);
             nameText.color = Color.black;
             nameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -148,6 +149,7 @@ public class Card : MonoBehaviour {
         else if (Type == CardType.Nightmare)
         {
             TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 180);
+            statisticObject.transform.rotation = Quaternion.Euler(0, 180, 180);
             imageCard.transform.rotation = Quaternion.Euler(0, 0, 0);
             nameText.color = Color.white;
             nameObject.transform.rotation = Quaternion.Euler(0, 0, 0);

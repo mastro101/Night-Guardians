@@ -9,7 +9,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 	public Transform placeholderParent = null;
 
     CombatManager combatManager;
-    Card card;
+    Card card = null;
 	GameObject placeholder = null;
 
     private void Awake()
@@ -78,7 +78,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             this.transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
             GetComponent<CanvasGroup>().blocksRaycasts = true;
 
-            Card card = GetComponent<Card>();
             DropZone dropZone = parentToReturnTo.GetComponent<DropZone>();
 
             if (dropZone != null)
@@ -89,6 +88,10 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                     card.PlaySound();
                     Debug.Log("BlaBlaBla");
                 }
+                if (card.Zone == DropZoneType.Support)
+                    card.transform.rotation = Quaternion.Euler(0, 0, 90);
+                else
+                    card.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
 
             Destroy(placeholder);
