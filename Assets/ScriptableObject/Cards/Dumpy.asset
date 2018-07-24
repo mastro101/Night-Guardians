@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Dumpy
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
+  Supporto: 1
   Name: 
-  Attack: 0
-  Life: 0
-  PurificationOrDarkness: 0
+  Attack: 2
+  Life: 4
+  PurificationOrDarkness: 2
   Description: 
-  SpriteImage: {fileID: 0}
-  SoundCreature: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: a417c293913b2a44fa428a5288bd816f, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 6ddbb5d345113d143ac485c85c8356be, type: 3}

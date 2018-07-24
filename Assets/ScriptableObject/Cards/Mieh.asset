@@ -14,9 +14,9 @@ MonoBehaviour:
   Type: 0
   Supporto: 0
   Name: 
-  Attack: 0
-  Life: 0
-  PurificationOrDarkness: 0
+  Attack: 1
+  Life: 1
+  PurificationOrDarkness: 1
   Description: 
-  SpriteImage: {fileID: 0}
-  SoundCreature: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: a6769e2f351ff7148a0424b9be2cf24b, type: 3}
+  SoundCreature: {fileID: 8300000, guid: a842cfc690ac1ca46a09e6728adfd64e, type: 3}

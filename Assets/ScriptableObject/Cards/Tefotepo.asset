@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Tefotepo
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
+  Supporto: 1
   Name: 
   Attack: 0
-  Life: 0
+  Life: 1
   PurificationOrDarkness: 0
   Description: 
-  SpriteImage: {fileID: 0}
-  SoundCreature: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: a10fd1471ddee474186165d03c9f37f3, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 4811050674751ec4bac2b87ef5f7ed03, type: 3}

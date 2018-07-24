@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Bleff
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
+  Supporto: 1
   Name: 
-  Attack: 0
-  Life: 0
+  Attack: 2
+  Life: 2
   PurificationOrDarkness: 0
   Description: 
-  SpriteImage: {fileID: 0}
-  SoundCreature: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: b8e80b27320ec2c4f96718f687772598, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 8b45a2ce9ddcef84ca9e6363d043b655, type: 3}
