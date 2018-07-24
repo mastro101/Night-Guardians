@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Pina
+  m_Name: Bleff
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 2
-  Name: Pina
-  Attack: 1
-  Life: 1
-  PurificationOrDarkness: 2
-  Description: It's over 9000 yiasgdj hagsd asidug ash dhugsug
-  SpriteImage: {fileID: 21300000, guid: d11b8b664714c64468a040eedfc48809, type: 3}
-  SoundCreature: {fileID: 8300000, guid: 4f173d965cf7ac34d8abfbc91a187df7, type: 3}
+  Supporto: 0
+  Name: 
+  Attack: 0
+  Life: 0
+  PurificationOrDarkness: 0
+  Description: 
+  SpriteImage: {fileID: 0}
+  SoundCreature: {fileID: 0}

@@ -32,7 +32,7 @@ public class EnemySpawn : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        if (enemies != null)
+        if (enemies != null) // DA AGGIUSTARE TROPPO GENEREICO FORSE PARENTESI QUADRE
         {
             Instantiate(card, spawnZone.transform).GetComponent<Card>().Data = enemies[0];
             EnemyLeft--;
