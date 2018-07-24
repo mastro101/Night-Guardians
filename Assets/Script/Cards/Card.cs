@@ -55,6 +55,7 @@ public class Card : MonoBehaviour {
             isPurificato = value;
             if (isPurificato)
             {
+                Data = Data.DataPurificatedCard;
                 combatManager.InCombat = false;
                 Debug.Log(Data.Name + " è stato purificato");
             }
@@ -145,6 +146,20 @@ public class Card : MonoBehaviour {
             purificationOrDarknessText.color = Color.black;
             purificationOrDarknessObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCover.sprite = Covers[0];
+            switch (Data.Supporto)
+            {
+                case Buff.Attack:
+                    attackText.color = Color.blue;
+                    break;
+                case Buff.Life:
+                    lifeText.color = Color.blue;
+                    break;
+                case Buff.Purification:
+                    purificationOrDarknessText.color = Color.blue;
+                    break;
+                default:
+                    break;
+            }
         }
         else if (Type == CardType.Nightmare)
         {

@@ -9,14 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Gnawy
+  m_Name: Dumpy
   m_EditorClassIdentifier: 
-  Type: 1
-  Supporto: 0
-  Name: Gnawy
+  Type: 0
+  Supporto: 1
+  Name: 
   Attack: 2
-  Life: 3
-  PurificationOrDarkness: 4
-  Description: Dente mannaro
-  SpriteImage: {fileID: 21300000, guid: 660b4f5db3fb6854bb8ee2596fdc7e97, type: 3}
-  SoundCreature: {fileID: 0}
+  Life: 4
+  PurificationOrDarkness: 2
+  DataPurificatedCard: {fileID: 0}
+  Description: 
+  SpriteImage: {fileID: 21300000, guid: a417c293913b2a44fa428a5288bd816f, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 6ddbb5d345113d143ac485c85c8356be, type: 3}

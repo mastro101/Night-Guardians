@@ -33,12 +33,17 @@ public class Scarti : MonoBehaviour
 
     void refillDeck(Deck _deck)
     {
-        for (int i = 0; i < Cards.Length; i++)
+        if (Cards[0] != null)
         {
-            _deck.Cards[i] = Cards[i];
+            for (int i = 0; i < Cards.Length; i++)
+            {
+                _deck.Cards[i] = Cards[i];
+            }
+            ScartedCard = 0;
+            _deck.SetCardInGameText();
         }
-        ScartedCard = 0;
-        _deck.SetCardInGameText();
+        else
+            FindObjectOfType<EndCondiction>().EndGame(false);
     }
 
     public void ScartCard(Card _card)

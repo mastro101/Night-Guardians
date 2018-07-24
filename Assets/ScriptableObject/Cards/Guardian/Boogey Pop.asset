@@ -17,6 +17,7 @@ MonoBehaviour:
   Attack: 1
   Life: 2
   PurificationOrDarkness: 1
+  DataPurificatedCard: {fileID: 0}
   Description: 
   SpriteImage: {fileID: 21300000, guid: 18f8df58b1a358145883279524df2444, type: 3}
   SoundCreature: {fileID: 8300000, guid: d1e5f48c1faeec3478740435c2722cfe, type: 3}

@@ -32,7 +32,7 @@ public class EnemySpawn : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        if (enemies != null) // DA AGGIUSTARE TROPPO GENEREICO FORSE PARENTESI QUADRE
+        if (enemies[0] != null)
         {
             Instantiate(card, spawnZone.transform).GetComponent<Card>().Data = enemies[0];
             EnemyLeft--;
@@ -50,6 +50,7 @@ public class EnemySpawn : MonoBehaviour
         else
         {
             Debug.Log("You Win");
+            FindObjectOfType<EndCondiction>().EndGame(true);
         }
     }
 

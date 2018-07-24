@@ -11,6 +11,7 @@ public class CardsData : ScriptableObject {
     public int Attack;
     public int Life;
     public int PurificationOrDarkness;
+    public CardsData DataPurificatedCard;
     public string Description;
     public Sprite SpriteImage;
     public AudioClip SoundCreature;

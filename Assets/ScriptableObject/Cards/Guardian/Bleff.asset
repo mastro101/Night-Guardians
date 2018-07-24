@@ -9,14 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Pionator
+  m_Name: Bleff
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
+  Supporto: 1
   Name: 
   Attack: 2
-  Life: 1
-  PurificationOrDarkness: 2
+  Life: 2
+  PurificationOrDarkness: 0
+  DataPurificatedCard: {fileID: 0}
   Description: 
-  SpriteImage: {fileID: 21300000, guid: 706ab2847ce5d2e4ba2207bd2b66e277, type: 3}
-  SoundCreature: {fileID: 8300000, guid: 630e872a07555a14d92edb51fcda1b59, type: 3}
+  SpriteImage: {fileID: 21300000, guid: b8e80b27320ec2c4f96718f687772598, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 8b45a2ce9ddcef84ca9e6363d043b655, type: 3}

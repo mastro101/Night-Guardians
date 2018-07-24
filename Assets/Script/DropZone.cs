@@ -53,10 +53,7 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             {
                 cardDropped.Zone = Type;
             }
-
         }
-        
-
     }
 }
 

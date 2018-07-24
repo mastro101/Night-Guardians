@@ -9,14 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Geraniosaurus
+  m_Name: Mieh
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 1
-  Name: Geraniosaurus
+  Supporto: 0
+  Name: 
   Attack: 1
-  Life: 3
-  PurificationOrDarkness: 0
-  Description: Sono un fiore
-  SpriteImage: {fileID: 21300000, guid: 4ab793feea2101d4da891ce3153ab188, type: 3}
-  SoundCreature: {fileID: 8300000, guid: fe3bbcdcb3bce2e48a46fcedac23174f, type: 3}
+  Life: 1
+  PurificationOrDarkness: 1
+  DataPurificatedCard: {fileID: 0}
+  Description: 
+  SpriteImage: {fileID: 21300000, guid: a6769e2f351ff7148a0424b9be2cf24b, type: 3}
+  SoundCreature: {fileID: 8300000, guid: a842cfc690ac1ca46a09e6728adfd64e, type: 3}

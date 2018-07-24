@@ -11,6 +11,7 @@ public class CombatManager : MonoBehaviour
     Scarti scarti;
     EnemySpawn enemiesSpawn;
     Deck deck;
+    Resources resources;
     [HideInInspector]
     public bool InCombat = false;
     int numberOfCardInField;
@@ -22,6 +23,7 @@ public class CombatManager : MonoBehaviour
         scarti = FindObjectOfType<Scarti>();
         enemiesSpawn = FindObjectOfType<EnemySpawn>();
         deck = FindObjectOfType<Deck>();
+        resources = FindObjectOfType<Resources>();
     }
 
     private void Start()
@@ -93,8 +95,10 @@ public class CombatManager : MonoBehaviour
                 }
             } while (InCombat && CardDestroied < 3);
 
-            if (!Enemy.IsAlive || Enemy.PurificationOrDarkness == 0)
+            if (!Enemy.IsAlive || Enemy.Type == CardType.Guardian)
                 enemiesSpawn.SpawnEnemy();
+            else if (CardDestroied == 3)
+                FindObjectOfType<EndCondiction>().EndGame(false);
         }
         else
         {
@@ -122,6 +126,7 @@ public class CombatManager : MonoBehaviour
             InCombat = false;
             scartGuardian();
             Destroy(Enemy.gameObject);
+            resources.AddCoin(1);
         }
     }
 
@@ -129,7 +134,7 @@ public class CombatManager : MonoBehaviour
     {
         if (Enemy.IsAlive)
             Enemy.PurificationOrDarkness -= cardInField[_cardInField].PurificationOrDarkness;
-        if (Enemy.PurificationOrDarkness == 0)
+        if (Enemy.IsPurificato)
         {
             scarti.ScartCard(Enemy);
             Destroy(Enemy.gameObject);
@@ -145,8 +150,11 @@ public class CombatManager : MonoBehaviour
         {
             if (cardInField[i] != null)
             {
-                scarti.ScartCard(cardInField[i]);
-                Destroy(cardInField[i].gameObject);
+                if (cardInField[i].IsAlive)
+                {
+                    scarti.ScartCard(cardInField[i]);
+                    Destroy(cardInField[i].gameObject);
+                }
             }
         }
 
