@@ -11,7 +11,7 @@ public class Deck : MonoBehaviour {
     [SerializeField]
     GameObject card = null;
 
-    public Text TextScarti;
+    public Text TextCardInDeck;
     int cardInDeck;
     int CardInDeck
     {
@@ -19,7 +19,7 @@ public class Deck : MonoBehaviour {
         set
         {
             cardInDeck = value;
-            TextScarti.text = "Deck\n" + cardInDeck;
+            TextCardInDeck.text = "Deck\n" + cardInDeck;
         }
     }
 
