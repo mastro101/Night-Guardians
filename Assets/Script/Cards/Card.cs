@@ -42,6 +42,7 @@ public class Card : MonoBehaviour {
             isAlive = value;
             if (!isAlive)
             {
+                Data.LifeChange = Data.Life;
                 Debug.Log(Data.Name + " is death");
             }
         }
@@ -70,6 +71,8 @@ public class Card : MonoBehaviour {
         {
             life = value;
             lifeText.text = life.ToString();
+            if (life < Data.Life)
+                lifeText.color = Color.red;
             if (life <= 0)
             {
                 isAlive = false;
@@ -108,14 +111,8 @@ public class Card : MonoBehaviour {
     private void Start()
     {
         Zone = transform.parent.GetComponent<DropZone>().Type;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Life--;
-        }
+        if (Type == CardType.Guardian)
+            Life = Data.LifeChange;
     }
 
     void insertData()

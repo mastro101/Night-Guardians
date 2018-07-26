@@ -32,6 +32,12 @@ public class Deck : MonoBehaviour {
 
     private void Start()
     {
+        foreach(CardsData cardData in Cards)
+        {
+            if (cardData != null)
+                cardData.LifeChange = cardData.Life;
+        }
+
         SetCardInGameText();
         Draw();
     }

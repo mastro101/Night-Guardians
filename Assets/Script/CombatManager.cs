@@ -111,6 +111,7 @@ public class CombatManager : MonoBehaviour
     {
         Enemy.Life -= cardInField[_cardInField].Attack;
         cardInField[_cardInField].Life -= Enemy.Attack;
+        cardInField[_cardInField].Data.LifeChange = cardInField[_cardInField].Life;
         CheckLifeAndDestroy(_cardInField);
     }
 
