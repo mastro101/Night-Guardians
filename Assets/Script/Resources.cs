@@ -12,6 +12,6 @@ public class Resources : MonoBehaviour
     public void AddCoin(int _coin)
     {
         Coin += _coin;
-        CoinText.text = "Coin: " + Coin.ToString();
+        CoinText.text = " " + Coin.ToString();
     }
 }

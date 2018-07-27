@@ -19,7 +19,7 @@ public class Deck : MonoBehaviour {
         set
         {
             cardInDeck = value;
-            TextCardInDeck.text = "Deck\n" + cardInDeck;
+            TextCardInDeck.text = "\n" + cardInDeck;
         }
     }
 

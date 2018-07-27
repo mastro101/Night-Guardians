@@ -20,7 +20,7 @@ public class EnemySpawn : MonoBehaviour
         set
         {
             enemyLeft = value;
-            TextEnemyLeft.text = "Enemy\n" + enemyLeft;
+            TextEnemyLeft.text = "\n" + enemyLeft;
         }
     }
 

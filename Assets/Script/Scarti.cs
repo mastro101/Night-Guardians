@@ -15,7 +15,7 @@ public class Scarti : MonoBehaviour
         set
         {
             scartedCard = value;
-            TextScarti.text = "Scarti\n" + scartedCard;
+            TextScarti.text = "\n" + scartedCard;
         }
     }
 
@@ -28,7 +28,7 @@ public class Scarti : MonoBehaviour
     private void Start()
     {
         deck.OnEmpty += refillDeck;
-        TextScarti.text = "Scarti";
+        TextScarti.text = "";
     }
 
     void refillDeck(Deck _deck)
