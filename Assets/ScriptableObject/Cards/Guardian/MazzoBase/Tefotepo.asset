@@ -9,15 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Nommy
+  m_Name: Tefotepo
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
+  Supporto: 1
   Name: 
-  Attack: 3
+  Attack: 0
   Life: 1
-  PurificationOrDarkness: 1
+  PurificationOrDarkness: 0
   DataPurificatedCard: {fileID: 0}
   Description: 
-  SpriteImage: {fileID: 21300000, guid: 660b4f5db3fb6854bb8ee2596fdc7e97, type: 3}
-  SoundCreature: {fileID: 8300000, guid: 6ddbb5d345113d143ac485c85c8356be, type: 3}
+  SpriteImage: {fileID: 21300000, guid: a10fd1471ddee474186165d03c9f37f3, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 4811050674751ec4bac2b87ef5f7ed03, type: 3}
+  LifeChange: 1

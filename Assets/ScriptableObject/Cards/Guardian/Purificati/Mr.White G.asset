@@ -9,15 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Boogey Pop
+  m_Name: Mr.White G
   m_EditorClassIdentifier: 
   Type: 0
   Supporto: 1
   Name: 
-  Attack: 1
-  Life: 2
-  PurificationOrDarkness: 1
+  Attack: 2
+  Life: 3
+  PurificationOrDarkness: 0
   DataPurificatedCard: {fileID: 0}
   Description: 
-  SpriteImage: {fileID: 21300000, guid: 18f8df58b1a358145883279524df2444, type: 3}
-  SoundCreature: {fileID: 8300000, guid: d1e5f48c1faeec3478740435c2722cfe, type: 3}
+  SpriteImage: {fileID: 21300000, guid: aa8cbd1c1ccfc6f4f9d8de4b0cef3d41, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 89757b0f7902e5541b052992f1599736, type: 3}
+  LifeChange: 0

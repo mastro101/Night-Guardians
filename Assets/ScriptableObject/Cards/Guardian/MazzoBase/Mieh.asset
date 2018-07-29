@@ -9,15 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Dumpy
+  m_Name: Mieh
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 1
+  Supporto: 0
   Name: 
-  Attack: 2
-  Life: 4
-  PurificationOrDarkness: 2
+  Attack: 1
+  Life: 1
+  PurificationOrDarkness: 1
   DataPurificatedCard: {fileID: 0}
   Description: 
-  SpriteImage: {fileID: 21300000, guid: a417c293913b2a44fa428a5288bd816f, type: 3}
-  SoundCreature: {fileID: 8300000, guid: 6ddbb5d345113d143ac485c85c8356be, type: 3}
+  SpriteImage: {fileID: 21300000, guid: a6769e2f351ff7148a0424b9be2cf24b, type: 3}
+  SoundCreature: {fileID: 8300000, guid: a842cfc690ac1ca46a09e6728adfd64e, type: 3}
+  LifeChange: 1

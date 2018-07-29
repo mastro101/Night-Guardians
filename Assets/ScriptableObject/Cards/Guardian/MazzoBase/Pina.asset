@@ -9,15 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Mieh
+  m_Name: Pina
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
-  Name: 
+  Supporto: 2
+  Name: Pina
   Attack: 1
   Life: 1
-  PurificationOrDarkness: 1
+  PurificationOrDarkness: 2
   DataPurificatedCard: {fileID: 0}
-  Description: 
-  SpriteImage: {fileID: 21300000, guid: a6769e2f351ff7148a0424b9be2cf24b, type: 3}
-  SoundCreature: {fileID: 8300000, guid: a842cfc690ac1ca46a09e6728adfd64e, type: 3}
+  Description: It's over 9000 yiasgdj hagsd asidug ash dhugsug
+  SpriteImage: {fileID: 21300000, guid: d11b8b664714c64468a040eedfc48809, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 4f173d965cf7ac34d8abfbc91a187df7, type: 3}
+  LifeChange: 1

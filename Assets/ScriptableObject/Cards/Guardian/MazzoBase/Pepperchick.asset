@@ -9,15 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Jellybun
+  m_Name: Pepperchick
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
+  Supporto: 1
   Name: 
-  Attack: 2
-  Life: 1
+  Attack: 1
+  Life: 2
   PurificationOrDarkness: 1
   DataPurificatedCard: {fileID: 0}
   Description: 
-  SpriteImage: {fileID: 21300000, guid: 88d58c3c342ee344884af7cae8155181, type: 3}
-  SoundCreature: {fileID: 8300000, guid: 1244a9b5c3acf6642be0785d5ab1abcb, type: 3}
+  SpriteImage: {fileID: 21300000, guid: a3e9ec668efeb4c4abfe24f4cc85c622, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 8f7045580d8c8514e871ad31def93504, type: 3}
+  LifeChange: 2

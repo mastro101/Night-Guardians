@@ -9,15 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Bisilbubil
+  m_Name: Geraniosaurus
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 2
-  Name: 
+  Supporto: 1
+  Name: Geraniosaurus
   Attack: 1
-  Life: 1
-  PurificationOrDarkness: 2
+  Life: 3
+  PurificationOrDarkness: 0
   DataPurificatedCard: {fileID: 0}
-  Description: 
-  SpriteImage: {fileID: 21300000, guid: 7a8252d7fe4f6c1499136139983cbb3f, type: 3}
-  SoundCreature: {fileID: 8300000, guid: 624958a2e04f6d741bc935e14b75c272, type: 3}
+  Description: Sono un fiore
+  SpriteImage: {fileID: 21300000, guid: 4ab793feea2101d4da891ce3153ab188, type: 3}
+  SoundCreature: {fileID: 8300000, guid: fe3bbcdcb3bce2e48a46fcedac23174f, type: 3}
+  LifeChange: 2

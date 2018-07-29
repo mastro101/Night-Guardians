@@ -9,15 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Pepperchick
+  m_Name: Nommy
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 1
+  Supporto: 0
   Name: 
-  Attack: 1
-  Life: 2
+  Attack: 3
+  Life: 1
   PurificationOrDarkness: 1
   DataPurificatedCard: {fileID: 0}
   Description: 
-  SpriteImage: {fileID: 21300000, guid: a3e9ec668efeb4c4abfe24f4cc85c622, type: 3}
-  SoundCreature: {fileID: 8300000, guid: 8f7045580d8c8514e871ad31def93504, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 660b4f5db3fb6854bb8ee2596fdc7e97, type: 3}
+  SoundCreature: {fileID: 8300000, guid: 6ddbb5d345113d143ac485c85c8356be, type: 3}
+  LifeChange: 0

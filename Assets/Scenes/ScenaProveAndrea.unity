@@ -509,18 +509,18 @@ MonoBehaviour:
   Cards:
   - {fileID: 11400000, guid: a73c37a806a2ea047b8f6f6cd04cba4c, type: 2}
   - {fileID: 11400000, guid: b2b3419762b5da74683dfbe412b5887d, type: 2}
-  - {fileID: 11400000, guid: 860f98f1147470e46b320e58fab3bb3a, type: 2}
-  - {fileID: 11400000, guid: f6644622a7deda042a204a2082c12950, type: 2}
   - {fileID: 11400000, guid: ef8adb94303102f4899293136d19e92d, type: 2}
-  - {fileID: 11400000, guid: 991e03c8971e366428f8360572f0503e, type: 2}
   - {fileID: 11400000, guid: fcfcd77d86507b4408a247ddc822aa35, type: 2}
   - {fileID: 11400000, guid: fa72d866c4f368b43a8731f5a3055bc7, type: 2}
   - {fileID: 11400000, guid: c9f017762b1fa3145bdb2f4e19d0a08b, type: 2}
-  - {fileID: 11400000, guid: 6b6fa38007b24ff4485e48f97f77cf82, type: 2}
-  - {fileID: 11400000, guid: dd56b57ae9770fa458a8291f1f8bee1c, type: 2}
   - {fileID: 11400000, guid: 2f7673fa8aea4d0409ffde478185d9cf, type: 2}
   - {fileID: 11400000, guid: cbbaa85f20739154b821f88d12efff59, type: 2}
   - {fileID: 11400000, guid: 50844b1b1fddc6f4297e3e9bea52d622, type: 2}
+  - {fileID: 11400000, guid: 991e03c8971e366428f8360572f0503e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -745,9 +745,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a6063a64513866c44bbbef9d6055c982, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d18546b3914923046bc8b6fa90c46b84, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1800,6 +1800,22 @@ Prefab:
       propertyPath: m_ChildForceExpandHeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 697d6c384bbfab247b2544cd19bb1a07,
+        type: 3}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37befaefbc687214b83e288075ca4587, type: 2}
   m_IsPrefabParent: 0
@@ -2680,6 +2696,17 @@ Prefab:
     - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
         type: 2}
       propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7cb66a1f9c24d9748a7a151bbbfe4579,
+        type: 3}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3736,6 +3763,27 @@ Prefab:
     - target: {fileID: 114800541164163084, guid: 37befaefbc687214b83e288075ca4587,
         type: 2}
       propertyPath: m_ChildForceExpandHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 20a249f19e6af3846989e3e1776fdd1a,
+        type: 3}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114914967288961084, guid: 37befaefbc687214b83e288075ca4587,
+        type: 2}
+      propertyPath: m_FillMethod
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
