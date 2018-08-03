@@ -77,6 +77,7 @@ public class Deck : MonoBehaviour {
         else
         {
             InvockOnEmpty();
+            Draw(_for);
         }
     }
 
