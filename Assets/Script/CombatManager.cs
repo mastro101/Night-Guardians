@@ -137,6 +137,7 @@ public class CombatManager : MonoBehaviour
             Enemy.PurificationOrDarkness -= cardInField[_cardInField].PurificationOrDarkness;
         if (Enemy.IsPurificato)
         {
+            Enemy.Data.LifeChange = Enemy.Data.Life;
             scarti.ScartCard(Enemy);
             Destroy(Enemy.gameObject);
             InCombat = false;

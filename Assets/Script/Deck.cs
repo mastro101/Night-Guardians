@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class Deck : MonoBehaviour {
 
     public CardsData[] Cards;
-    [SerializeField]
-    DropZone drawZone;
+    public DropZone drawZone;
     [SerializeField]
     GameObject card = null;
 
@@ -69,8 +68,11 @@ public class Deck : MonoBehaviour {
                 else
                 {
                     InvockOnEmpty();
-                    _for -= i - 1;
-                    i = 0;
+                    if (Cards[0] != null)
+                    {
+                        _for -= i - 1;
+                        i = 0;
+                    }
                 }
             }
         }

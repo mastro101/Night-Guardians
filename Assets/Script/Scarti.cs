@@ -38,12 +38,14 @@ public class Scarti : MonoBehaviour
             for (int i = 0; i < Cards.Length; i++)
             {
                 _deck.Cards[i] = Cards[i];
+                Cards[i] = null;
             }
             ScartedCard = 0;
             _deck.SetCardInGameText();
         }
         else
-            FindObjectOfType<EndCondiction>().EndGame(false);
+            if (_deck.drawZone)
+                FindObjectOfType<EndCondiction>().EndGame(false);
     }
 
     public void ScartCard(Card _card)
