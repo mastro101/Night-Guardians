@@ -19,6 +19,6 @@ MonoBehaviour:
   Attack: 4
   Life: 9
   Description: Sabotaggio
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: 8f3c9c356ad065147a1f051f9537c4b1, type: 3}
   SoundCreature: {fileID: 0}
   LifeChange: 0

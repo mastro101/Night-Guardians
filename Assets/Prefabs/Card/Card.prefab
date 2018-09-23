@@ -833,6 +833,8 @@ MonoBehaviour:
   Zone: 0
   combatManager: {fileID: 0}
   Type: 0
+  Grado: 0
+  Fazione: 0
   TextAndImageObject: {fileID: 1723911928709112}
   nameObject: {fileID: 151050}
   statisticObject: {fileID: 1783350459397978}

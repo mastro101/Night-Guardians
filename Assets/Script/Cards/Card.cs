@@ -119,7 +119,8 @@ public class Card : MonoBehaviour {
 
     private void Start()
     {
-        Zone = transform.parent.GetComponent<DropZone>().Type;
+        if (transform.parent.GetComponent<DropZone>())
+            Zone = transform.parent.GetComponent<DropZone>().Type;
         if (Type == CardType.Guardian)
             Life = Data.LifeChange;
     }

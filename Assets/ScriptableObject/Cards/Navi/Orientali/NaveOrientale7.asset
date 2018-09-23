@@ -19,6 +19,6 @@ MonoBehaviour:
   Attack: 8
   Life: 1
   Description: 
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: 8bba5f8acfaa8cc419ea368aec564eeb, type: 3}
   SoundCreature: {fileID: 0}
   LifeChange: 0

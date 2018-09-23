@@ -8,8 +8,14 @@ public class Scarti : MonoBehaviour
     public CardsData[] Cards;
     public Text TextScarti;
     Deck deck;
+    [SerializeField]
+    GameObject card = null;
+    [SerializeField]
+    GameObject scartiViewerObject;
+    ScartiViewer scartiViewer;
+
     int scartedCard;
-    int ScartedCard
+    public int ScartedCard
     {
         get { return scartedCard; }
         set
@@ -23,6 +29,7 @@ public class Scarti : MonoBehaviour
     {
         deck = FindObjectOfType<Deck>();
         Cards = new CardsData[deck.Cards.Length];
+        scartiViewer = scartiViewerObject.GetComponent<ScartiViewer>();
     }
 
     private void Start()
@@ -58,6 +65,19 @@ public class Scarti : MonoBehaviour
                 ScartedCard++;
                 break;
             }
+        }
+    }
+
+    public void ViewCard()
+    {
+        if (!scartiViewerObject.activeInHierarchy)
+        {
+            scartiViewerObject.SetActive(true);
+            scartiViewer.ViewScarti();
+        }
+        else
+        {
+            scartiViewer.Close();
         }
     }
 }

@@ -9,10 +9,14 @@ public class Deck : MonoBehaviour {
     public DropZone drawZone;
     [SerializeField]
     GameObject card = null;
+    [SerializeField]
+    GameObject deckViewerObject;
+    DeckViewer deckViewer;
+    
 
     public Text TextCardInDeck;
     int cardInDeck;
-    int CardInDeck
+    public int CardInDeck
     {
         get { return cardInDeck; }
         set
@@ -29,6 +33,11 @@ public class Deck : MonoBehaviour {
         Draw(5);        
     }
 
+    private void Awake()
+    {
+        deckViewer = deckViewerObject.GetComponent<DeckViewer>();
+    }
+
     private void Start()
     {
         foreach(CardsData cardData in Cards)
@@ -38,7 +47,20 @@ public class Deck : MonoBehaviour {
         }
 
         SetCardInGameText();
+        ShuffleArray(Cards);
         Draw();
+    }
+
+    public void ShuffleArray<T>(T[] arr)
+    {
+        
+        for (int i = CardInDeck - 1; i > 0; i--)
+        {
+            int r = Random.Range(0, i + 1);
+            T tmp = arr[i];
+            arr[i] = arr[r];
+            arr[r] = tmp;
+        }
     }
 
     public void Draw(int _for)
@@ -83,6 +105,19 @@ public class Deck : MonoBehaviour {
         }
     }
 
+    public void ViewCard()
+    {
+        if (!deckViewerObject.activeInHierarchy)
+        {
+            deckViewerObject.SetActive(true);
+            deckViewer.ViewDeck();
+        }
+        else
+        {
+            deckViewer.Close();
+        }
+    }
+
     public void SetCardInGameText()
     {
         foreach (CardsData cards in Cards)
@@ -101,6 +136,12 @@ public class Deck : MonoBehaviour {
     }
 
     #endregion
+
+    private void OnMouseDown()
+    {
+        deckViewerObject.SetActive(true);
+        deckViewer.ViewDeck();
+    }
 }
 
 public class DeckEvent
