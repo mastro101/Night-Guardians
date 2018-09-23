@@ -56,7 +56,13 @@ public class Card : MonoBehaviour {
             isPurificato = value;
             if (isPurificato)
             {
-                Data = Data.DataPurificatedCard;
+                int i;
+                do
+                {
+                    i = Random.Range(0, contenitoreCards.Cards.Length);
+                }
+                while (contenitoreCards.Cards[i].Grado != Grado || contenitoreCards.Cards[i].Fazione != Fazione);
+                Data = contenitoreCards.Cards[i];
                 combatManager.InCombat = false;
                 Debug.Log(Data.Name + " è stato purificato");
             }
@@ -73,39 +79,42 @@ public class Card : MonoBehaviour {
             lifeText.text = life.ToString();
             if (life < Data.Life)
                 lifeText.color = Color.red;
-            if (life <= 0)
+            if (Type == CardType.Guardian)
             {
-                isAlive = false;
+                if (life <= 0)
+                {
+                    isAlive = false;
+                }
+            }
+            else
+            {
+                if (life < 0)
+                    isAlive = false;
             }
         }
     }
 
-    int purificationOrDarkness;
-    public int PurificationOrDarkness
-    {
-        get { return purificationOrDarkness; }
-        set
-        {
-            purificationOrDarkness = value;
-            purificationOrDarknessText.text = purificationOrDarkness.ToString();
-            if (purificationOrDarkness == 0 && Data.Type == CardType.Nightmare)
-                IsPurificato = true;
-        }
-    }
+    public int Grado;
+    public Fazioni Fazione;
+
+    FazioniClass fazioniClass;
+    ContenitoreCards contenitoreCards;
 
     [SerializeField]
-    GameObject TextAndImageObject = null, nameObject = null, statisticObject = null, attackObject = null, lifeObject = null, purificationOrDarknessObject = null, descriptionObject = null;
+    GameObject TextAndImageObject = null, nameObject = null, statisticObject = null, attackObject = null, lifeObject = null, descriptionObject = null, fazioneObject = null;
     [SerializeField]
     Sprite[] Covers = null;
     [SerializeField]
-    Image imageCard = null, imageCover = null;
+    Image imageCard = null, imageCover = null, imageFazione = null;
     [SerializeField]
-    TextMeshProUGUI nameText = null, attackText = null, lifeText = null, purificationOrDarknessText = null, descriptionText = null;
+    TextMeshProUGUI nameText = null, attackText = null, lifeText = null, descriptionText = null;
 
     private void Awake()
     {
         soundCreature = FindObjectOfType<AudioSource>();
         combatManager = FindObjectOfType<CombatManager>();
+        fazioniClass = FindObjectOfType<FazioniClass>();
+        contenitoreCards = FindObjectOfType<ContenitoreCards>();
     }
 
     private void Start()
@@ -118,15 +127,39 @@ public class Card : MonoBehaviour {
     void insertData()
     {
         Type = Data.Type;
+        Grado = Data.Grado;
         Attack = Data.Attack;
         Life = Data.Life;
-        PurificationOrDarkness = Data.PurificationOrDarkness;
         nameText.text = Data.Name;
         imageCard.sprite = Data.SpriteImage;
         attackText.text = Data.Attack.ToString();
         lifeText.text = Data.Life.ToString();
-        purificationOrDarknessText.text = Data.PurificationOrDarkness.ToString();
         descriptionText.text = Data.Description;
+        Fazione = Data.Fazione;
+        switch (Fazione)
+        {
+            case Fazioni.NonMorti:
+                imageFazione.sprite = fazioniClass.NonMorti;
+                break;
+            case Fazioni.Orientali:
+                imageFazione.sprite = fazioniClass.Orientali;
+                break;
+            case Fazioni.PiratiVeri:
+                imageFazione.sprite = fazioniClass.PiratiVeri;
+                break;
+            case Fazioni.Marina:
+                imageFazione.sprite = fazioniClass.Marina;
+                break;
+            case Fazioni.Voodoo:
+                imageFazione.sprite = fazioniClass.Voodoo;
+                break;
+            case Fazioni.Kraken:
+                imageFazione.sprite = fazioniClass.Kraken;
+                break;
+            default:
+                imageFazione.sprite = fazioniClass.PiratiVeri;
+                break;
+        }
         if (Type == CardType.Guardian)
         {
             TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -140,8 +173,7 @@ public class Card : MonoBehaviour {
             attackObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             lifeText.color = Color.black;
             lifeObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            purificationOrDarknessText.color = Color.black;
-            purificationOrDarknessObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            fazioneObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCover.sprite = Covers[0];
             switch (Data.Supporto)
             {
@@ -150,9 +182,6 @@ public class Card : MonoBehaviour {
                     break;
                 case Buff.Life:
                     lifeText.color = Color.blue;
-                    break;
-                case Buff.Purification:
-                    purificationOrDarknessText.color = Color.blue;
                     break;
                 default:
                     break;
@@ -171,8 +200,7 @@ public class Card : MonoBehaviour {
             attackObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             lifeText.color = Color.white;
             lifeObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            purificationOrDarknessText.color = Color.white;
-            purificationOrDarknessObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            fazioneObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCover.sprite = Covers[1];
         }
     }

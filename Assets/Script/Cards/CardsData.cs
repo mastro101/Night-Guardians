@@ -7,11 +7,11 @@ public class CardsData : ScriptableObject {
 
     public CardType Type;
     public Buff Supporto;
+    public Fazioni Fazione;
+    public int Grado;
     public string Name;
     public int Attack;
     public int Life;
-    public int PurificationOrDarkness;
-    public CardsData DataPurificatedCard;
     public string Description;
     public Sprite SpriteImage;
     public AudioClip SoundCreature;
@@ -29,5 +29,14 @@ public enum Buff
 {
     Attack,
     Life,
-    Purification,
+}
+
+public enum Fazioni
+{
+    NonMorti,
+    Orientali,
+    PiratiVeri,
+    Marina,
+    Voodoo,
+    Kraken,
 }

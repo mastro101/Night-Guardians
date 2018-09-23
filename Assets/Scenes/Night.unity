@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 8
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964128, b: 0.5748176, a: 1}
-  m_UseRadianceAmbientProbe: 0
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -55,10 +54,11 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 10
-    m_AtlasSize: 1024
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -1138,69 +1138,54 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
+    - serializedVersion: 2
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -1331,6 +1316,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 773829431}
+--- !u!1 &804900034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 804900035}
+  - component: {fileID: 804900036}
+  m_Layer: 0
+  m_Name: FazioniClass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &804900035
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 804900034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1085360070}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &804900036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 804900034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54c4213328b4544f9cc109ac1b9f4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NonMorti: {fileID: 21300000, guid: b304c8ce1e455104ea70fb914f01dbd1, type: 3}
+  Orientali: {fileID: 0}
+  PiratiVeri: {fileID: 21300000, guid: 12c9e85c610568d4a9e795b1c5a59882, type: 3}
+  Marina: {fileID: 0}
+  Voodoo: {fileID: 0}
+  Kraken: {fileID: 0}
 --- !u!1 &838783889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,6 +1967,8 @@ Transform:
   - {fileID: 194904629}
   - {fileID: 902472282}
   - {fileID: 838783891}
+  - {fileID: 804900035}
+  - {fileID: 1251853951}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2026,7 +2059,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22.25
+  m_fontSize: 39.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2152,6 +2185,67 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224559338490218200, guid: 37befaefbc687214b83e288075ca4587,
     type: 2}
   m_PrefabInternal: {fileID: 1079804413}
+--- !u!1 &1251853950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1251853951}
+  - component: {fileID: 1251853952}
+  m_Layer: 0
+  m_Name: ContenitoreCards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251853951
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251853950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1085360070}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1251853952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251853950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b801689b21d7c447b766530d244b8b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cards:
+  - {fileID: 11400000, guid: 91e7831bf4fa0814cb3beac637365d88, type: 2}
+  - {fileID: 11400000, guid: 6f253b758f47eb242b00d3dc47f60539, type: 2}
+  - {fileID: 11400000, guid: 7fb8fbf641fa018429e976b553d5dcc0, type: 2}
+  - {fileID: 11400000, guid: cc5dd7a27db56164282bcf251ce9d3ee, type: 2}
+  - {fileID: 11400000, guid: b353c98c14980254095315bab5ea5245, type: 2}
+  - {fileID: 11400000, guid: 65f027bbe669d0540855755d0d2f4abd, type: 2}
+  - {fileID: 11400000, guid: 607cf49a32a60b147b2ec22820fc1df4, type: 2}
+  - {fileID: 11400000, guid: dd313aa585cc75b428b3bb9031205ebb, type: 2}
+  - {fileID: 11400000, guid: 080d502036d95624f834202c38083c80, type: 2}
+  - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
+  - {fileID: 11400000, guid: 9c1e0b27fba4fd544950564acafb9b5f, type: 2}
+  - {fileID: 11400000, guid: 7c1bd9b948fa97344b32a6fc61b0a866, type: 2}
+  - {fileID: 11400000, guid: 8ca89dbe35a449c46be70eb477b5ea63, type: 2}
+  - {fileID: 11400000, guid: ccf05a5dba7afac4ba846f893ff57f27, type: 2}
+  - {fileID: 11400000, guid: bd8053594e20e2346832edb4ea963e4c, type: 2}
+  - {fileID: 11400000, guid: 3655cc0974317d040aa4c1e0cfa4453f, type: 2}
+  - {fileID: 11400000, guid: 2bbc16a34e886344882cb23331213cfe, type: 2}
+  - {fileID: 11400000, guid: 348e8be155f9223409d558b674b79cf0, type: 2}
+  - {fileID: 11400000, guid: 9a87a8221f7bb594fa8ab72f6e192b22, type: 2}
+  - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
 --- !u!1 &1293356500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3314,10 +3408,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 11400000, guid: c6390ae39e1fdc648ae7fc487aafb21d, type: 2}
-  - {fileID: 11400000, guid: 2943bf5a032d3664dba4c71ebaac95ae, type: 2}
-  - {fileID: 11400000, guid: 56f55da6d4bfc124a9064fa1493a36f5, type: 2}
-  - {fileID: 11400000, guid: 1555bf947bd47ee47a54d14e343e6385, type: 2}
+  - {fileID: 11400000, guid: 51c6a9324d413e244ad0aa6c83869f27, type: 2}
+  - {fileID: 11400000, guid: efcbab91bc0c3b84aae6de3bcd3d266f, type: 2}
+  - {fileID: 11400000, guid: 894fce3b56741b14580c85007ae07f68, type: 2}
+  - {fileID: 11400000, guid: 772a6ecf76ec5e14896697b2c8c8481d, type: 2}
   spawnZone: {fileID: 1120325846}
   card: {fileID: 107266, guid: 4cb743ae18add3b499aa3b3eb65ea1ec, type: 2}
   TextEnemyLeft: {fileID: 2004604104}

@@ -64,9 +64,6 @@ public class CombatManager : MonoBehaviour
                     case Buff.Life:
                         cardInField[i].Life++;
                         break;
-                    case Buff.Purification:
-                        cardInField[i].PurificationOrDarkness++;
-                        break;
                     default:
                         Debug.Log("No buff");
                         break;
@@ -134,7 +131,11 @@ public class CombatManager : MonoBehaviour
     void Purifica (int _cardInField)
     {
         if (Enemy.IsAlive)
-            Enemy.PurificationOrDarkness -= cardInField[_cardInField].PurificationOrDarkness;
+        {
+            if (Enemy.Life == 0)
+                Enemy.IsPurificato = true;
+        }
+
         if (Enemy.IsPurificato)
         {
             Enemy.Data.LifeChange = Enemy.Data.Life;
