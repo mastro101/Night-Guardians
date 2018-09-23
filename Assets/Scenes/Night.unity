@@ -167,6 +167,7 @@ MonoBehaviour:
   TextScarti: {fileID: 1831723918}
   card: {fileID: 107266, guid: 4cb743ae18add3b499aa3b3eb65ea1ec, type: 2}
   scartiViewerObject: {fileID: 1280831855}
+  deckViewerObject: {fileID: 822039233}
 --- !u!114 &143783738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +587,7 @@ MonoBehaviour:
   drawZone: {fileID: 971652997}
   card: {fileID: 107266, guid: 4cb743ae18add3b499aa3b3eb65ea1ec, type: 2}
   deckViewerObject: {fileID: 822039233}
+  scartiViewerObject: {fileID: 1280831855}
   TextCardInDeck: {fileID: 1478604871}
 --- !u!114 &254776999
 MonoBehaviour:

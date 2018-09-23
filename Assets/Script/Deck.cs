@@ -11,7 +11,10 @@ public class Deck : MonoBehaviour {
     GameObject card = null;
     [SerializeField]
     GameObject deckViewerObject;
+    [SerializeField]
+    GameObject scartiViewerObject;
     DeckViewer deckViewer;
+    ScartiViewer scartiViewer;
     
 
     public Text TextCardInDeck;
@@ -36,6 +39,7 @@ public class Deck : MonoBehaviour {
     private void Awake()
     {
         deckViewer = deckViewerObject.GetComponent<DeckViewer>();
+        scartiViewer = scartiViewerObject.GetComponent<ScartiViewer>();
     }
 
     private void Start()
@@ -109,6 +113,11 @@ public class Deck : MonoBehaviour {
     {
         if (!deckViewerObject.activeInHierarchy)
         {
+            if (scartiViewerObject.activeInHierarchy)
+            {
+                scartiViewerObject.SetActive(false);
+                scartiViewer.Close();
+            }
             deckViewerObject.SetActive(true);
             deckViewer.ViewDeck();
         }

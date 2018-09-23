@@ -12,7 +12,10 @@ public class Scarti : MonoBehaviour
     GameObject card = null;
     [SerializeField]
     GameObject scartiViewerObject;
+    [SerializeField]
+    GameObject deckViewerObject;
     ScartiViewer scartiViewer;
+    DeckViewer deckViewer;
 
     int scartedCard;
     public int ScartedCard
@@ -30,6 +33,7 @@ public class Scarti : MonoBehaviour
         deck = FindObjectOfType<Deck>();
         Cards = new CardsData[deck.Cards.Length];
         scartiViewer = scartiViewerObject.GetComponent<ScartiViewer>();
+        deckViewer = deckViewerObject.GetComponent<DeckViewer>();
     }
 
     private void Start()
@@ -72,6 +76,11 @@ public class Scarti : MonoBehaviour
     {
         if (!scartiViewerObject.activeInHierarchy)
         {
+            if (deckViewerObject.activeInHierarchy)
+            {
+                deckViewerObject.SetActive(false);
+                deckViewer.Close();
+            }
             scartiViewerObject.SetActive(true);
             scartiViewer.ViewScarti();
         }
