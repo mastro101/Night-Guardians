@@ -22,7 +22,7 @@ public class ScartiViewer : MonoBehaviour
         {
             card = Instantiate(cardObject, scartiViewerObject.transform);
             card.GetComponent<Card>().Data = scarti.Cards[i];
-            card.transform.SetSiblingIndex(Random.Range(0, i));
+            card.transform.SetSiblingIndex(Random.Range(0, i + 1));
         }
     }
 
