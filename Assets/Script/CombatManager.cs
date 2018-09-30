@@ -138,9 +138,8 @@ public class CombatManager : MonoBehaviour
 
         if (Enemy.IsPurificato)
         {
-            Enemy.Data.LifeChange = Enemy.Data.Life;
+            //Enemy.Data.LifeChange = Enemy.Data.Life;
             scarti.ScartCard(Enemy);
-            Destroy(Enemy.gameObject);
             InCombat = false;
             scartGuardian();
         }
@@ -156,7 +155,6 @@ public class CombatManager : MonoBehaviour
                 if (cardInField[i].IsAlive)
                 {
                     scarti.ScartCard(cardInField[i]);
-                    Destroy(cardInField[i].gameObject);
                 }
             }
         }
@@ -164,14 +162,12 @@ public class CombatManager : MonoBehaviour
         if (Support != null)
         {
             scarti.ScartCard(Support);
-            Destroy(Support.gameObject);
         }
 
         int cardInHand = hand.transform.childCount;
         for (int i = 0; i < cardInHand; i++)
         {
-            scarti.ScartCard(hand.transform.GetChild(i).GetComponent<Card>());
-            Destroy(hand.transform.GetChild(i).gameObject);
+            scarti.ScartCard(hand.transform.GetChild(0).GetComponent<Card>());
         }
         deck.Draw(5);
     }

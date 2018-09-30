@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,7 +38,8 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964128, b: 0.5748176, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 10
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -144,6 +144,7 @@ RectTransform:
   m_Children:
   - {fileID: 968307210}
   - {fileID: 1831723917}
+  - {fileID: 1696217069}
   m_Father: {fileID: 1294952943}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -168,6 +169,7 @@ MonoBehaviour:
   card: {fileID: 107266, guid: 4cb743ae18add3b499aa3b3eb65ea1ec, type: 2}
   scartiViewerObject: {fileID: 1280831855}
   deckViewerObject: {fileID: 822039233}
+  playableCardInScartiTR: {fileID: 1696217069}
 --- !u!114 &143783738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +546,7 @@ RectTransform:
   m_Children:
   - {fileID: 424301695}
   - {fileID: 1478604870}
+  - {fileID: 1562343525}
   m_Father: {fileID: 1294952943}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -565,14 +568,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cards:
   - {fileID: 11400000, guid: 91e7831bf4fa0814cb3beac637365d88, type: 2}
-  - {fileID: 11400000, guid: 6f253b758f47eb242b00d3dc47f60539, type: 2}
+  - {fileID: 11400000, guid: 91e7831bf4fa0814cb3beac637365d88, type: 2}
   - {fileID: 11400000, guid: 7fb8fbf641fa018429e976b553d5dcc0, type: 2}
-  - {fileID: 11400000, guid: cc5dd7a27db56164282bcf251ce9d3ee, type: 2}
+  - {fileID: 11400000, guid: 7fb8fbf641fa018429e976b553d5dcc0, type: 2}
   - {fileID: 11400000, guid: b353c98c14980254095315bab5ea5245, type: 2}
-  - {fileID: 11400000, guid: 65f027bbe669d0540855755d0d2f4abd, type: 2}
+  - {fileID: 11400000, guid: b353c98c14980254095315bab5ea5245, type: 2}
   - {fileID: 11400000, guid: 607cf49a32a60b147b2ec22820fc1df4, type: 2}
-  - {fileID: 11400000, guid: dd313aa585cc75b428b3bb9031205ebb, type: 2}
-  - {fileID: 11400000, guid: 080d502036d95624f834202c38083c80, type: 2}
+  - {fileID: 11400000, guid: 607cf49a32a60b147b2ec22820fc1df4, type: 2}
+  - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
   - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
   - {fileID: 0}
   - {fileID: 0}
@@ -585,9 +588,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   drawZone: {fileID: 971652997}
-  card: {fileID: 107266, guid: 4cb743ae18add3b499aa3b3eb65ea1ec, type: 2}
+  Card: {fileID: 107266, guid: 4cb743ae18add3b499aa3b3eb65ea1ec, type: 2}
   deckViewerObject: {fileID: 822039233}
   scartiViewerObject: {fileID: 1280831855}
+  playableCardInDeckTR: {fileID: 1562343525}
   TextCardInDeck: {fileID: 1478604871}
 --- !u!114 &254776999
 MonoBehaviour:
@@ -1249,54 +1253,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -1468,11 +1487,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NonMorti: {fileID: 21300000, guid: b304c8ce1e455104ea70fb914f01dbd1, type: 3}
-  Orientali: {fileID: 0}
+  Orientali: {fileID: 21300000, guid: 18f8df58b1a358145883279524df2444, type: 3}
   PiratiVeri: {fileID: 21300000, guid: 12c9e85c610568d4a9e795b1c5a59882, type: 3}
-  Marina: {fileID: 0}
-  Voodoo: {fileID: 0}
-  Kraken: {fileID: 0}
+  Marina: {fileID: 21300000, guid: 660b4f5db3fb6854bb8ee2596fdc7e97, type: 3}
+  Voodoo: {fileID: 21300000, guid: a417c293913b2a44fa428a5288bd816f, type: 3}
+  Kraken: {fileID: 21300000, guid: cbfcdb780b929f04db5f3f32687ad2da, type: 3}
 --- !u!1 &822039233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,7 +1526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: -0.0012207}
+  m_AnchoredPosition: {x: 0.5, y: -0.0012207031}
   m_SizeDelta: {x: -1, y: -0.0025024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &822039235
@@ -2276,7 +2295,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39.6
+  m_fontSize: 22.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3267,6 +3286,39 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478604869}
+--- !u!1 &1562343524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1562343525}
+  m_Layer: 5
+  m_Name: Cards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1562343525
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562343524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 254776997}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1690201977
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,6 +3393,39 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1690201977}
+--- !u!1 &1696217068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1696217069}
+  m_Layer: 5
+  m_Name: Cards
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1696217069
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696217068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 143783736}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746337714 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114108303856074610, guid: 37befaefbc687214b83e288075ca4587,

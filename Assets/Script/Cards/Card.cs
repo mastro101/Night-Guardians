@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour {
 
+    public int ID;
     [SerializeField]
     CardsData data;
     public CardsData Data
@@ -121,8 +122,6 @@ public class Card : MonoBehaviour {
     {
         if (transform.parent.GetComponent<DropZone>())
             Zone = transform.parent.GetComponent<DropZone>().Type;
-        if (Type == CardType.Guardian)
-            Life = Data.LifeChange;
     }
 
     void insertData()

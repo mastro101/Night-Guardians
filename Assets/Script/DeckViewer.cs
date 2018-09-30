@@ -19,9 +19,9 @@ public class DeckViewer : MonoBehaviour
     {
         for (int i = 0; i < deck.CardInDeck; i++)
         {
-            card = Instantiate(cardObject, deckViewerObject.transform);
-            card.GetComponent<Card>().Data = deck.Cards[i];
-            card.transform.SetSiblingIndex(Random.Range(0, i));
+            card = Instantiate(deck.playableCardInDeckTR.GetChild(i).gameObject, deckViewerObject.transform);
+            card.transform.SetSiblingIndex(Random.Range(0, i + 1));
+            Destroy(card.GetComponent<Draggable>());
         }
     }
 

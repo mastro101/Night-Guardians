@@ -16,6 +16,7 @@ public class Scarti : MonoBehaviour
     GameObject deckViewerObject;
     ScartiViewer scartiViewer;
     DeckViewer deckViewer;
+    public Transform playableCardInScartiTR;
 
     int scartedCard;
     public int ScartedCard
@@ -44,32 +45,30 @@ public class Scarti : MonoBehaviour
 
     void refillDeck(Deck _deck)
     {
-        if (Cards[0] != null)
+        if (playableCardInScartiTR.childCount > 0)
         {
-            for (int i = 0; i < Cards.Length; i++)
+            if (playableCardInScartiTR.GetChild(0) != null)
             {
-                _deck.Cards[i] = Cards[i];
-                Cards[i] = null;
+                int n = playableCardInScartiTR.childCount;
+                for (int i = 0; i < n; i++)
+                {
+                    playableCardInScartiTR.GetChild(0).SetParent(_deck.playableCardInDeckTR);
+                    _deck.playableCardInDeckTR.GetChild(0).SetSiblingIndex(Random.Range(0, i + 1));
+                }
+                ScartedCard = 0;
+                _deck.SetCardInGameText();
             }
-            ScartedCard = 0;
-            _deck.SetCardInGameText();
-        }
-        else
-            if (_deck.drawZone)
+            else
+                if (_deck.drawZone)
                 FindObjectOfType<EndCondiction>().EndGame(false);
+        }
     }
 
     public void ScartCard(Card _card)
     {
-        for (int i = 0; i < Cards.Length; i++)
-        {
-            if (Cards[i] == null)
-            {
-                Cards[i] = _card.Data;
-                ScartedCard++;
-                break;
-            }
-        }
+        _card.transform.SetParent(playableCardInScartiTR);
+        _card.transform.position = new Vector2(1200, 100);
+        ScartedCard++;
     }
 
     public void ViewCard()

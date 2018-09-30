@@ -20,9 +20,9 @@ public class ScartiViewer : MonoBehaviour
     {
         for (int i = 0; i < scarti.ScartedCard; i++)
         {
-            card = Instantiate(cardObject, scartiViewerObject.transform);
-            card.GetComponent<Card>().Data = scarti.Cards[i];
+            card = Instantiate(scarti.playableCardInScartiTR.GetChild(i).gameObject, scartiViewerObject.transform);
             card.transform.SetSiblingIndex(Random.Range(0, i + 1));
+            Destroy(card.GetComponent<Draggable>());
         }
     }
 

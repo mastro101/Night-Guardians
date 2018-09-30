@@ -15,7 +15,6 @@ public class CardsData : ScriptableObject {
     public string Description;
     public Sprite SpriteImage;
     public AudioClip SoundCreature;
-    [HideInInspector]
     public int LifeChange;
 }
 

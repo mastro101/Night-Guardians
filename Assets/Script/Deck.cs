@@ -8,13 +8,15 @@ public class Deck : MonoBehaviour {
     public CardsData[] Cards;
     public DropZone drawZone;
     [SerializeField]
-    GameObject card = null;
+    GameObject Card = null;
+    GameObject card;
     [SerializeField]
     GameObject deckViewerObject;
     [SerializeField]
     GameObject scartiViewerObject;
     DeckViewer deckViewer;
     ScartiViewer scartiViewer;
+    public Transform playableCardInDeckTR;
     
 
     public Text TextCardInDeck;
@@ -47,17 +49,19 @@ public class Deck : MonoBehaviour {
         foreach(CardsData cardData in Cards)
         {
             if (cardData != null)
+            {
                 cardData.LifeChange = cardData.Life;
+                CardInDeck++;
+            }
         }
 
-        SetCardInGameText();
         ShuffleArray(Cards);
+        CreateCards();
         Draw();
     }
 
     public void ShuffleArray<T>(T[] arr)
-    {
-        
+    {        
         for (int i = CardInDeck - 1; i > 0; i--)
         {
             int r = Random.Range(0, i + 1);
@@ -67,39 +71,62 @@ public class Deck : MonoBehaviour {
         }
     }
 
+    public void CreateCards()
+    {
+        foreach (CardsData cardData in Cards)
+        {
+            if (cardData != null)
+            {
+                card = Instantiate(Card, playableCardInDeckTR);
+                card.GetComponent<Card>().Data = cardData;
+                card.transform.position = new Vector2(-100, -100);
+            }
+            else
+                break;
+        }
+    }
+
     public void Draw(int _for)
     {
-        if (Cards[0] != null)
+        if (playableCardInDeckTR.childCount > 0)
         {
-            for (int i = 0; i < _for; i++)
+            if (playableCardInDeckTR.GetChild(0) != null)
             {
-                if (Cards[0] != null)
+                for (int i = 0; i < _for; i++)
                 {
-                    Instantiate(card, drawZone.transform).GetComponent<Card>().Data = Cards[0];
-                    CardInDeck--;
-                    for (int n = 0; n < Cards.Length; n++)
+                    if (playableCardInDeckTR.GetChild(0) != null)
                     {
-                        // Per Spostare tutte le carte in cima 
-                        if (Cards[n] != null)
+                        playableCardInDeckTR.GetChild(0).SetParent(drawZone.transform);
+                        CardInDeck--;
+                        //for (int n = 0; n < Cards.Length; n++)
+                        //{
+                        //    // Per Spostare tutte le carte in cima 
+                        //    if (Cards[n] != null)
+                        //    {
+                        //        if (n != Cards.Length - 1)
+                        //            Cards[n] = Cards[n + 1];
+                        //        else
+                        //            Cards[n] = null;
+                        //    }
+                        //    else
+                        //        break;
+                        //}
+                    }
+                    else
+                    {
+                        InvockOnEmpty();
+                        if (playableCardInDeckTR.GetChild(0) != null)
                         {
-                            if (n != Cards.Length - 1)
-                                Cards[n] = Cards[n + 1];
-                            else
-                                Cards[n] = null;
+                            _for -= i - 1;
+                            i = 0;
                         }
-                        else
-                            break;
                     }
                 }
-                else
-                {
-                    InvockOnEmpty();
-                    if (Cards[0] != null)
-                    {
-                        _for -= i - 1;
-                        i = 0;
-                    }
-                }
+            }
+            else
+            {
+                InvockOnEmpty();
+                Draw(_for);
             }
         }
         else
@@ -129,11 +156,7 @@ public class Deck : MonoBehaviour {
 
     public void SetCardInGameText()
     {
-        foreach (CardsData cards in Cards)
-        {
-            if (cards != null)
-                CardInDeck++;
-        }
+        CardInDeck = playableCardInDeckTR.childCount;
     }
 
     #region Event
