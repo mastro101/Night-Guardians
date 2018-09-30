@@ -50,7 +50,6 @@ public class Deck : MonoBehaviour {
         {
             if (cardData != null)
             {
-                cardData.LifeChange = cardData.Life;
                 CardInDeck++;
             }
         }
@@ -94,23 +93,35 @@ public class Deck : MonoBehaviour {
             {
                 for (int i = 0; i < _for; i++)
                 {
-                    if (playableCardInDeckTR.GetChild(0) != null)
+                    if (playableCardInDeckTR.childCount > 0)
                     {
-                        playableCardInDeckTR.GetChild(0).SetParent(drawZone.transform);
-                        CardInDeck--;
-                        //for (int n = 0; n < Cards.Length; n++)
-                        //{
-                        //    // Per Spostare tutte le carte in cima 
-                        //    if (Cards[n] != null)
-                        //    {
-                        //        if (n != Cards.Length - 1)
-                        //            Cards[n] = Cards[n + 1];
-                        //        else
-                        //            Cards[n] = null;
-                        //    }
-                        //    else
-                        //        break;
-                        //}
+                        if (playableCardInDeckTR.GetChild(0) != null)
+                        {
+                            playableCardInDeckTR.GetChild(0).SetParent(drawZone.transform);
+                            CardInDeck--;
+                            //for (int n = 0; n < Cards.Length; n++)
+                            //{
+                            //    // Per Spostare tutte le carte in cima 
+                            //    if (Cards[n] != null)
+                            //    {
+                            //        if (n != Cards.Length - 1)
+                            //            Cards[n] = Cards[n + 1];
+                            //        else
+                            //            Cards[n] = null;
+                            //    }
+                            //    else
+                            //        break;
+                            //}
+                        }
+                        else
+                        {
+                            InvockOnEmpty();
+                            if (playableCardInDeckTR.GetChild(0) != null)
+                            {
+                                _for -= i - 1;
+                                i = 0;
+                            }
+                        }
                     }
                     else
                     {
@@ -169,11 +180,6 @@ public class Deck : MonoBehaviour {
 
     #endregion
 
-    private void OnMouseDown()
-    {
-        deckViewerObject.SetActive(true);
-        deckViewer.ViewDeck();
-    }
 }
 
 public class DeckEvent

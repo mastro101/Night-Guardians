@@ -43,7 +43,6 @@ public class Card : MonoBehaviour {
             isAlive = value;
             if (!isAlive)
             {
-                Data.LifeChange = Data.Life;
                 Debug.Log(Data.Name + " is death");
             }
         }

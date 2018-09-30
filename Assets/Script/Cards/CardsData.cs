@@ -15,7 +15,7 @@ public class CardsData : ScriptableObject {
     public string Description;
     public Sprite SpriteImage;
     public AudioClip SoundCreature;
-    public int LifeChange;
+    public CardsData Evolution;
 }
 
 public enum CardType

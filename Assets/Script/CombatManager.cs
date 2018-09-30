@@ -6,7 +6,9 @@ public class CombatManager : MonoBehaviour
     [SerializeField]
     DropZone zoneField = null, zoneEnemy = null, zoneSupport = null, hand = null;
     public Card[] cardInField;
+    [HideInInspector]
     public Card Enemy;
+    [HideInInspector]
     public Card Support;
     Scarti scarti;
     EnemySpawn enemiesSpawn;
@@ -16,6 +18,8 @@ public class CombatManager : MonoBehaviour
     public bool InCombat = false;
     int numberOfCardInField;
     int CardDestroied;
+    [SerializeField]
+    Transform chooseCardsPanel;
 
     private void Awake()
     {
@@ -108,7 +112,6 @@ public class CombatManager : MonoBehaviour
     {
         Enemy.Life -= cardInField[_cardInField].Attack;
         cardInField[_cardInField].Life -= Enemy.Attack;
-        cardInField[_cardInField].Data.LifeChange = cardInField[_cardInField].Life;
         CheckLifeAndDestroy(_cardInField);
     }
 
