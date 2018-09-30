@@ -20,6 +20,7 @@ public class CombatManager : MonoBehaviour
     int CardDestroied;
     [SerializeField]
     Transform chooseCardsPanel;
+    ContenitoreCards contenitoreCards;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class CombatManager : MonoBehaviour
         enemiesSpawn = FindObjectOfType<EnemySpawn>();
         deck = FindObjectOfType<Deck>();
         resources = FindObjectOfType<Resources>();
+        contenitoreCards = FindObjectOfType<ContenitoreCards>();
     }
 
     private void Start()
@@ -148,6 +150,7 @@ public class CombatManager : MonoBehaviour
                     {
                         card = Instantiate(cardInField[i].gameObject, chooseCardsPanel);
                         card.AddComponent<EvolveCard>().OriginalCard = cardInField[i];
+                        Destroy(card.GetComponent<Draggable>());
                     }
                 }
             }
@@ -159,7 +162,26 @@ public class CombatManager : MonoBehaviour
             {
                 card = Instantiate(Support.gameObject, chooseCardsPanel);
                 card.AddComponent<EvolveCard>().OriginalCard = Support;
+                Destroy(card.GetComponent<Draggable>());
             }
+        }
+    }
+
+    void choosePurificatedCard()
+    {
+        chooseCardsPanel.gameObject.SetActive(true);
+        int i;
+        for (int x = 0; x < 3; x++)
+        {
+            do
+            {
+                i = Random.Range(0, contenitoreCards.Cards.Length);
+            }
+            while (contenitoreCards.Cards[i].Grado != Enemy.Grado || contenitoreCards.Cards[i].Fazione != Enemy.Fazione);
+            card = Instantiate(Enemy.gameObject, chooseCardsPanel);
+            card.GetComponent<Card>().Data = contenitoreCards.Cards[i];
+            card.AddComponent<ChoosePurification>().OriginalCard = Enemy;
+            Destroy(card.GetComponent<Draggable>());
         }
     }
 
@@ -174,6 +196,7 @@ public class CombatManager : MonoBehaviour
         if (Enemy.IsPurificato)
         {
             //Enemy.Data.LifeChange = Enemy.Data.Life;
+            choosePurificatedCard();
             scarti.ScartCard(Enemy);
             InCombat = false;
             scartGuardian();

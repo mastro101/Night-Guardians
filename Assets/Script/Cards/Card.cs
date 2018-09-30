@@ -56,14 +56,8 @@ public class Card : MonoBehaviour {
             isPurificato = value;
             if (isPurificato)
             {
-                int i;
-                do
-                {
-                    i = Random.Range(0, contenitoreCards.Cards.Length);
-                }
-                while (contenitoreCards.Cards[i].Grado != Grado || contenitoreCards.Cards[i].Fazione != Fazione);
-                Data = contenitoreCards.Cards[i];
                 combatManager.InCombat = false;
+                Type = CardType.Guardian;
                 Debug.Log(Data.Name + " è stato purificato");
             }
         }
@@ -98,7 +92,6 @@ public class Card : MonoBehaviour {
     public Fazioni Fazione;
 
     FazioniClass fazioniClass;
-    ContenitoreCards contenitoreCards;
 
     [SerializeField]
     GameObject TextAndImageObject = null, nameObject = null, statisticObject = null, attackObject = null, lifeObject = null, descriptionObject = null, fazioneObject = null;
@@ -114,7 +107,6 @@ public class Card : MonoBehaviour {
         soundCreature = FindObjectOfType<AudioSource>();
         combatManager = FindObjectOfType<CombatManager>();
         fazioniClass = FindObjectOfType<FazioniClass>();
-        contenitoreCards = FindObjectOfType<ContenitoreCards>();
     }
 
     private void Start()
