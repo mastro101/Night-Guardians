@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Pirata6
+  m_Name: TestEvolution
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 1
+  Supporto: 0
   Fazione: 2
-  Grado: 1
-  Name: Y
-  Attack: 1
-  Life: 2
-  Description: Tattico
-  SpriteImage: {fileID: 21300000, guid: 88d58c3c342ee344884af7cae8155181, type: 3}
+  Grado: 0
+  Name: Evolution
+  Attack: 4
+  Life: 4
+  Description: OMG i'm an evolution
+  SpriteImage: {fileID: 0}
   SoundCreature: {fileID: 0}
-  Evolution: {fileID: 11400000, guid: 9eebe8c4611229b42b2e16e220a9705a, type: 2}
+  Evolution: {fileID: 0}

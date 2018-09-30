@@ -204,6 +204,12 @@ public class Card : MonoBehaviour {
         }
     }
 
+    public void Evolve()
+    {
+        Debug.Log("What? " + Data.Name + " is evolving!");
+        Data = Data.Evolution;
+    }
+
     public void PlaySound()
     {
         soundCreature.clip = Data.SoundCreature;

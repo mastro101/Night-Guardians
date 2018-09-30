@@ -21,4 +21,4 @@ MonoBehaviour:
   Description: Ubriaco:Schiva il primo colpo
   SpriteImage: {fileID: 21300000, guid: d11b8b664714c64468a040eedfc48809, type: 3}
   SoundCreature: {fileID: 0}
-  LifeChange: 2
+  Evolution: {fileID: 11400000, guid: 9eebe8c4611229b42b2e16e220a9705a, type: 2}

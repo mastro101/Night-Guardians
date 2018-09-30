@@ -125,9 +125,41 @@ public class CombatManager : MonoBehaviour
         if (!Enemy.IsAlive)
         {
             InCombat = false;
+
             scartGuardian();
             Destroy(Enemy.gameObject);
             resources.AddCoin(1);
+            evolveCard();
+        }
+    }
+
+    GameObject card;
+
+    void evolveCard()
+    {
+        chooseCardsPanel.gameObject.SetActive(true);
+        for (int i = 0; i < (zoneField.CardLimit); i++)
+        {
+            if (cardInField[i] != null)
+            {
+                if (cardInField[i].IsAlive)
+                {
+                    if (cardInField[i].Data.Evolution != null)
+                    {
+                        card = Instantiate(cardInField[i].gameObject, chooseCardsPanel);
+                        card.AddComponent<EvolveCard>().OriginalCard = cardInField[i];
+                    }
+                }
+            }
+        }
+
+        if (Support != null)
+        {
+            if (Support.Data.Evolution != null)
+            {
+                card = Instantiate(Support.gameObject, chooseCardsPanel);
+                card.AddComponent<EvolveCard>().OriginalCard = Support;
+            }
         }
     }
 

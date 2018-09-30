@@ -21,4 +21,4 @@ MonoBehaviour:
   Description: 
   SpriteImage: {fileID: 21300000, guid: 7a8252d7fe4f6c1499136139983cbb3f, type: 3}
   SoundCreature: {fileID: 0}
-  LifeChange: 1
+  Evolution: {fileID: 11400000, guid: 9eebe8c4611229b42b2e16e220a9705a, type: 2}
