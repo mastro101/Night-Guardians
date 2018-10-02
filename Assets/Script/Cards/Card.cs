@@ -102,11 +102,14 @@ public class Card : MonoBehaviour {
     [SerializeField]
     TextMeshProUGUI nameText = null, attackText = null, lifeText = null, descriptionText = null;
 
+    Deck deck;
+
     private void Awake()
     {
         soundCreature = FindObjectOfType<AudioSource>();
         combatManager = FindObjectOfType<CombatManager>();
         fazioniClass = FindObjectOfType<FazioniClass>();
+        deck = FindObjectOfType<Deck>();
     }
 
     private void Start()
@@ -206,5 +209,25 @@ public class Card : MonoBehaviour {
     {
         soundCreature.clip = Data.SoundCreature;
         soundCreature.Play();
+    }
+
+    private void OnDestroy()
+    {
+        Deck inDeck = transform.parent.parent.GetComponent<Deck>();
+        Scarti scarti = transform.parent.parent.GetComponent<Scarti>();
+        if (inDeck != null)
+        {
+            inDeck.CardInDeck--;
+        }
+        else if (scarti != null)
+        {
+            scarti.ScartedCard--;
+            return;
+        }
+        else if (transform.parent.GetComponent<DropZone>())
+        {
+            if (transform.parent.GetComponent<DropZone>().Type == DropZoneType.Hand)
+                deck.Draw(1);
+        }
     }
 }

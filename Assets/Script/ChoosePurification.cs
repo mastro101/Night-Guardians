@@ -8,10 +8,17 @@ public class ChoosePurification : MonoBehaviour, IPointerDownHandler
     [HideInInspector]
     public Card OriginalCard;
     Transform parentGO;
+    CloseWindow closeWindow;
+
+    private void Awake()
+    {
+        parentGO = transform.parent;
+        closeWindow = transform.parent.parent.GetChild(1).GetComponent<CloseWindow>();
+    }
 
     private void Start()
     {
-        parentGO = transform.parent;
+        closeWindow.OnClose += destroyOriginalCard;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -21,6 +28,12 @@ public class ChoosePurification : MonoBehaviour, IPointerDownHandler
         {
             Destroy(parentGO.GetChild(i).gameObject);
         }
-        parentGO.gameObject.SetActive(false);
+        parentGO.parent.gameObject.SetActive(false);
+    }
+
+    void destroyOriginalCard()
+    {
+        if (OriginalCard != null)
+            Destroy(OriginalCard.gameObject);
     }
 }

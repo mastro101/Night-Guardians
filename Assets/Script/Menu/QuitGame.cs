@@ -5,16 +5,16 @@ using UnityEngine;
 public class QuitGame : MonoBehaviour {
 
     [SerializeField]
-    GameObject quitMenu;
+    GameObject quitMenuGO;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!quitMenu.activeInHierarchy)
-                quitMenu.SetActive(true);
+            if (!quitMenuGO.activeInHierarchy)
+                quitMenuGO.SetActive(true);
             else
-                quitMenu.SetActive(false);
+                quitMenuGO.SetActive(false);
         }
     }
 
@@ -25,6 +25,6 @@ public class QuitGame : MonoBehaviour {
 
     public void CloseMenu()
     {
-        quitMenu.SetActive(false);
+        quitMenuGO.SetActive(false);
     }
 }

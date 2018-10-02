@@ -139,7 +139,6 @@ public class CombatManager : MonoBehaviour
 
     void evolveCard()
     {
-        chooseCardsPanel.gameObject.SetActive(true);
         for (int i = 0; i < (zoneField.CardLimit); i++)
         {
             if (cardInField[i] != null)
@@ -148,7 +147,9 @@ public class CombatManager : MonoBehaviour
                 {
                     if (cardInField[i].Data.Evolution != null)
                     {
-                        card = Instantiate(cardInField[i].gameObject, chooseCardsPanel);
+                        if (!chooseCardsPanel.gameObject.activeInHierarchy)
+                            chooseCardsPanel.gameObject.SetActive(true);
+                        card = Instantiate(cardInField[i].gameObject, chooseCardsPanel.GetChild(0));
                         card.AddComponent<EvolveCard>().OriginalCard = cardInField[i];
                         Destroy(card.GetComponent<Draggable>());
                     }
@@ -160,7 +161,10 @@ public class CombatManager : MonoBehaviour
         {
             if (Support.Data.Evolution != null)
             {
-                card = Instantiate(Support.gameObject, chooseCardsPanel);
+                if (!chooseCardsPanel.gameObject.activeInHierarchy)
+                    chooseCardsPanel.gameObject.SetActive(true);
+                Support.transform.rotation = Quaternion.Euler(0, 0, 0);
+                card = Instantiate(Support.gameObject, chooseCardsPanel.GetChild(0));
                 card.AddComponent<EvolveCard>().OriginalCard = Support;
                 Destroy(card.GetComponent<Draggable>());
             }
@@ -171,14 +175,25 @@ public class CombatManager : MonoBehaviour
     {
         chooseCardsPanel.gameObject.SetActive(true);
         int i;
-        for (int x = 0; x < 3; x++)
+        int card1 = -1, card2 = -1;
+        int limit;
+        if (Enemy.Grado == 2)
+            limit = 2;
+        else
+            limit = 3;
+        for (int x = 0; x < limit; x++)
         {
             do
             {
                 i = Random.Range(0, contenitoreCards.Cards.Length);
             }
-            while (contenitoreCards.Cards[i].Grado != Enemy.Grado || contenitoreCards.Cards[i].Fazione != Enemy.Fazione);
-            card = Instantiate(Enemy.gameObject, chooseCardsPanel);
+            while (contenitoreCards.Cards[i].Grado != Enemy.Grado || contenitoreCards.Cards[i].Fazione != Enemy.Fazione || (x == 1 && card1 == i) || (x == 2 && card2 == i));
+            if (x == 0)
+                card1 = i;
+            if (x == 1)
+                card2 = i;
+
+            card = Instantiate(Enemy.gameObject, chooseCardsPanel.GetChild(0));
             card.GetComponent<Card>().Data = contenitoreCards.Cards[i];
             card.AddComponent<ChoosePurification>().OriginalCard = Enemy;
             Destroy(card.GetComponent<Draggable>());

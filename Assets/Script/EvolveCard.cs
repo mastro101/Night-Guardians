@@ -26,6 +26,6 @@ public class EvolveCard : MonoBehaviour , IPointerDownHandler
         {
             Destroy(parentGO.GetChild(i).gameObject);
         }
-        parentGO.gameObject.SetActive(false);
+        parentGO.parent.gameObject.SetActive(false);
     }
 }
