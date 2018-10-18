@@ -3,51 +3,55 @@ using System.Collections;
 
 public class PotenzaFazioni : MonoBehaviour
 {
-    public int[] potenzeFazioni = new int[6];
+    private static bool created = false;
+
+    public int[] PotenzeFazioni = new int[6];
+    public Fazioni[] PossibiliFazioniDaIncontrare;
+
 
     public void AddPotenza(Fazioni fazione)
     {
-        potenzeFazioni[(int)fazione] += 10;
+        PotenzeFazioni[(int)fazione] += 10;
     }
 
     public void AddPotenza()
     {
-        foreach (int potenzaFazione in potenzeFazioni)
+        foreach (int potenzaFazione in PotenzeFazioni)
         {
-            potenzeFazioni[potenzaFazione] += 10;
+            PotenzeFazioni[potenzaFazione] += 10;
         }
     }
 
     public void RemovePotenza(Fazioni fazione)
     {
-        potenzeFazioni[(int)fazione] -= 10;
+        PotenzeFazioni[(int)fazione] -= 10;
     }
 
     public void RemovePotenza()
     {
-        foreach (int potenzaFazione in potenzeFazioni)
+        foreach (int potenzaFazione in PotenzeFazioni)
         {
-            potenzeFazioni[potenzaFazione] -= 10;
+            PotenzeFazioni[potenzaFazione] -= 10;
         }
     }
 
     public void ResetPotenza()
     {
-        foreach (int potenzaFazione in potenzeFazioni)
+        foreach (int potenzaFazione in PotenzeFazioni)
         {
-            potenzeFazioni[potenzaFazione] = 100;
+            PotenzeFazioni[potenzaFazione] = 100;
         }
     }
 
     public int GetPotenza(Fazioni fazione)
     {
-        return potenzeFazioni[(int)fazione];
+        return PotenzeFazioni[(int)fazione];
     }
 
     public int GetPotenza()
     {
         int sumPotenze = 0;
-        foreach (int potenzaFazione in potenzeFazioni)
+        foreach (int potenzaFazione in PotenzeFazioni)
         {
             sumPotenze += potenzaFazione;
         }
@@ -56,13 +60,13 @@ public class PotenzaFazioni : MonoBehaviour
 
     public float GetPercentPotenza(Fazioni fazioni)
     {
-        return (100 / 6) * (potenzeFazioni[(int)fazioni] / 100);
+        return (100 / 6) * (PotenzeFazioni[(int)fazioni] / 100);
     }
 
     public float GetPercentPotenza()
     {
         float sumProbability = 0;
-        foreach (int potenzaFazione in potenzeFazioni)
+        foreach (int potenzaFazione in PotenzeFazioni)
         {
             sumProbability += (100 / 6) * (potenzaFazione / 100);
         }
@@ -72,7 +76,7 @@ public class PotenzaFazioni : MonoBehaviour
     public float GetRangePotenza(Fazioni fazioni)
     {
         float range = 0;
-        for (int i = 0; i < potenzeFazioni.Length; i++)
+        for (int i = 0; i < PotenzeFazioni.Length; i++)
         {
             range += GetPercentPotenza((Fazioni)i);
             if (i == (int)fazioni)

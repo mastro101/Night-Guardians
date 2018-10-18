@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour {
 		
         if (Input.anyKey || Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("MapStage1");
         }
 	}
 }

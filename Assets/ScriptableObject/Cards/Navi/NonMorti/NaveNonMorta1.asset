@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: NavePiratiVeri7
+  m_Name: NaveNonMorta1
   m_EditorClassIdentifier: 
   Type: 1
   Supporto: 0
-  Fazione: 2
-  Grado: 2
+  Fazione: 0
+  Grado: 1
   Name: 
-  Attack: 2
-  Life: 6
-  Description: Doppia lama
+  Attack: 1
+  Life: 1
+  Description: 
   SpriteImage: {fileID: 0}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

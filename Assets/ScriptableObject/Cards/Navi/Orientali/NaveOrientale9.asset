@@ -14,11 +14,11 @@ MonoBehaviour:
   Type: 1
   Supporto: 0
   Fazione: 1
-  Grado: 0
+  Grado: 3
   Name: 
   Attack: 4
   Life: 9
   Description: Sabotaggio
   SpriteImage: {fileID: 21300000, guid: 8f3c9c356ad065147a1f051f9537c4b1, type: 3}
   SoundCreature: {fileID: 0}
-  LifeChange: 0
+  Evolution: {fileID: 0}

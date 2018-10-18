@@ -14,11 +14,11 @@ MonoBehaviour:
   Type: 1
   Supporto: 0
   Fazione: 2
-  Grado: 0
+  Grado: 1
   Name: 
   Attack: 2
   Life: 4
   Description: 
   SpriteImage: {fileID: 21300000, guid: cbfcdb780b929f04db5f3f32687ad2da, type: 3}
   SoundCreature: {fileID: 0}
-  LifeChange: 0
+  Evolution: {fileID: 0}
