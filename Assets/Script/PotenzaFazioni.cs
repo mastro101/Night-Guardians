@@ -16,9 +16,9 @@ public class PotenzaFazioni : MonoBehaviour
 
     public void AddPotenza()
     {
-        foreach (int potenzaFazione in PotenzeFazioni)
+        for (int i = 0; i < PotenzeFazioni.Length; i++)
         {
-            PotenzeFazioni[potenzaFazione] += 10;
+            PotenzeFazioni[i] += 10;
         }
     }
 
@@ -29,17 +29,17 @@ public class PotenzaFazioni : MonoBehaviour
 
     public void RemovePotenza()
     {
-        foreach (int potenzaFazione in PotenzeFazioni)
+        for (int i = 0; i < PotenzeFazioni.Length; i++)
         {
-            PotenzeFazioni[potenzaFazione] -= 10;
+            PotenzeFazioni[i] -= 10;
         }
     }
 
     public void ResetPotenza()
     {
-        foreach (int potenzaFazione in PotenzeFazioni)
+        for (int i = 0; i < PotenzeFazioni.Length; i++)
         {
-            PotenzeFazioni[potenzaFazione] = 100;
+            PotenzeFazioni[i] = 100;
         }
     }
 

@@ -2657,7 +2657,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2bbc16a34e886344882cb23331213cfe, type: 2}
   - {fileID: 11400000, guid: 348e8be155f9223409d558b674b79cf0, type: 2}
   - {fileID: 11400000, guid: 9a87a8221f7bb594fa8ab72f6e192b22, type: 2}
-  - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
+  - {fileID: 11400000, guid: ff03c9c9f6c0aa84ba4784e19d515335, type: 2}
+  - {fileID: 11400000, guid: e3b6cff3139571541bd895028991ec1a, type: 2}
+  - {fileID: 11400000, guid: d23054c67e44cba4a83e8274c16c62ea, type: 2}
+  - {fileID: 11400000, guid: a5b4ec1476da9c545a713167a1d91548, type: 2}
+  - {fileID: 11400000, guid: e87b75a073e9a94409133252d66b0312, type: 2}
+  - {fileID: 11400000, guid: cc1c8956a2b5b9f418777632469667a6, type: 2}
+  - {fileID: 11400000, guid: d627ee5d6be2aa94391eab19e5f37710, type: 2}
+  - {fileID: 11400000, guid: 4cb2ef218dcb1e94c96fbe85f770c756, type: 2}
+  - {fileID: 11400000, guid: cf1f51a806156e44b84be94d129bb667, type: 2}
+  - {fileID: 11400000, guid: a436a0be36ce70c48bd899fa7b17ed2b, type: 2}
+  - {fileID: 11400000, guid: f1c9e58fa28c7b64ba2c1263376ea569, type: 2}
+  - {fileID: 11400000, guid: c92edc79e1dd14242a184959948d326f, type: 2}
   EnemyCards:
   - {fileID: 11400000, guid: 6d5f91ed2473e284e9618b5c412b8e3e, type: 2}
   - {fileID: 11400000, guid: 832a24f6b5a3bf5428662f67364e0206, type: 2}
