@@ -22,9 +22,9 @@ public class PotenzaFazioni : MonoBehaviour
         }
     }
 
-    public void RemovePotenza(Fazioni fazione)
+    public void RemovePotenza(Fazioni fazione, int grado)
     {
-        PotenzeFazioni[(int)fazione] -= 10;
+        PotenzeFazioni[(int)fazione] -= 10 * grado;
     }
 
     public void RemovePotenza()

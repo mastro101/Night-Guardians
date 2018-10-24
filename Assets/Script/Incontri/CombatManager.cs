@@ -21,6 +21,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField]
     Transform chooseCardsPanel;
     ContenitoreCards contenitoreCards;
+    PotenzaFazioni potenzaFazioni;
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class CombatManager : MonoBehaviour
         deck = FindObjectOfType<Deck>();
         resources = FindObjectOfType<Resources>();
         contenitoreCards = FindObjectOfType<ContenitoreCards>();
+        potenzaFazioni = FindObjectOfType<PotenzaFazioni>();
     }
 
     private void Start()
@@ -128,6 +130,7 @@ public class CombatManager : MonoBehaviour
         {
             InCombat = false;
 
+            potenzaFazioni.RemovePotenza(Enemy.Fazione, Enemy.Grado);
             scartGuardian();
             Destroy(Enemy.gameObject);
             resources.AddCoin(1);
@@ -210,7 +213,7 @@ public class CombatManager : MonoBehaviour
 
         if (Enemy.IsPurificato)
         {
-            //Enemy.Data.LifeChange = Enemy.Data.Life;
+            potenzaFazioni.RemovePotenza(Enemy.Fazione, Enemy.Grado);
             choosePurificatedCard();
             scarti.ScartCard(Enemy);
             InCombat = false;
@@ -244,4 +247,6 @@ public class CombatManager : MonoBehaviour
         }
         deck.Draw(5);
     }
+
+
 }

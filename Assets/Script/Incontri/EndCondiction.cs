@@ -17,7 +17,10 @@ public class EndCondiction : MonoBehaviour
         {
             endScreen.SetActive(true);
             if (_win)
+            {
+                FindObjectOfType<PotenzaFazioni>().AddPotenza();
                 text.text = "You Win";
+            }
             else
                 text.text = "You Lose";
             end = true;
