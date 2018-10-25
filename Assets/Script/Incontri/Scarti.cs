@@ -67,7 +67,7 @@ public class Scarti : MonoBehaviour
     public void ScartCard(Card _card)
     {
         _card.transform.SetParent(playableCardInScartiTR);
-        _card.transform.position = new Vector2(1200, 100);
+        _card.transform.position = new Vector2(1500, -500);
         ScartedCard++;
     }
 
@@ -80,8 +80,11 @@ public class Scarti : MonoBehaviour
                 deckViewerObject.SetActive(false);
                 deckViewer.Close();
             }
-            scartiViewerObject.SetActive(true);
-            scartiViewer.ViewScarti();
+            if (ScartedCard != 0)
+            {
+                scartiViewerObject.SetActive(true);
+                scartiViewer.ViewScarti();
+            }
         }
         else
         {

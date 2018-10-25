@@ -78,7 +78,7 @@ public class Deck : MonoBehaviour {
             {
                 card = Instantiate(Card, playableCardInDeckTR);
                 card.GetComponent<Card>().Data = cardData;
-                card.transform.position = new Vector2(-100, -100);
+                card.transform.position = new Vector2(-200, -500);
             }
             else
                 break;
@@ -156,8 +156,11 @@ public class Deck : MonoBehaviour {
                 scartiViewerObject.SetActive(false);
                 scartiViewer.Close();
             }
-            deckViewerObject.SetActive(true);
-            deckViewer.ViewDeck();
+            if (CardInDeck != 0)
+            {
+                deckViewerObject.SetActive(true);
+                deckViewer.ViewDeck();
+            }
         }
         else
         {

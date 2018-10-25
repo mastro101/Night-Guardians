@@ -19,7 +19,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
-        if (!combatManager.InCombat && card.Type != CardType.Nightmare)
+        if (!combatManager.InCombat && card.Type != CardType.Nave)
         {
             Debug.Log("OnBeginDrag");
 
@@ -43,7 +43,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 	
 	public void OnDrag(PointerEventData eventData) {
         //Debug.Log ("OnDrag");
-        if (!combatManager.InCombat && card.Type != CardType.Nightmare)
+        if (!combatManager.InCombat && card.Type != CardType.Nave)
         {
             this.transform.position = eventData.position;
 
@@ -71,7 +71,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 	}
 	
 	public void OnEndDrag(PointerEventData eventData) {
-        if (!combatManager.InCombat && card.Type != CardType.Nightmare)
+        if (!combatManager.InCombat && card.Type != CardType.Nave)
         {
             Debug.Log("OnEndDrag");
             this.transform.SetParent(parentToReturnTo);

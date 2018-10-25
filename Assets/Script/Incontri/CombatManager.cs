@@ -100,7 +100,7 @@ public class CombatManager : MonoBehaviour
                 }
             } while (InCombat && CardDestroied < 3);
 
-            if (!Enemy.IsAlive || Enemy.Type == CardType.Guardian)
+            if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
                 enemiesSpawn.SpawnEnemy();
             else if (CardDestroied == 3)
                 FindObjectOfType<EndCondiction>().EndGame(false);

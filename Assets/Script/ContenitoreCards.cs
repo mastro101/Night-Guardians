@@ -39,6 +39,7 @@ public class ContenitoreCards : MonoBehaviour {
     {
         if (enemySpawn != null)
         {
+            enemySpawn.EnemyLeft = 0;
             for (SumGradoEnemy = 0; SumGradoEnemy < levelManager.LevelIncontro;)
             {
                 do

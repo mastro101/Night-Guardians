@@ -14,7 +14,7 @@ public class EnemySpawn : MonoBehaviour
     public Text TextEnemyLeft;
 
     int enemyLeft;
-    int EnemyLeft
+    public int EnemyLeft
     {
         get { return enemyLeft; }
         set
@@ -26,7 +26,6 @@ public class EnemySpawn : MonoBehaviour
 
     private void Start()
     {
-        EnemyLeft = enemies.Length;
         SpawnEnemy();
     }
 
@@ -37,6 +36,7 @@ public class EnemySpawn : MonoBehaviour
             if (enemies[i] == null)
             {
                 enemies[i] = cardsData;
+                EnemyLeft++;
                 break;
             }
         }

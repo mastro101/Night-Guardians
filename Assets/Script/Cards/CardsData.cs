@@ -20,8 +20,8 @@ public class CardsData : ScriptableObject {
 
 public enum CardType
 {
-    Guardian,
-    Nightmare,
+    Pirata,
+    Nave,
 }
 
 public enum Buff

@@ -57,7 +57,7 @@ public class Card : MonoBehaviour {
             if (isPurificato)
             {
                 combatManager.InCombat = false;
-                Type = CardType.Guardian;
+                Type = CardType.Pirata;
                 Debug.Log(Data.Name + " è stato purificato");
             }
         }
@@ -73,7 +73,7 @@ public class Card : MonoBehaviour {
             lifeText.text = life.ToString();
             if (life < Data.Life)
                 lifeText.color = Color.red;
-            if (Type == CardType.Guardian)
+            if (Type == CardType.Pirata)
             {
                 if (life <= 0)
                 {
@@ -154,7 +154,7 @@ public class Card : MonoBehaviour {
                 imageFazione.sprite = fazioniClass.PiratiVeri;
                 break;
         }
-        if (Type == CardType.Guardian)
+        if (Type == CardType.Pirata)
         {
             TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             statisticObject.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -181,7 +181,7 @@ public class Card : MonoBehaviour {
                     break;
             }
         }
-        else if (Type == CardType.Nightmare)
+        else if (Type == CardType.Nave)
         {
             TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 180);
             statisticObject.transform.rotation = Quaternion.Euler(0, 180, 180);
