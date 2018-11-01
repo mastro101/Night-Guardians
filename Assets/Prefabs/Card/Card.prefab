@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
+  m_MinWidth: 110
+  m_MinHeight: 165
   m_PreferredWidth: 110
   m_PreferredHeight: 165
   m_FlexibleWidth: 0
@@ -828,6 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b196c762d26eb90479a7541d77cd2e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   data: {fileID: 11400000, guid: cbbaa85f20739154b821f88d12efff59, type: 2}
   soundCreature: {fileID: 0}
   Zone: 0
