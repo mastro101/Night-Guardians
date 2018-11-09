@@ -91,16 +91,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cards:
-  - {fileID: 11400000, guid: 91e7831bf4fa0814cb3beac637365d88, type: 2}
-  - {fileID: 11400000, guid: 91e7831bf4fa0814cb3beac637365d88, type: 2}
-  - {fileID: 11400000, guid: 7fb8fbf641fa018429e976b553d5dcc0, type: 2}
-  - {fileID: 11400000, guid: 7fb8fbf641fa018429e976b553d5dcc0, type: 2}
-  - {fileID: 11400000, guid: b353c98c14980254095315bab5ea5245, type: 2}
-  - {fileID: 11400000, guid: b353c98c14980254095315bab5ea5245, type: 2}
-  - {fileID: 11400000, guid: 607cf49a32a60b147b2ec22820fc1df4, type: 2}
-  - {fileID: 11400000, guid: 607cf49a32a60b147b2ec22820fc1df4, type: 2}
-  - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
-  - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

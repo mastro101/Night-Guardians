@@ -40,6 +40,7 @@ public class EndCondiction : MonoBehaviour
                 FindObjectOfType<PotenzaFazioni>().AddPotenza();
                 levelManager.LevelMap++;
                 text.text = "You Win";
+                cardsOfDeck.Cards = new CardsData[50];
                 cardsOfDeck.FillDeck(deck.Cards);
                 cardsOfDeck.FillDeck(scarti.Cards);
                 if (!levelManager.FinalLevel)

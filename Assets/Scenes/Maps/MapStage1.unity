@@ -1691,11 +1691,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 575691117}
     m_Modifications:
-    - target: {fileID: 114014703961155420, guid: a9226d6cfc10fed4c9857de5b5d13f82,
-        type: 2}
-      propertyPath: Cards.Array.size
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 224391979646633810, guid: a9226d6cfc10fed4c9857de5b5d13f82,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -2458,6 +2453,36 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d627ee5d6be2aa94391eab19e5f37710, type: 2}
   - {fileID: 11400000, guid: 4cb2ef218dcb1e94c96fbe85f770c756, type: 2}
   - {fileID: 11400000, guid: cf1f51a806156e44b84be94d129bb667, type: 2}
+  - {fileID: 11400000, guid: 65f027bbe669d0540855755d0d2f4abd, type: 2}
+  - {fileID: 11400000, guid: 607cf49a32a60b147b2ec22820fc1df4, type: 2}
+  - {fileID: 11400000, guid: dd313aa585cc75b428b3bb9031205ebb, type: 2}
+  - {fileID: 11400000, guid: 080d502036d95624f834202c38083c80, type: 2}
+  - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
