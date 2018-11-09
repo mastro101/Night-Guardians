@@ -38,13 +38,22 @@ public class SelectLevel : MonoBehaviour {
         switch (SceneManager.GetActiveScene().name)
         {
             case "MapStage1":
-                levelManager.LevelIncontro = Random.Range(3, 6);
+                if (levelManager.LevelMap == 1)
+                    levelManager.LevelIncontro = 3;
+                else
+                    levelManager.LevelIncontro = Random.Range(3, 6);
                 break;
             case "MapStage2":
-                levelManager.LevelIncontro = Random.Range(5, 8);
+                if (levelManager.LevelMap == 1)
+                    levelManager.LevelIncontro = 5;
+                else
+                    levelManager.LevelIncontro = Random.Range(5, 8);
                 break;
             case "MapStage3":
-                levelManager.LevelIncontro = Random.Range(7, 10);
+                if (levelManager.LevelMap == 1)
+                    levelManager.LevelIncontro = 7;
+                else
+                    levelManager.LevelIncontro = Random.Range(7, 10);
                 break;
             default:
                 break;

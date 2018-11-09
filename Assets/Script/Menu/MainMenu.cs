@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
-	void Update () {
-		
-        if (Input.anyKey || Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("MapStage1");
-        }
-	}
+    public void StartButton()
+    {
+        SceneManager.LoadScene("MapStage1");
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
 }

@@ -8,6 +8,12 @@ public class EvolveCard : MonoBehaviour , IPointerDownHandler
     [HideInInspector]
     public Card OriginalCard;
     Transform parentGO;
+    EndCondiction endCondiction;
+
+    private void Awake()
+    {
+        endCondiction = FindObjectOfType<EndCondiction>();
+    }
 
     private void Start()
     {
@@ -26,6 +32,10 @@ public class EvolveCard : MonoBehaviour , IPointerDownHandler
         {
             Destroy(parentGO.GetChild(i).gameObject);
         }
+
+        if (endCondiction.InEnd)
+            endCondiction.EndGame(true);
+
         parentGO.parent.gameObject.SetActive(false);
     }
 }

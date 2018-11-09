@@ -62,7 +62,7 @@ public class EnemySpawn : MonoBehaviour
         else
         {
             Debug.Log("You Win");
-            FindObjectOfType<EndCondiction>().EndGame(true);
+            FindObjectOfType<EndCondiction>().InEnd = true;
         }
     }
 

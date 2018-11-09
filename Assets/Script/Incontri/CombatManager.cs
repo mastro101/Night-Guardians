@@ -22,6 +22,7 @@ public class CombatManager : MonoBehaviour
     Transform chooseCardsPanel;
     ContenitoreCards contenitoreCards;
     PotenzaFazioni potenzaFazioni;
+    EndCondiction endCondiction;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class CombatManager : MonoBehaviour
         resources = FindObjectOfType<Resources>();
         contenitoreCards = FindObjectOfType<ContenitoreCards>();
         potenzaFazioni = FindObjectOfType<PotenzaFazioni>();
+        endCondiction = FindObjectOfType<EndCondiction>();
     }
 
     private void Start()
@@ -102,8 +104,10 @@ public class CombatManager : MonoBehaviour
 
             if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
                 enemiesSpawn.SpawnEnemy();
+            if (endCondiction.InEnd && !endCondiction.Ended && !chooseCardsPanel.gameObject.activeInHierarchy)
+                endCondiction.EndGame(true);
             else if (CardDestroied == 3)
-                FindObjectOfType<EndCondiction>().EndGame(false);
+                endCondiction.EndGame(false);
         }
         else
         {
@@ -245,7 +249,8 @@ public class CombatManager : MonoBehaviour
         {
             scarti.ScartCard(hand.transform.GetChild(0).GetComponent<Card>());
         }
-        deck.Draw(5);
+        if (!endCondiction.InEnd)
+            deck.Draw(5);
     }
 
 

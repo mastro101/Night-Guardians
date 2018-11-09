@@ -16,6 +16,7 @@ public class Deck : MonoBehaviour {
     GameObject scartiViewerObject;
     DeckViewer deckViewer;
     ScartiViewer scartiViewer;
+    CardsOfDeck cardsOfDeck;
     public Transform playableCardInDeckTR;
     
 
@@ -41,11 +42,14 @@ public class Deck : MonoBehaviour {
     private void Awake()
     {
         deckViewer = deckViewerObject.GetComponent<DeckViewer>();
-        scartiViewer = scartiViewerObject.GetComponent<ScartiViewer>();
+        if (scartiViewer)
+            scartiViewer = scartiViewerObject.GetComponent<ScartiViewer>();
+        cardsOfDeck = FindObjectOfType<CardsOfDeck>();
     }
 
     private void Start()
     {
+        FillDeck(cardsOfDeck.Cards);
         foreach(CardsData cardData in Cards)
         {
             if (cardData != null)
@@ -57,6 +61,33 @@ public class Deck : MonoBehaviour {
         ShuffleArray(Cards);
         CreateCards();
         Draw();
+    }
+
+    public void FillDeck(CardsData _card)
+    {
+        for (int i = 0; i < Cards.Length; i++)
+        {
+            if (Cards[i] == null)
+            {
+                Cards[i] = _card;
+                break;
+            }
+        }
+    }
+
+    public void FillDeck(CardsData[] _cards)
+    {
+        int n = 0;
+        for (int i = 0; i < Cards.Length; i++)
+        {
+            if (Cards[i] == null)
+            {
+                Cards[i] = _cards[n];
+                if (_cards[n] == null)
+                    break;
+                n++;
+            }
+        }
     }
 
     public void ShuffleArray<T>(T[] arr)
@@ -87,31 +118,43 @@ public class Deck : MonoBehaviour {
 
     public void Draw(int _for)
     {
-        if (playableCardInDeckTR.childCount > 0)
+        if (drawZone != null)
         {
-            if (playableCardInDeckTR.GetChild(0) != null)
+            if (playableCardInDeckTR.childCount > 0)
             {
-                for (int i = 0; i < _for; i++)
+                if (playableCardInDeckTR.GetChild(0) != null)
                 {
-                    if (playableCardInDeckTR.childCount > 0)
+                    for (int i = 0; i < _for; i++)
                     {
-                        if (playableCardInDeckTR.GetChild(0) != null)
+                        if (playableCardInDeckTR.childCount > 0)
                         {
-                            playableCardInDeckTR.GetChild(0).SetParent(drawZone.transform);
-                            CardInDeck--;
-                            //for (int n = 0; n < Cards.Length; n++)
-                            //{
-                            //    // Per Spostare tutte le carte in cima 
-                            //    if (Cards[n] != null)
-                            //    {
-                            //        if (n != Cards.Length - 1)
-                            //            Cards[n] = Cards[n + 1];
-                            //        else
-                            //            Cards[n] = null;
-                            //    }
-                            //    else
-                            //        break;
-                            //}
+                            if (playableCardInDeckTR.GetChild(0) != null)
+                            {
+                                playableCardInDeckTR.GetChild(0).SetParent(drawZone.transform);
+                                CardInDeck--;
+                                //for (int n = 0; n < Cards.Length; n++)
+                                //{
+                                //    // Per Spostare tutte le carte in cima 
+                                //    if (Cards[n] != null)
+                                //    {
+                                //        if (n != Cards.Length - 1)
+                                //            Cards[n] = Cards[n + 1];
+                                //        else
+                                //            Cards[n] = null;
+                                //    }
+                                //    else
+                                //        break;
+                                //}
+                            }
+                            else
+                            {
+                                InvockOnEmpty();
+                                if (playableCardInDeckTR.GetChild(0) != null)
+                                {
+                                    _for -= i - 1;
+                                    i = 0;
+                                }
+                            }
                         }
                         else
                         {
@@ -123,15 +166,11 @@ public class Deck : MonoBehaviour {
                             }
                         }
                     }
-                    else
-                    {
-                        InvockOnEmpty();
-                        if (playableCardInDeckTR.GetChild(0) != null)
-                        {
-                            _for -= i - 1;
-                            i = 0;
-                        }
-                    }
+                }
+                else
+                {
+                    InvockOnEmpty();
+                    Draw(_for);
                 }
             }
             else
@@ -140,21 +179,19 @@ public class Deck : MonoBehaviour {
                 Draw(_for);
             }
         }
-        else
-        {
-            InvockOnEmpty();
-            Draw(_for);
-        }
     }
 
     public void ViewCard()
     {
         if (!deckViewerObject.activeInHierarchy)
         {
-            if (scartiViewerObject.activeInHierarchy)
+            if (scartiViewer != null)
             {
-                scartiViewerObject.SetActive(false);
-                scartiViewer.Close();
+                if (scartiViewerObject.activeInHierarchy)
+                {
+                    scartiViewerObject.SetActive(false);
+                    scartiViewer.Close();
+                }
             }
             if (CardInDeck != 0)
             {

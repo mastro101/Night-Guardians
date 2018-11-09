@@ -10,26 +10,38 @@ public class EndCondiction : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI text;
     LevelManager levelManager;
-    bool end;
+    [HideInInspector]
+    public bool InEnd;
+    [HideInInspector]
+    public bool Ended;
+    CardsOfDeck cardsOfDeck;
+    Deck deck;
+    Scarti scarti;
+
 
     private void Awake()
     {
         levelManager = FindObjectOfType<LevelManager>();
         Debug.Log(levelManager.MapSceneName);
-        end = false;
+        Ended = false;
+        cardsOfDeck = FindObjectOfType<CardsOfDeck>();
+        deck = FindObjectOfType<Deck>();
+        scarti = FindObjectOfType<Scarti>();
     }
 
     public void EndGame(bool _win)
     {
-        if (!end)
+        if (!Ended)
         {
-            end = true;
+            Ended = true;
             endScreen.SetActive(true);
             if (_win)
             {
                 FindObjectOfType<PotenzaFazioni>().AddPotenza();
                 levelManager.LevelMap++;
                 text.text = "You Win";
+                cardsOfDeck.FillDeck(deck.Cards);
+                cardsOfDeck.FillDeck(scarti.Cards);
                 SceneManager.LoadScene(levelManager.MapSceneName);
             }
             else
@@ -39,7 +51,7 @@ public class EndCondiction : MonoBehaviour
 
     private void Update()
     {
-        if (end)
+        if (Ended)
         {
             if (Input.GetKeyDown(KeyCode.R))
             {

@@ -9,11 +9,13 @@ public class ChoosePurification : MonoBehaviour, IPointerDownHandler
     public Card OriginalCard;
     Transform parentGO;
     CloseWindow closeWindow;
+    EndCondiction endCondiction;
 
     private void Awake()
     {
         parentGO = transform.parent;
         closeWindow = transform.parent.parent.GetChild(1).GetComponent<CloseWindow>();
+        endCondiction = FindObjectOfType<EndCondiction>();
     }
 
     private void Start()
@@ -28,6 +30,10 @@ public class ChoosePurification : MonoBehaviour, IPointerDownHandler
         {
             Destroy(parentGO.GetChild(i).gameObject);
         }
+
+        if (endCondiction.InEnd)
+            endCondiction.EndGame(true);
+
         parentGO.parent.gameObject.SetActive(false);
     }
 
