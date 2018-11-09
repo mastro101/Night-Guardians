@@ -470,6 +470,7 @@ MonoBehaviour:
   LevelIncontro: 0
   LevelMap: 0
   MapSceneName: 
+  FinalLevel: 0
 --- !u!1 &575691113
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopUpLevel: {fileID: 776528578}
+  finalLevel: 0
   LevelMap: 2
   incontri:
   - {fileID: 12017297}
@@ -1110,6 +1112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopUpLevel: {fileID: 776528578}
+  finalLevel: 0
   LevelMap: 4
   incontri:
   - {fileID: 12017297}
@@ -1450,6 +1453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopUpLevel: {fileID: 776528578}
+  finalLevel: 0
   LevelMap: 3
   incontri:
   - {fileID: 12017297}
@@ -1674,6 +1678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopUpLevel: {fileID: 776528578}
+  finalLevel: 0
   LevelMap: 1
   incontri:
   - {fileID: 12017297}
@@ -1969,6 +1974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopUpLevel: {fileID: 776528578}
+  finalLevel: 1
   LevelMap: 6
   incontri:
   - {fileID: 12017297}
@@ -2173,6 +2179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopUpLevel: {fileID: 776528578}
+  finalLevel: 0
   LevelMap: 5
   incontri:
   - {fileID: 12017297}

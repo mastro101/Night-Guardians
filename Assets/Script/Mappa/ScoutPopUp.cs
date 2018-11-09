@@ -6,6 +6,8 @@ public class ScoutPopUp : MonoBehaviour
 {
     [SerializeField]
     GameObject PopUpLevel;
+    [SerializeField]
+    bool finalLevel;
     bool WasOpen;
     [SerializeField]
     int LevelMap;
@@ -34,6 +36,8 @@ public class ScoutPopUp : MonoBehaviour
     {
         if (!WasOpen)
         {
+            if (finalLevel)
+                levelManager.FinalLevel = true;
             WasOpen = true;
             PopUpLevel.SetActive(true);
             for (int i = 0; i < incontri.Length; i++)

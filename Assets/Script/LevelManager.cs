@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     public int LevelIncontro;
     public int LevelMap;
     public string MapSceneName;
+    public bool FinalLevel;
 
     private void Awake()
     {

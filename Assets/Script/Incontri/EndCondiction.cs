@@ -42,7 +42,8 @@ public class EndCondiction : MonoBehaviour
                 text.text = "You Win";
                 cardsOfDeck.FillDeck(deck.Cards);
                 cardsOfDeck.FillDeck(scarti.Cards);
-                SceneManager.LoadScene(levelManager.MapSceneName);
+                if (!levelManager.FinalLevel)
+                    SceneManager.LoadScene(levelManager.MapSceneName);
             }
             else
                 text.text = "You Lose";
