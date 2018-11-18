@@ -18,6 +18,7 @@ MonoBehaviour:
   Name: P
   Attack: 5
   Life: 5
+  Effects: 0a000000
   Description: Tattico
   SpriteImage: {fileID: 21300000, guid: b8e80b27320ec2c4f96718f687772598, type: 3}
   SoundCreature: {fileID: 0}

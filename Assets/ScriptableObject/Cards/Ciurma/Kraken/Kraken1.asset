@@ -18,6 +18,7 @@ MonoBehaviour:
   Name: 
   Attack: 1
   Life: 1
+  Effects: 
   Description: 
   SpriteImage: {fileID: 0}
   SoundCreature: {fileID: 0}

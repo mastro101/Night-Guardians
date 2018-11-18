@@ -18,6 +18,7 @@ MonoBehaviour:
   Name: Y
   Attack: 1
   Life: 2
+  Effects: 0a000000
   Description: Tattico
   SpriteImage: {fileID: 21300000, guid: 88d58c3c342ee344884af7cae8155181, type: 3}
   SoundCreature: {fileID: 0}

@@ -18,6 +18,7 @@ MonoBehaviour:
   Name: W
   Attack: 2
   Life: 3
+  Effects: 10000000
   Description: 
   SpriteImage: {fileID: 21300000, guid: 4ab793feea2101d4da891ce3153ab188, type: 3}
   SoundCreature: {fileID: 0}

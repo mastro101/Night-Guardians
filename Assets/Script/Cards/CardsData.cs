@@ -12,6 +12,7 @@ public class CardsData : ScriptableObject {
     public string Name;
     public int Attack;
     public int Life;
+    public Effect[] Effects;
     public string Description;
     public Sprite SpriteImage;
     public AudioClip SoundCreature;
@@ -38,4 +39,25 @@ public enum Fazioni
     Marina,
     Voodoo,
     Kraken,
+}
+
+public enum Effect
+{
+    Supporto,
+    Letale,
+    Ricomposto,
+    PolvereDaSparo,
+    GiocoSporco,
+    DoppiaLama,
+    Counter,
+    Tattico,
+    Ubriaco,
+    Puzza,
+    Paura,
+    Necromante,
+    Sabotaggio,
+    Rigenera,
+    Esplosivi,
+    Medico,
+    Uova,
 }

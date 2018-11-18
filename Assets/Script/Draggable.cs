@@ -82,6 +82,20 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
             if (dropZone != null)
             {
+                switch (dropZone.Type)
+                {
+                    case DropZoneType.Hand:
+                        card.positionCard = PositionCard.OnHand;
+                        break;
+                    case DropZoneType.Field:
+                        card.positionCard = PositionCard.OnField;
+                        break;
+                    case DropZoneType.Support:
+                        card.positionCard = PositionCard.OnField;
+                        break;
+                    default:
+                        break;
+                }
                 if (dropZone.Type == DropZoneType.Field)
                 {
                     // Suono quando viene messo in campo

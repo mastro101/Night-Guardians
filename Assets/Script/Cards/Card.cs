@@ -43,6 +43,7 @@ public class Card : MonoBehaviour {
             isAlive = value;
             if (!isAlive)
             {
+                invokOnDeath();
                 Debug.Log(Data.Name + " is death");
             }
         }
@@ -87,9 +88,47 @@ public class Card : MonoBehaviour {
             }
         }
     }
-
+    public Effect[] Effects;
     public int Grado;
     public Fazioni Fazione;
+
+    PositionCard _positionCard;
+    public PositionCard positionCard
+    {
+        get { return _positionCard; }
+        set
+        {
+            _positionCard = value;
+            switch (_positionCard)
+            {
+                case PositionCard.OnDeck:
+                    invokOnDeck();
+                    break;
+                case PositionCard.OnHand:
+                    InvokOnHand();
+                    break;
+                case PositionCard.OnField:
+                    InvokOnField();
+                    break;
+                case PositionCard.OnScarti:
+                    InvokeOnScarti();
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    // Position
+    public event CardEvent.CardEventDelegate OnDeck;
+    public event CardEvent.CardEventDelegate OnHand;
+    public event CardEvent.CardEventDelegate OnField;
+    public event CardEvent.CardEventDelegate OnScarti;
+
+    // 
+    public event CardEvent.CardEventDelegate OnDeath;
+
+
 
     FazioniClass fazioniClass;
 
@@ -124,6 +163,12 @@ public class Card : MonoBehaviour {
         Grado = Data.Grado;
         Attack = Data.Attack;
         Life = Data.Life;
+        Effects = new Effect[Data.Effects.Length];
+        for (int i = 0; i < Effects.Length; i++)
+        {
+            Effects[i] = Data.Effects[i];
+            addEffect(i);
+        }
         nameText.text = Data.Name;
         imageCard.sprite = Data.SpriteImage;
         attackText.text = Data.Attack.ToString();
@@ -211,6 +256,83 @@ public class Card : MonoBehaviour {
         soundCreature.Play();
     }
 
+    void addEffect(int i)
+    {
+        switch (Effects[i])
+        {
+            case Effect.Supporto:
+                break;
+            case Effect.Letale:
+                break;
+            case Effect.Ricomposto:
+                break;
+            case Effect.PolvereDaSparo:
+                break;
+            case Effect.GiocoSporco:
+                break;
+            case Effect.DoppiaLama:
+                break;
+            case Effect.Counter:
+                break;
+            case Effect.Tattico:
+                break;
+            case Effect.Ubriaco:
+                break;
+            case Effect.Puzza:
+                break;
+            case Effect.Paura:
+                gameObject.AddComponent<Paura>();
+                break;
+            case Effect.Necromante:
+                break;
+            case Effect.Sabotaggio:
+                break;
+            case Effect.Rigenera:
+                break;
+            case Effect.Esplosivi:
+                break;
+            case Effect.Medico:
+                break;
+            case Effect.Uova:
+                gameObject.AddComponent<Uova>();
+                break;
+            default:
+                break;
+        }
+    }
+
+    #region Event
+
+    void invokOnDeck()
+    {
+        if (OnDeck != null)
+            OnDeck();
+    }
+
+    void invokOnDeath()
+    {
+        if (OnDeath != null)
+            OnDeath();
+    }
+
+    void InvokOnField()
+    {
+        if (OnField != null)
+            OnField();
+    }
+
+    void InvokOnHand()
+    {
+        if (OnHand != null)
+            OnHand();
+    }
+
+    void InvokeOnScarti()
+    {
+        if (OnScarti != null)
+            OnScarti();
+    }
+
     private void OnDestroy()
     {
         Deck inDeck = transform.parent.parent.GetComponent<Deck>();
@@ -230,4 +352,19 @@ public class Card : MonoBehaviour {
                 deck.Draw(1);
         }
     }
+
+    #endregion
+}
+
+public class CardEvent
+{
+    public delegate void CardEventDelegate();
+}
+
+public enum PositionCard
+{
+    OnDeck,
+    OnHand,
+    OnField,
+    OnScarti,
 }

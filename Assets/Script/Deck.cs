@@ -109,6 +109,7 @@ public class Deck : MonoBehaviour {
             {
                 card = Instantiate(Card, playableCardInDeckTR);
                 card.GetComponent<Card>().Data = cardData;
+                card.GetComponent<Card>().positionCard = PositionCard.OnDeck;
                 card.transform.position = new Vector2(-200, -500);
             }
             else

@@ -24,6 +24,8 @@ public class CombatManager : MonoBehaviour
     PotenzaFazioni potenzaFazioni;
     EndCondiction endCondiction;
 
+    public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
+
     private void Awake()
     {
         cardInField = new Card[zoneField.CardLimit];
@@ -52,6 +54,7 @@ public class CombatManager : MonoBehaviour
 
     public void Combat()
     {
+        invokeOnStartFight();
         InCombat = true;
         Debug.Log("MORTAL COMBAAAAAAT");
         if (zoneSupport.transform.childCount != 0)
@@ -253,5 +256,18 @@ public class CombatManager : MonoBehaviour
             deck.Draw(5);
     }
 
+    #region Event
 
+    void invokeOnStartFight()
+    {
+        if (OnStartFight != null)
+            OnStartFight();
+    }
+
+    #endregion
+}
+
+public class CombatManagerEvent
+{
+    public delegate void CombatManagerDelegate();
 }
