@@ -9,19 +9,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: KrakenSoldier1_09
+  m_Name: KrakenSoldier2_09
   m_EditorClassIdentifier: 
   Type: 0
   Supporto: 1
   Fazione: 5
-  Grado: 1
-  Name: KrakenSoldier1_09
-  Attack: 4
-  Life: 4
+  Grado: 2
+  Name: KrakenSoldier2_09
+  Attack: 6
+  Life: 5
   Effects: 
   Description: 'Tentacles: After the first turn, the enemy has -2/-0. \nSupport: Remove
-    all Eggs you own. Create an X/X Kraken Soldier in the first empty slot. X is the
-    number of Eggs removed this way.'
+    all Eggs you own. Create an X/X Kraken Soldier in the first empty slot. X is twice
+    the number of Eggs removed this way.'
   SpriteImage: {fileID: 21300000, guid: 3bcdf476b91de1a4daecf94e8aea934b, type: 3}
   SoundCreature: {fileID: 0}
-  Evolution: {fileID: 11400000, guid: fa3e017c80a9e5d409c14a4acb4eecc9, type: 2}
+  Evolution: {fileID: 11400000, guid: 05c053a92726c46488c02c2afa222bcd, type: 2}

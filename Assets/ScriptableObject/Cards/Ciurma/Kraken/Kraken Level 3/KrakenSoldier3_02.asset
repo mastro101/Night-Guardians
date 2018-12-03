@@ -9,17 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: KrakenSoldier1_06
+  m_Name: KrakenSoldier3_02
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
+  Supporto: 1
   Fazione: 5
-  Grado: 1
-  Name: KrakenSoldier1_06
-  Attack: 2
-  Life: 2
+  Grado: 3
+  Name: KrakenSoldier3_02
+  Attack: 3
+  Life: 4
   Effects: 
-  Description: 'After the first turn, the enemy has -2/-0. '
-  SpriteImage: {fileID: 21300000, guid: 773a878afb403f54b9716cbab8cee434, type: 3}
+  Description: '''+1/+1 for each Egg you own.  \nSupport: At the end of the fight,
+    promote each Egg in combat. \nEggs in combat have +1/+1 and Regenerate.'
+  SpriteImage: {fileID: 21300000, guid: 6c89d41a21361fe4f848ce879f50b436, type: 3}
   SoundCreature: {fileID: 0}
-  Evolution: {fileID: 11400000, guid: dde5bf235a3903a418f9ebcb981685a2, type: 2}
+  Evolution: {fileID: 0}

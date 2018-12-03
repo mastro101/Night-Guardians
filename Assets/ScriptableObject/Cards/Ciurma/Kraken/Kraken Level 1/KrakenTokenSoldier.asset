@@ -14,8 +14,8 @@ MonoBehaviour:
   Type: 0
   Supporto: 0
   Fazione: 5
-  Grado: 0
-  Name: 
+  Grado: 1
+  Name: KrakenTokenSoldier
   Attack: 0
   Life: 0
   Effects: 

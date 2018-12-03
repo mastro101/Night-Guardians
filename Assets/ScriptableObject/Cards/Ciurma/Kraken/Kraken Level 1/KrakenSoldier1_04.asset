@@ -14,12 +14,12 @@ MonoBehaviour:
   Type: 0
   Supporto: 0
   Fazione: 5
-  Grado: 0
-  Name: KrakenSoldier04
+  Grado: 1
+  Name: KrakenSoldier1_04
   Attack: 3
   Life: 2
   Effects: 
   Description: 'Clumsy: attacks once every two turns.'
   SpriteImage: {fileID: 21300000, guid: 33a4b5edef39fd1438bc979ce369761f, type: 3}
   SoundCreature: {fileID: 0}
-  Evolution: {fileID: 0}
+  Evolution: {fileID: 11400000, guid: fd5e554451e1618418d808670d167cb3, type: 2}

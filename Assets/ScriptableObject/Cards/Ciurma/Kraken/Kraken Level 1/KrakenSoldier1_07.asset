@@ -14,13 +14,12 @@ MonoBehaviour:
   Type: 0
   Supporto: 1
   Fazione: 5
-  Grado: 0
-  Name: KrakenSoldier07
+  Grado: 1
+  Name: KrakenSoldier1_07
   Attack: 3
   Life: 5
   Effects: 
-  Description: 'Poison: When hit, it poisons the enemy, dealing 1 damage every time
-    the enemy attacks.'
+  Description: 
   SpriteImage: {fileID: 21300000, guid: f593e73bf2cd0e249aaf11da526c7033, type: 3}
   SoundCreature: {fileID: 0}
-  Evolution: {fileID: 0}
+  Evolution: {fileID: 11400000, guid: cc1eaa2ce19984e46adf6884acd2b1f2, type: 2}

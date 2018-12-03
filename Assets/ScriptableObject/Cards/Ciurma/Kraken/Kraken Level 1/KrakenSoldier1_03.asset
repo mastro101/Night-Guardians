@@ -14,12 +14,12 @@ MonoBehaviour:
   Type: 0
   Supporto: 0
   Fazione: 5
-  Grado: 0
-  Name: KrakenSoldier03
-  Attack: 1
+  Grado: 1
+  Name: KrakenSoldier1_03
+  Attack: 2
   Life: 2
   Effects: 
-  Description: 'Allure: enemies always attack this soldier if they can.'
+  Description: 
   SpriteImage: {fileID: 21300000, guid: 0b72cabe8eab0234cb0e9d97e75f9fd8, type: 3}
   SoundCreature: {fileID: 0}
-  Evolution: {fileID: 0}
+  Evolution: {fileID: 11400000, guid: f0217c3b65a9dfc47917a097505615f7, type: 2}
