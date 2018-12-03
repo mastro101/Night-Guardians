@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
+  m_Name: KrakenSoldier1_09
+  m_EditorClassIdentifier: 
+  Type: 0
+  Supporto: 1
+  Fazione: 5
+  Grado: 0
+  Name: KrakenSoldier09
+  Attack: 4
+  Life: 4
+  Effects: 
+  Description: 'Tentacles: After the first turn, the enemy has -3/-0. \nSupport: Remove
+    all Eggs you own. Create an X/X Kraken Soldier in the first empty slot. X is twice
+    the number of Eggs removed this way.'
+  SpriteImage: {fileID: 21300000, guid: 3bcdf476b91de1a4daecf94e8aea934b, type: 3}
+  SoundCreature: {fileID: 0}
+  Evolution: {fileID: 0}
