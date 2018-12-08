@@ -9,17 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: MarineSoldier1_01
+  m_Name: MarineSoldier1_08
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
-  Fazione: 3
+  Supporto: 1
+  Fazione: 0
   Grado: 1
   Name: 
-  Attack: 3
-  Life: 2
+  Attack: 1
+  Life: 3
   Effects: 
   Description: 
-  SpriteImage: {fileID: 21300000, guid: 94fa543273f9d7f46bd947398fdae0b9, type: 3}
+  SpriteImage: {fileID: 21300000, guid: c155c5430bf3a9c44a42bc54be2bba3e, type: 3}
   SoundCreature: {fileID: 0}
-  Evolution: {fileID: 11400000, guid: 2241dddc08514c14fa66cbf4158fbf53, type: 2}
+  Evolution: {fileID: 11400000, guid: c560741edf1d04d44bbbdd6631639e52, type: 2}
