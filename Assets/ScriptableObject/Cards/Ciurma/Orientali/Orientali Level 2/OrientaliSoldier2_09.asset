@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
+  m_Name: OrientaliSoldier2_09
+  m_EditorClassIdentifier: 
+  Type: 0
+  Supporto: 0
+  Fazione: 1
+  Grado: 2
+  Name: OrientaliSoldier2_09
+  Attack: 4
+  Life: 4
+  Effects: 
+  Description: 'Explosives: Deal 2 damage to the Enemy and 1 damage to a random Soldier
+    at the start of combat. \nSupport: New Year+: Sacrifice the Soldier in slot 1.
+    Deal damage equal to that Soldier''s Attack plus 4 at the start of combat'
+  SpriteImage: {fileID: 21300000, guid: d7c0ac83cd6d3524c95b82776fa65b5d, type: 3}
+  SoundCreature: {fileID: 0}
+  Evolution: {fileID: 11400000, guid: bcfca5169d5edd043889ba46055a56c3, type: 2}
