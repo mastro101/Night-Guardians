@@ -25,6 +25,7 @@ public class CombatManager : MonoBehaviour
     EndCondiction endCondiction;
 
     public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
+    public event CombatManagerEvent.CombatManagerDelegate OnEndFight;
 
     private void Awake()
     {
@@ -115,6 +116,7 @@ public class CombatManager : MonoBehaviour
         else
         {
             InCombat = false;
+            invokeOnEndFight();
             Debug.Log("Non ci sono nemici");
         }
     }
@@ -136,6 +138,8 @@ public class CombatManager : MonoBehaviour
         if (!Enemy.IsAlive)
         {
             InCombat = false;
+            invokeOnEndFight();
+
 
             potenzaFazioni.RemovePotenza(Enemy.Fazione, Enemy.Grado);
             scartGuardian();
@@ -224,6 +228,7 @@ public class CombatManager : MonoBehaviour
             choosePurificatedCard();
             scarti.ScartCard(Enemy);
             InCombat = false;
+            invokeOnEndFight();
             scartGuardian();
         }
     }
@@ -262,6 +267,12 @@ public class CombatManager : MonoBehaviour
     {
         if (OnStartFight != null)
             OnStartFight();
+    }
+
+    void invokeOnEndFight()
+    {
+        if (OnEndFight != null)
+            OnEndFight();
     }
 
     #endregion

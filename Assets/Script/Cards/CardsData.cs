@@ -43,21 +43,7 @@ public enum Fazioni
 
 public enum Effect
 {
-    Supporto,
-    Letale,
-    Ricomposto,
-    PolvereDaSparo,
-    GiocoSporco,
-    DoppiaLama,
-    Counter,
-    Tattico,
-    Ubriaco,
-    Puzza,
-    Paura,
-    Necromante,
-    Sabotaggio,
-    Rigenera,
-    Esplosivi,
-    Medico,
-    Uova,
+    Breed,
+    AttackForEgg,
+    LifeForEgg,
 }

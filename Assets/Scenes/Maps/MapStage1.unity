@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964128, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2442,22 +2442,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cards:
-  - {fileID: 11400000, guid: 91e7831bf4fa0814cb3beac637365d88, type: 2}
-  - {fileID: 11400000, guid: 6f253b758f47eb242b00d3dc47f60539, type: 2}
-  - {fileID: 11400000, guid: 7fb8fbf641fa018429e976b553d5dcc0, type: 2}
-  - {fileID: 11400000, guid: cc5dd7a27db56164282bcf251ce9d3ee, type: 2}
-  - {fileID: 11400000, guid: b353c98c14980254095315bab5ea5245, type: 2}
-  - {fileID: 11400000, guid: a436a0be36ce70c48bd899fa7b17ed2b, type: 2}
-  - {fileID: 11400000, guid: f1c9e58fa28c7b64ba2c1263376ea569, type: 2}
-  - {fileID: 11400000, guid: c92edc79e1dd14242a184959948d326f, type: 2}
-  - {fileID: 11400000, guid: d627ee5d6be2aa94391eab19e5f37710, type: 2}
-  - {fileID: 11400000, guid: 4cb2ef218dcb1e94c96fbe85f770c756, type: 2}
-  - {fileID: 11400000, guid: cf1f51a806156e44b84be94d129bb667, type: 2}
-  - {fileID: 11400000, guid: 65f027bbe669d0540855755d0d2f4abd, type: 2}
-  - {fileID: 11400000, guid: 607cf49a32a60b147b2ec22820fc1df4, type: 2}
-  - {fileID: 11400000, guid: dd313aa585cc75b428b3bb9031205ebb, type: 2}
-  - {fileID: 11400000, guid: 080d502036d95624f834202c38083c80, type: 2}
-  - {fileID: 11400000, guid: 0b2154a90e44c3147a22c131d965fa30, type: 2}
+  - {fileID: 11400000, guid: cb6a5500def14424bb70e32188459b8f, type: 2}
+  - {fileID: 11400000, guid: 59098aa9d885dad46a79b0257f2d17c7, type: 2}
+  - {fileID: 11400000, guid: 06de82d024d1f2745afd616d046aaba2, type: 2}
+  - {fileID: 11400000, guid: cb2d9c5181760434da9fd1c2d420c9ae, type: 2}
+  - {fileID: 11400000, guid: 4b1a7bb10a5756948863ec5cd67c1c41, type: 2}
+  - {fileID: 11400000, guid: f809ca074e6815b4294974b5beba184c, type: 2}
+  - {fileID: 11400000, guid: de8452bb939881742a6cdc8194f55fee, type: 2}
+  - {fileID: 11400000, guid: 7dad405c54bf09647898149485d42d2a, type: 2}
+  - {fileID: 11400000, guid: b302c21ad2c4fde49a1fdc560edf9a62, type: 2}
+  - {fileID: 11400000, guid: e974ff81a57df25438569382697b1fee, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

@@ -28,7 +28,7 @@ public class CardsOfDeck : MonoBehaviour {
             if (Cards[i] == null)
             {
                 Cards[i] = _cards[n];
-                if (_cards[n] == null)
+                if (_cards[n + 1] == null)
                     break;
                 n++;
             }                

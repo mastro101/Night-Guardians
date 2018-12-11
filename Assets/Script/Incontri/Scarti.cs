@@ -68,6 +68,7 @@ public class Scarti : MonoBehaviour
     {
         _card.transform.SetParent(playableCardInScartiTR);
         _card.transform.position = new Vector2(1500, -500);
+        _card.positionCard = PositionCard.OnScarti;
         ScartedCard++;
     }
 

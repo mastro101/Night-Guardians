@@ -21,7 +21,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnBeginDrag(PointerEventData eventData) {
         if (!combatManager.InCombat && card.Type != CardType.Nave)
         {
-            Debug.Log("OnBeginDrag");
 
             placeholder = new GameObject();
             placeholder.transform.SetParent(this.transform.parent);
@@ -73,7 +72,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 	public void OnEndDrag(PointerEventData eventData) {
         if (!combatManager.InCombat && card.Type != CardType.Nave)
         {
-            Debug.Log("OnEndDrag");
             this.transform.SetParent(parentToReturnTo);
             this.transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
             GetComponent<CanvasGroup>().blocksRaycasts = true;
@@ -100,7 +98,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 {
                     // Suono quando viene messo in campo
                     card.PlaySound();
-                    Debug.Log("BlaBlaBla");
                 }
                 if (card.Zone == DropZoneType.Support)
                     card.transform.rotation = Quaternion.Euler(0, 0, 90);

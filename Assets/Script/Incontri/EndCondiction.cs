@@ -22,7 +22,6 @@ public class EndCondiction : MonoBehaviour
     private void Awake()
     {
         levelManager = FindObjectOfType<LevelManager>();
-        Debug.Log(levelManager.MapSceneName);
         Ended = false;
         cardsOfDeck = FindObjectOfType<CardsOfDeck>();
         deck = FindObjectOfType<Deck>();

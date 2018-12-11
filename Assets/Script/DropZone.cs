@@ -42,10 +42,10 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log(eventData.pointerDrag.name + " was dropped on " + gameObject.name);
-
         Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
         Card cardDropped = d.GetComponent<Card>();
+        Debug.Log(cardDropped.Data.Name + " was dropped on " + gameObject.name);
+
         if (d != null && transform.childCount <= CardLimit)
         {
             d.parentToReturnTo = this.transform;

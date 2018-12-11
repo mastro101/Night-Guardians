@@ -67,4 +67,16 @@ public class ContenitoreCards : MonoBehaviour {
             SumGradoEnemy = 0;
         }
     }
+
+    public CardsData FindCard(string _name)
+    {
+        foreach (CardsData card in Cards)
+        {
+            if (card.Name == _name)
+            {
+                return card;
+            }
+        }
+        return null;
+    }
 }

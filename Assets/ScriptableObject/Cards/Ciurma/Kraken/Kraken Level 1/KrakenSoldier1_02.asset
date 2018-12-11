@@ -18,7 +18,7 @@ MonoBehaviour:
   Name: KrakenSoldier1_02
   Attack: 1
   Life: 2
-  Effects: 
+  Effects: 02000000
   Description: +0/+1 for each Egg you own.
   SpriteImage: {fileID: 21300000, guid: 6c89d41a21361fe4f848ce879f50b436, type: 3}
   SoundCreature: {fileID: 0}

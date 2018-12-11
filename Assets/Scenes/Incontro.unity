@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964128, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 21.2
+  m_fontSize: 27.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2406,6 +2406,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a436a0be36ce70c48bd899fa7b17ed2b, type: 2}
   - {fileID: 11400000, guid: f1c9e58fa28c7b64ba2c1263376ea569, type: 2}
   - {fileID: 11400000, guid: c92edc79e1dd14242a184959948d326f, type: 2}
+  - {fileID: 11400000, guid: 9a32c6aabaa385e4baa53e0d75e6652d, type: 2}
   EnemyCards:
   - {fileID: 11400000, guid: 6d5f91ed2473e284e9618b5c412b8e3e, type: 2}
   - {fileID: 11400000, guid: 832a24f6b5a3bf5428662f67364e0206, type: 2}

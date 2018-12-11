@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Card : MonoBehaviour {
@@ -43,6 +44,10 @@ public class Card : MonoBehaviour {
             isAlive = value;
             if (!isAlive)
             {
+                if (Data.Name == "KrakenTokenEgg")
+                {
+                    EggEvent.AddEgg(-1);
+                }
                 invokOnDeath();
                 Debug.Log(Data.Name + " is death");
             }
@@ -111,7 +116,7 @@ public class Card : MonoBehaviour {
                     InvokOnField();
                     break;
                 case PositionCard.OnScarti:
-                    InvokeOnScarti();
+                    InvokeOnScarti(); 
                     break;
                 default:
                     break;
@@ -143,12 +148,15 @@ public class Card : MonoBehaviour {
 
     Deck deck;
 
+    Scene scene;
+
     private void Awake()
     {
         soundCreature = FindObjectOfType<AudioSource>();
         combatManager = FindObjectOfType<CombatManager>();
         fazioniClass = FindObjectOfType<FazioniClass>();
         deck = FindObjectOfType<Deck>();
+        scene = SceneManager.GetActiveScene();
     }
 
     private void Start()
@@ -163,11 +171,15 @@ public class Card : MonoBehaviour {
         Grado = Data.Grado;
         Attack = Data.Attack;
         Life = Data.Life;
-        Effects = new Effect[Data.Effects.Length];
-        for (int i = 0; i < Effects.Length; i++)
+        if (Data.Effects != null)
         {
-            Effects[i] = Data.Effects[i];
-            addEffect(i);
+            Effects = new Effect[Data.Effects.Length];
+
+            for (int i = 0; i < Effects.Length; i++)
+            {
+                Effects[i] = Data.Effects[i];
+                addEffect(i);
+            }
         }
         nameText.text = Data.Name;
         imageCard.sprite = Data.SpriteImage;
@@ -258,46 +270,22 @@ public class Card : MonoBehaviour {
 
     void addEffect(int i)
     {
-        switch (Effects[i])
+        if (scene.name == "Incontro")
         {
-            case Effect.Supporto:
-                break;
-            case Effect.Letale:
-                break;
-            case Effect.Ricomposto:
-                break;
-            case Effect.PolvereDaSparo:
-                break;
-            case Effect.GiocoSporco:
-                break;
-            case Effect.DoppiaLama:
-                break;
-            case Effect.Counter:
-                break;
-            case Effect.Tattico:
-                break;
-            case Effect.Ubriaco:
-                break;
-            case Effect.Puzza:
-                break;
-            case Effect.Paura:
-                gameObject.AddComponent<Paura>();
-                break;
-            case Effect.Necromante:
-                break;
-            case Effect.Sabotaggio:
-                break;
-            case Effect.Rigenera:
-                break;
-            case Effect.Esplosivi:
-                break;
-            case Effect.Medico:
-                break;
-            case Effect.Uova:
-                gameObject.AddComponent<Uova>();
-                break;
-            default:
-                break;
+            switch (Effects[i])
+            {
+                case Effect.Breed:
+                    gameObject.AddComponent<Breed>();
+                    break;
+                case Effect.AttackForEgg:
+                    gameObject.AddComponent<AttackForEgg>();
+                    break;
+                case Effect.LifeForEgg:
+                    gameObject.AddComponent<LifeForEgg>();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
