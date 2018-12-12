@@ -132,6 +132,7 @@ public class Card : MonoBehaviour {
 
     // 
     public event CardEvent.CardEventDelegate OnDeath;
+    public event CardEvent.CardEventDelCombat OnAttack;
 
 
 
@@ -283,10 +284,19 @@ public class Card : MonoBehaviour {
                 case Effect.LifeForEgg:
                     gameObject.AddComponent<LifeForEgg>();
                     break;
+                case Effect.Clumsy:
+                    gameObject.AddComponent<Clumsy>();
+                    break;
                 default:
                     break;
             }
         }
+    }
+
+    public void Fight(Card _enemy)
+    {
+        InvokeOnAttack(_enemy);
+        _enemy.Life -= Attack;
     }
 
     #region Event
@@ -321,6 +331,12 @@ public class Card : MonoBehaviour {
             OnScarti();
     }
 
+    public void InvokeOnAttack(Card _enemy)
+    {
+        if (OnAttack != null)
+            OnAttack(_enemy);
+    }
+
     private void OnDestroy()
     {
         Deck inDeck = transform.parent.parent.GetComponent<Deck>();
@@ -347,6 +363,7 @@ public class Card : MonoBehaviour {
 public class CardEvent
 {
     public delegate void CardEventDelegate();
+    public delegate void CardEventDelCombat(Card _enemy);
 }
 
 public enum PositionCard

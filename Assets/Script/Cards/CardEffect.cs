@@ -19,11 +19,11 @@ public abstract class CardEffect : MonoBehaviour
 
     public virtual void ApplyEffect()
     {
-        UnsubscribeEvent();
+
     }
-    public virtual void ApplyEffect(int value)
+    public virtual void ApplyEffect(Card _card)
     {
-        UnsubscribeEvent();
+
     }
 
     public virtual void SubscribeEvent()

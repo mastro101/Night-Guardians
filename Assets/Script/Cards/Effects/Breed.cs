@@ -21,13 +21,13 @@ public class Breed : CardEffect {
     public override void SubscribeEvent()
     {
         base.SubscribeEvent();
-        card.combatManager.OnEndFight += ApplyEffect;
+        combatManager.OnEndFight += ApplyEffect;
     }
 
     public override void UnsubscribeEvent()
     {
         base.UnsubscribeEvent();
-        card.combatManager.OnEndFight -= ApplyEffect;
+        combatManager.OnEndFight -= ApplyEffect;
     }
 
     public override void ApplyEffect()

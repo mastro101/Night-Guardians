@@ -25,6 +25,7 @@ public class CombatManager : MonoBehaviour
     EndCondiction endCondiction;
 
     public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
+    public event CombatManagerEvent.CombatManagerDelegate OnEndTurn;
     public event CombatManagerEvent.CombatManagerDelegate OnEndFight;
 
     private void Awake()
@@ -57,7 +58,6 @@ public class CombatManager : MonoBehaviour
     {
         invokeOnStartFight();
         InCombat = true;
-        Debug.Log("MORTAL COMBAAAAAAT");
         if (zoneSupport.transform.childCount != 0)
             Support = zoneSupport.transform.GetChild(0).gameObject.GetComponent<Card>();
         Enemy = zoneEnemy.transform.GetChild(0).GetComponent<Card>();
@@ -104,6 +104,7 @@ public class CombatManager : MonoBehaviour
                         }
                     }
                 }
+                invokeOnEndTurn();
             } while (InCombat && CardDestroied < 3);
 
             if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
@@ -123,8 +124,8 @@ public class CombatManager : MonoBehaviour
 
     void Attack(int _cardInField)
     {
-        Enemy.Life -= cardInField[_cardInField].Attack;
-        cardInField[_cardInField].Life -= Enemy.Attack;
+        cardInField[_cardInField].Fight(Enemy);
+        Enemy.Fight(cardInField[_cardInField]);
         CheckLifeAndDestroy(_cardInField);
     }
 
@@ -265,16 +266,32 @@ public class CombatManager : MonoBehaviour
 
     void invokeOnStartFight()
     {
+        Debug.Log("Inizio Combattimento");
         if (OnStartFight != null)
             OnStartFight();
     }
 
-    void invokeOnEndFight()
+    void invokeOnEndTurn()
     {
-        if (OnEndFight != null)
-            OnEndFight();
+        Debug.Log("Fine Turno");
+        if (OnEndTurn != null)
+            OnEndTurn();
     }
 
+    void invokeOnEndFight()
+    {
+        Debug.Log("Fine Combattimento");
+        if (OnEndFight != null)
+            OnEndFight();
+        resetDelegate();
+    }
+
+    void resetDelegate()
+    {
+        OnStartFight = null;
+        OnEndTurn = null;
+        OnEndFight = null;
+    }
     #endregion
 }
 

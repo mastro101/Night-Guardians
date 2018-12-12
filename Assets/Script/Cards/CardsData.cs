@@ -46,4 +46,5 @@ public enum Effect
     Breed,
     AttackForEgg,
     LifeForEgg,
+    Clumsy,
 }
