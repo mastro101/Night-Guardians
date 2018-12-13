@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Incontro.unity
     guid: bf2d6a5c6ee6ecc45ab29692c1242c04
+  - enabled: 1
+    path: Assets/Scenes/Maps/MapStage2.unity
+    guid: 1e1ea845058252348befcfb704076a99
+  - enabled: 1
+    path: Assets/Scenes/Maps/MapStage3.unity
+    guid: 8d9ac96315c0cd9418a0358febc18aad
   m_configObjects: {}

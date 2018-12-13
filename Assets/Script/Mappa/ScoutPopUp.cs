@@ -38,6 +38,8 @@ public class ScoutPopUp : MonoBehaviour
         {
             if (finalLevel)
                 levelManager.FinalLevel = true;
+            else
+                levelManager.FinalLevel = false;
             WasOpen = true;
             PopUpLevel.SetActive(true);
             for (int i = 0; i < incontri.Length; i++)
@@ -53,12 +55,12 @@ public class ScoutPopUp : MonoBehaviour
                         fazione = Fazioni.NonMorti;
                     else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Orientali))
                         fazione = Fazioni.Orientali;
-                    else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.PiratiVeri))
-                        fazione = Fazioni.PiratiVeri;
+                    //else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.PiratiVeri))
+                      //  fazione = Fazioni.PiratiVeri;
                     else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Marina))
                         fazione = Fazioni.Marina;
-                    else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Voodoo))
-                        fazione = Fazioni.Voodoo;
+                    //else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Voodoo))
+                      //  fazione = Fazioni.Voodoo;
                     else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Kraken))
                         fazione = Fazioni.Kraken;
 

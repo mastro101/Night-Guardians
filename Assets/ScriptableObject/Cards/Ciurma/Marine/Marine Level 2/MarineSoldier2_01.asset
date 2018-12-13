@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Supporto: 0
-  Fazione: 0
+  Fazione: 3
   Grado: 2
   Name: 
   Attack: 4
   Life: 3
-  Effects: 
+  Effects: []
   Description: 
   SpriteImage: {fileID: 21300000, guid: 94fa543273f9d7f46bd947398fdae0b9, type: 3}
   SoundCreature: {fileID: 0}

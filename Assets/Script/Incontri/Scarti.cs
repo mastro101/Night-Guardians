@@ -59,8 +59,10 @@ public class Scarti : MonoBehaviour
                 _deck.SetCardInGameText();
             }
             else
+            {
                 if (_deck.drawZone)
-                FindObjectOfType<EndCondiction>().EndGame(false);
+                    FindObjectOfType<EndCondiction>().EndGame(false);
+            }
         }
     }
 

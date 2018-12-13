@@ -265,7 +265,9 @@ public class Card : MonoBehaviour {
     public void Evolve()
     {
         Debug.Log("What? " + Data.Name + " is evolving!");
+        deck.RemoveCard(Data.Name);
         Data = Data.Evolution;
+        deck.FillDeck(Data);
     }
 
     public void PlaySound()

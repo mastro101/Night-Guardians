@@ -10,9 +10,11 @@ public class ChoosePurification : MonoBehaviour, IPointerDownHandler
     Transform parentGO;
     CloseWindow closeWindow;
     EndCondiction endCondiction;
+    Deck deck;
 
     private void Awake()
     {
+        deck = FindObjectOfType<Deck>();
         parentGO = transform.parent;
         closeWindow = transform.parent.parent.GetChild(1).GetComponent<CloseWindow>();
         endCondiction = FindObjectOfType<EndCondiction>();
@@ -26,6 +28,7 @@ public class ChoosePurification : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         OriginalCard.Data = GetComponent<Card>().Data;
+        deck.FillDeck(OriginalCard.Data);
         for (int i = 0; i < parentGO.childCount; i++)
         {
             Destroy(parentGO.GetChild(i).gameObject);

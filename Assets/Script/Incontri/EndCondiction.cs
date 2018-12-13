@@ -17,7 +17,7 @@ public class EndCondiction : MonoBehaviour
     CardsOfDeck cardsOfDeck;
     Deck deck;
     Scarti scarti;
-
+    int map = 1;
 
     private void Awake()
     {
@@ -42,8 +42,24 @@ public class EndCondiction : MonoBehaviour
                 cardsOfDeck.Cards = new CardsData[50];
                 cardsOfDeck.FillDeck(deck.Cards);
                 cardsOfDeck.FillDeck(scarti.Cards);
-                if (!levelManager.FinalLevel)
-                    SceneManager.LoadScene(levelManager.MapSceneName);
+                if (levelManager.FinalLevel)
+                    levelManager.LevelMap = 1;
+                if (levelManager.FinalLevel && levelManager.MapSceneName == "MapStage3")
+                {
+
+                }
+                else
+                {
+                    if (!levelManager.FinalLevel)
+                        SceneManager.LoadScene(levelManager.MapSceneName);
+                    else
+                    {
+                        map++;
+                        levelManager.MapSceneName = "MapStage" + map.ToString();
+                        SceneManager.LoadScene(levelManager.MapSceneName);
+                        levelManager.FinalLevel = false;
+                    }
+                }
             }
             else
                 text.text = "You Lose";
@@ -54,10 +70,9 @@ public class EndCondiction : MonoBehaviour
     {
         if (Ended)
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Scene scene = SceneManager.GetActiveScene();
-                SceneManager.LoadScene(scene.name);
+                SceneManager.LoadScene("MainMenu");
             }
         }
     }

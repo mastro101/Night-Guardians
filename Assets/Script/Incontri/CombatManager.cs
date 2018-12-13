@@ -112,7 +112,7 @@ public class CombatManager : MonoBehaviour
                 enemiesSpawn.SpawnEnemy();
             if (endCondiction.InEnd && !endCondiction.Ended && !chooseCardsPanel.gameObject.activeInHierarchy)
                 endCondiction.EndGame(true);
-            else if (CardDestroied == 3 && Enemy.IsAlive)
+            else if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy)
                 endCondiction.EndGame(false);
         }
         else
@@ -288,6 +288,24 @@ public class CombatManager : MonoBehaviour
     {
         endFight = true;
         Debug.Log("Fine Combattimento");
+        for (int i = 0; i < NumberOfCardInField; i++)
+        {
+            cardInField[i] = zoneField.transform.GetChild(i).gameObject.GetComponent<Card>();
+
+            // Aggiungo il valore del supporto
+            if (Support != null)
+            {
+                switch (Support.Data.Supporto)
+                {
+                    case Buff.Attack:
+                        cardInField[i].Attack--;
+                        break;
+                    default:
+                        Debug.Log("No buff");
+                        break;
+                }
+            }
+        }
         if (OnEndFight != null)
             OnEndFight();
         resetDelegate();

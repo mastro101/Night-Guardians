@@ -13,7 +13,7 @@ public class SelectLevel : MonoBehaviour {
 
     private void Awake()
     {
-        possibiliFazioni = new Fazioni[Random.Range(2, 5)];
+        possibiliFazioni = new Fazioni[Random.Range(2, 4)];
         TextFazioni = transform.GetChild(0).GetComponent<Text>();
         potenzaFazioni = FindObjectOfType<PotenzaFazioni>();
         levelManager = FindObjectOfType<LevelManager>();
