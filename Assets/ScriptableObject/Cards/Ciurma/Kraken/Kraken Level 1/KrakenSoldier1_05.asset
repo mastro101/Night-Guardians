@@ -18,7 +18,9 @@ MonoBehaviour:
   Name: KrakenSoldier1_05
   Attack: 4
   Life: 2
-  Effects: 00000000
+  Effects:
+  - Effect: 0
+    Variable: 1
   Description: 'Breed: At the end of the fight, add 1 Egg to your discard pile. '
   SpriteImage: {fileID: 21300000, guid: 361fbfae858483648a87fa7ac518f02c, type: 3}
   SoundCreature: {fileID: 0}

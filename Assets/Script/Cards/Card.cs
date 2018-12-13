@@ -48,6 +48,7 @@ public class Card : MonoBehaviour {
                 {
                     EggEvent.AddEgg(-1);
                 }
+                deck.RemoveCard(Data.Name);
                 invokOnDeath();
                 Debug.Log(Data.Name + " is death");
             }
@@ -83,17 +84,19 @@ public class Card : MonoBehaviour {
             {
                 if (life <= 0)
                 {
-                    isAlive = false;
+                    IsAlive = false;
                 }
             }
             else
             {
                 if (life < 0)
-                    isAlive = false;
+                    IsAlive = false;
             }
         }
     }
-    public Effect[] Effects;
+    public EffectVariable[] Effects;
+    [HideInInspector]
+    int[] variableEffects;
     public int Grado;
     public Fazioni Fazione;
 
@@ -174,11 +177,13 @@ public class Card : MonoBehaviour {
         Life = Data.Life;
         if (Data.Effects != null)
         {
-            Effects = new Effect[Data.Effects.Length];
+            Effects = new EffectVariable[Data.Effects.Length];
+            variableEffects = new int[Data.Effects.Length];
 
             for (int i = 0; i < Effects.Length; i++)
             {
                 Effects[i] = Data.Effects[i];
+                variableEffects[i] = Effects[i].Variable;
                 addEffect(i);
             }
         }
@@ -273,7 +278,7 @@ public class Card : MonoBehaviour {
     {
         if (scene.name == "Incontro")
         {
-            switch (Effects[i])
+            switch (Effects[i].Effect)
             {
                 case Effect.Breed:
                     gameObject.AddComponent<Breed>();
@@ -287,9 +292,16 @@ public class Card : MonoBehaviour {
                 case Effect.Clumsy:
                     gameObject.AddComponent<Clumsy>();
                     break;
+                case Effect.TentaclesAttack:
+                    gameObject.AddComponent<TentaclesAttack>();
+                    break;
+                case Effect.TentaclesLife:
+                    gameObject.AddComponent<TentaclesLife>();
+                    break;
                 default:
                     break;
             }
+            GetComponent<CardEffect>().Variable = variableEffects[i];
         }
     }
 

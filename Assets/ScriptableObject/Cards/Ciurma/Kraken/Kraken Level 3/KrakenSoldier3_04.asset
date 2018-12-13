@@ -18,7 +18,9 @@ MonoBehaviour:
   Name: KrakenSoldier3_04
   Attack: 6
   Life: 3
-  Effects: 
+  Effects:
+  - Effect: 4
+    Variable: 2
   Description: 'Tentacles: After the first turn, the enemy has -2/-0.  \nSupport:
     Tentacles.'
   SpriteImage: {fileID: 21300000, guid: 33a4b5edef39fd1438bc979ce369761f, type: 3}

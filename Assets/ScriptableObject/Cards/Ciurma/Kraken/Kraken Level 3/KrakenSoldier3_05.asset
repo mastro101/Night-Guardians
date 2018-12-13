@@ -18,7 +18,9 @@ MonoBehaviour:
   Name: KrakenSoldier3_05
   Attack: 5
   Life: 4
-  Effects: 
+  Effects:
+  - Effect: 0
+    Variable: 2
   Description: 'Breed+: At the end of the fight, add 1 Rank 2 Egg to your discard
     pile. \nSupport: for each Egg in combat, draw an additional card at the beginning
     of the next fight.'

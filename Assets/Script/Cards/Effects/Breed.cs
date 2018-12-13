@@ -15,6 +15,7 @@ public class Breed : CardEffect {
         card.OnField += SubscribeEvent;
         card.OnScarti += UnsubscribeEvent;
         card.OnDeath += UnsubscribeEvent;
+        card.OnHand += UnsubscribeEvent;
 
     }
 
@@ -24,20 +25,18 @@ public class Breed : CardEffect {
         combatManager.OnEndFight += ApplyEffect;
     }
 
-    public override void UnsubscribeEvent()
-    {
-        base.UnsubscribeEvent();
-        combatManager.OnEndFight -= ApplyEffect;
-    }
-
     public override void ApplyEffect()
     {
         base.ApplyEffect();
-        newCard = Instantiate(card.gameObject);
-        newCard.GetComponent<Card>().Data = egg;
-        deck.FillDeck(egg);
-        scarti.ScartCard(newCard.GetComponent<Card>()); 
-        EggEvent.AddEgg();
+        for (int i = 0; i < Variable; i++)
+        {
+            newCard = Instantiate(card.gameObject);
+            //egg.Grado = card.Grado;
+            newCard.GetComponent<Card>().Data = egg;
+            deck.FillDeck(egg);
+            scarti.ScartCard(newCard.GetComponent<Card>());
+            EggEvent.AddEgg();
+        }
     }
 }
 

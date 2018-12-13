@@ -18,7 +18,9 @@ MonoBehaviour:
   Name: KrakenSoldier1_04
   Attack: 3
   Life: 2
-  Effects: 
+  Effects:
+  - Effect: 3
+    Variable: 1
   Description: 'Clumsy: attacks once every two turns.'
   SpriteImage: {fileID: 21300000, guid: 33a4b5edef39fd1438bc979ce369761f, type: 3}
   SoundCreature: {fileID: 0}

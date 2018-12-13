@@ -4,7 +4,7 @@ using System.Collections;
 public class CombatManager : MonoBehaviour
 {
     [SerializeField]
-    DropZone zoneField = null, zoneEnemy = null, zoneSupport = null, hand = null;
+    public DropZone zoneField = null, zoneEnemy = null, zoneSupport = null, hand = null;
     public Card[] cardInField;
     [HideInInspector]
     public Card Enemy;
@@ -16,7 +16,7 @@ public class CombatManager : MonoBehaviour
     Resources resources;
     [HideInInspector]
     public bool InCombat = false;
-    int numberOfCardInField;
+    public int NumberOfCardInField;
     int CardDestroied;
     [SerializeField]
     Transform chooseCardsPanel;
@@ -56,14 +56,13 @@ public class CombatManager : MonoBehaviour
 
     public void Combat()
     {
-        invokeOnStartFight();
         InCombat = true;
         if (zoneSupport.transform.childCount != 0)
             Support = zoneSupport.transform.GetChild(0).gameObject.GetComponent<Card>();
         Enemy = zoneEnemy.transform.GetChild(0).GetComponent<Card>();
-        numberOfCardInField = zoneField.transform.childCount;
+        NumberOfCardInField = zoneField.transform.childCount;
         // Prendo i componenti delle carte in campo 
-        for (int i = 0; i < numberOfCardInField; i++)
+        for (int i = 0; i < NumberOfCardInField; i++)
         {
             cardInField[i] = zoneField.transform.GetChild(i).gameObject.GetComponent<Card>();
 
@@ -88,7 +87,9 @@ public class CombatManager : MonoBehaviour
         if (Enemy != null)
         {
             //conta i guardiani in campo
-            CardDestroied = 3 - numberOfCardInField;
+            CardDestroied = 3 - NumberOfCardInField;
+
+            invokeOnStartFight();
 
             do
             {
@@ -104,14 +105,14 @@ public class CombatManager : MonoBehaviour
                         }
                     }
                 }
-                invokeOnEndTurn();
+                invokeOnEndTurn(endFight);
             } while (InCombat && CardDestroied < 3);
 
             if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
                 enemiesSpawn.SpawnEnemy();
             if (endCondiction.InEnd && !endCondiction.Ended && !chooseCardsPanel.gameObject.activeInHierarchy)
                 endCondiction.EndGame(true);
-            else if (CardDestroied == 3)
+            else if (CardDestroied == 3 && Enemy.IsAlive)
                 endCondiction.EndGame(false);
         }
         else
@@ -129,7 +130,7 @@ public class CombatManager : MonoBehaviour
         CheckLifeAndDestroy(_cardInField);
     }
 
-    void CheckLifeAndDestroy(int _cardInField)
+    public void CheckLifeAndDestroy(int _cardInField)
     {        
         if (!cardInField[_cardInField].IsAlive)
         {
@@ -271,15 +272,21 @@ public class CombatManager : MonoBehaviour
             OnStartFight();
     }
 
-    void invokeOnEndTurn()
+    void invokeOnEndTurn(bool isEndCombat)
     {
-        Debug.Log("Fine Turno");
-        if (OnEndTurn != null)
-            OnEndTurn();
+        if (!isEndCombat)
+        {
+            Debug.Log("Fine Turno");
+            if (OnEndTurn != null)
+                OnEndTurn();
+        }
+        endFight = false;
     }
 
+    bool endFight;
     void invokeOnEndFight()
     {
+        endFight = true;
         Debug.Log("Fine Combattimento");
         if (OnEndFight != null)
             OnEndFight();

@@ -18,7 +18,13 @@ MonoBehaviour:
   Name: KrakenSoldier3_08
   Attack: 4
   Life: 4
-  Effects: 
+  Effects:
+  - Effect: 1
+    Variable: 1
+  - Effect: 2
+    Variable: 1
+  - Effect: 0
+    Variable: 2
   Description: '''+1/+1 for each Egg you own. \nBreed+: At the end of the fight, add
     1 Rank 2 Egg to your discard pile. \nSupport: Eggs in combat have +1/+2 and Poison.'
   SpriteImage: {fileID: 21300000, guid: 33a5639f0911e4a49b6882771106bf9d, type: 3}

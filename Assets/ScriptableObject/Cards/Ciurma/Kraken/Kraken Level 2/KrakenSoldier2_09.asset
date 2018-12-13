@@ -18,7 +18,9 @@ MonoBehaviour:
   Name: KrakenSoldier2_09
   Attack: 6
   Life: 5
-  Effects: 
+  Effects:
+  - Effect: 4
+    Variable: 2
   Description: 'Tentacles: After the first turn, the enemy has -2/-0. \nSupport: Remove
     all Eggs you own. Create an X/X Kraken Soldier in the first empty slot. X is twice
     the number of Eggs removed this way.'

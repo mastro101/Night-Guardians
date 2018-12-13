@@ -5,8 +5,13 @@ public class Paura : CardEffect
 {
     private void Start()
     {
-        if (card.positionCard == PositionCard.OnField)
-            combatManager.OnStartFight += ApplyEffect;
+        card.OnField += SubscribeEvent;
+    }
+
+    public override void SubscribeEvent()
+    {
+        base.SubscribeEvent();
+        combatManager.OnStartFight += ApplyEffect;
     }
 
     public override void ApplyEffect()

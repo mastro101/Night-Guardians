@@ -63,6 +63,48 @@ public class Deck : MonoBehaviour {
         Draw();
     }
 
+    public void RemoveCards(string _cardName)
+    {
+        for (int i = 0; i < Cards.Length; i++)
+        {
+            if (Cards[i].Name == _cardName)
+            {
+                do
+                {
+                    for (int n = i; n < Cards.Length; n++)
+                    {
+                        Cards[n] = Cards[n + 1];
+                        if (Cards[n + 1] == null)
+                            break;
+                    }
+                } while (Cards[i].Name == _cardName);
+            }
+
+            if (Cards[i] == null)
+                break;
+        }
+    }
+
+    public void RemoveCard(string _cardName)
+    {
+        for (int i = 0; i < Cards.Length; i++)
+        {
+            if (Cards[i] != null)
+            {
+                if (Cards[i].Name == _cardName)
+                {
+                    Debug.Log(_cardName + "Is dead");
+                    for (int n = i; n < Cards.Length; n++)
+                    {                        
+                        Cards[n] = Cards[n + 1];
+                        if (Cards[n + 1] == null)
+                            break;
+                    }
+                }
+            }
+        }
+    }
+
     public void FillDeck(CardsData _card)
     {
         for (int i = 0; i < Cards.Length; i++)

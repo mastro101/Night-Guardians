@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class CardsData : ScriptableObject {
     public string Name;
     public int Attack;
     public int Life;
-    public Effect[] Effects;
+    public EffectVariable[] Effects;
     public string Description;
     public Sprite SpriteImage;
     public AudioClip SoundCreature;
@@ -47,4 +48,13 @@ public enum Effect
     AttackForEgg,
     LifeForEgg,
     Clumsy,
+    TentaclesAttack,
+    TentaclesLife,
+}
+
+[Serializable]
+public class EffectVariable
+{
+    public Effect Effect;
+    public int Variable;
 }

@@ -8,6 +8,7 @@ public abstract class CardEffect : MonoBehaviour
     protected Deck deck;
     protected Scarti scarti;
     protected CombatManager combatManager;
+    public int Variable;
 
     protected virtual void Awake()
     {

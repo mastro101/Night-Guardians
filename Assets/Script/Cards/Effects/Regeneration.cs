@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Regeneration : CardEffect
 {
+
+
     public override void ApplyEffect()
     {
         if(card.IsAlive)

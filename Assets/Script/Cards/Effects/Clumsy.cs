@@ -8,6 +8,7 @@ public class Clumsy : CardEffect {
     {
         card.OnDeath += ResetAttack;
         card.OnScarti += ResetAttack;
+        card.OnHand += ResetAttack;
         card.OnField += saveOldAttack;
         card.OnAttack += ApplyEffect;
         
@@ -15,13 +16,6 @@ public class Clumsy : CardEffect {
 
     int turn = 1 ;
     int oldAttack;
-
-    public override void UnsubscribeEvent()
-    {
-        base.UnsubscribeEvent();
-        card.Attack = oldAttack;
-
-    }
 
     void saveOldAttack()
     {

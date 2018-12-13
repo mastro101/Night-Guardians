@@ -18,7 +18,9 @@ MonoBehaviour:
   Name: KrakenSoldier2_02
   Attack: 2
   Life: 2
-  Effects: 
+  Effects:
+  - Effect: 2
+    Variable: 1
   Description: '+0/+1 for each Egg you own. \nSupport: At the end of the fight, promote
     each Egg in combat.'
   SpriteImage: {fileID: 21300000, guid: 6c89d41a21361fe4f848ce879f50b436, type: 3}
