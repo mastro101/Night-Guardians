@@ -834,6 +834,7 @@ MonoBehaviour:
   Zone: 0
   combatManager: {fileID: 0}
   Type: 0
+  Effects: []
   Grado: 0
   Fazione: 0
   TextAndImageObject: {fileID: 1723911928709112}
@@ -844,7 +845,7 @@ MonoBehaviour:
   descriptionObject: {fileID: 1426410172709290}
   fazioneObject: {fileID: 147584}
   Covers:
-  - {fileID: 21300000, guid: f1fa3d5ff2b3b354e9d9bad74f12a183, type: 3}
+  - {fileID: 21300000, guid: e0af524bc41122f46a9e3db1cdd1af59, type: 3}
   - {fileID: 21300000, guid: dc30ccbbb36c6cf448218a9ecf19e82a, type: 3}
   imageCard: {fileID: 114464381492377508}
   imageCover: {fileID: 11437358}
