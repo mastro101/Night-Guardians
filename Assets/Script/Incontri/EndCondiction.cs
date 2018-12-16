@@ -26,6 +26,20 @@ public class EndCondiction : MonoBehaviour
         cardsOfDeck = FindObjectOfType<CardsOfDeck>();
         deck = FindObjectOfType<Deck>();
         scarti = FindObjectOfType<Scarti>();
+        switch (levelManager.MapSceneName)
+        {
+            case "MapStage1":
+                map = 1;
+                break;
+            case "MapStage2":
+                map = 2;
+                break;
+            case "MapStage3":
+                map = 3;
+                break;
+            default:
+                break;
+        }
     }
 
     public void EndGame(bool _win)
@@ -46,7 +60,7 @@ public class EndCondiction : MonoBehaviour
                     levelManager.LevelMap = 1;
                 if (levelManager.FinalLevel && levelManager.MapSceneName == "MapStage3")
                 {
-
+                    Debug.Log("Fine");
                 }
                 else
                 {

@@ -11,10 +11,13 @@ public class QuitGame : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!quitMenuGO.activeInHierarchy)
-                quitMenuGO.SetActive(true);
-            else
-                quitMenuGO.SetActive(false);
+            if (quitMenuGO)
+            {
+                if (!quitMenuGO.activeInHierarchy)
+                    quitMenuGO.SetActive(true);
+                else
+                    quitMenuGO.SetActive(false);
+            }
         }
     }
 

@@ -11,6 +11,6 @@ public class AttackForEgg : CardEffect
     public override void ApplyEffect()
     {
         base.ApplyEffect();
-        card.Attack += Variable * EggEvent.EggInDeck;
+        card.Attack = card.Attack + (Variable * EggEvent.EggInDeck);
     }
 }

@@ -11,6 +11,6 @@ public class LifeForEgg : CardEffect
     public override void ApplyEffect()
     {
         base.ApplyEffect();
-        card.Life += Variable * EggEvent.EggInDeck;
+        card.Life = card.Life + (Variable * EggEvent.EggInDeck);
     }
 }
