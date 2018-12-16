@@ -28,6 +28,12 @@ public class QuitGame : MonoBehaviour {
 
     public void CloseMenu()
     {
-        quitMenuGO.SetActive(false);
+        if (quitMenuGO)
+        {
+            if (!quitMenuGO.activeInHierarchy)
+                quitMenuGO.SetActive(true);
+            else
+                quitMenuGO.SetActive(false);
+        }
     }
 }
