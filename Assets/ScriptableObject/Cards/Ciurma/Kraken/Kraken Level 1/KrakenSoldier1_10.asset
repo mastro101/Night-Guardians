@@ -18,8 +18,8 @@ MonoBehaviour:
   Name: KrakenSoldier1_10
   Attack: 8
   Life: 7
-  Effects: 
+  Effects: []
   Description: 'Tough: Immune to damage and debuffs dealt by allies.'
-  SpriteImage: {fileID: 21300000, guid: f91fd6c66dd7abc46b6a01e8e7be9b69, type: 3}
+  SpriteImage: {fileID: 21300000, guid: a427f83c4d29061418bace429ccb861c, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: e266b3b136d2c734a8173d0e5e954359, type: 2}

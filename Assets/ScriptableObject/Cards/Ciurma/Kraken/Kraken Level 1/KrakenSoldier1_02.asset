@@ -22,6 +22,6 @@ MonoBehaviour:
   - Effect: 2
     Variable: 1
   Description: +0/+1 for each Egg you own.
-  SpriteImage: {fileID: 21300000, guid: 6c89d41a21361fe4f848ce879f50b436, type: 3}
+  SpriteImage: {fileID: 21300000, guid: de9980c210100e64e935e7269693152f, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: b4cc73d2445e6a34f9dc1a75e3cef43c, type: 2}

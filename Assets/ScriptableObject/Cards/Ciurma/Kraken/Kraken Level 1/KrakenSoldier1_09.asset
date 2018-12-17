@@ -26,6 +26,6 @@ MonoBehaviour:
   Description: 'Tentacles: After the first turn, the enemy has -2/-0. \nSupport: Remove
     all Eggs you own. Create an X/X Kraken Soldier in the first empty slot. X is the
     number of Eggs removed this way.'
-  SpriteImage: {fileID: 21300000, guid: 3bcdf476b91de1a4daecf94e8aea934b, type: 3}
+  SpriteImage: {fileID: 21300000, guid: f8fa4dd671d018e4db2706e7e8674e69, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: fa3e017c80a9e5d409c14a4acb4eecc9, type: 2}

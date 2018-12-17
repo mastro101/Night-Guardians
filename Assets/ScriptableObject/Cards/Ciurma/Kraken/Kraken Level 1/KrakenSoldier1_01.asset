@@ -22,6 +22,6 @@ MonoBehaviour:
   - Effect: 0
     Variable: 1
   Description: 'Breed: At the end of the fight, add 1 Egg to your discard pile.'
-  SpriteImage: {fileID: 21300000, guid: 17a005fbc66deb548964ecbcf15ae45f, type: 3}
+  SpriteImage: {fileID: 21300000, guid: d190e8f887e3f224da7bda518bcdea10, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 1299cf12e9a8dd14389a0d3a34201b8e, type: 2}

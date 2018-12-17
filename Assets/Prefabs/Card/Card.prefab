@@ -846,7 +846,7 @@ MonoBehaviour:
   fazioneObject: {fileID: 147584}
   Covers:
   - {fileID: 21300000, guid: e0af524bc41122f46a9e3db1cdd1af59, type: 3}
-  - {fileID: 21300000, guid: dc30ccbbb36c6cf448218a9ecf19e82a, type: 3}
+  - {fileID: 21300000, guid: f4c0cb90ee8057948bd4a28700b2cb2f, type: 3}
   imageCard: {fileID: 114464381492377508}
   imageCover: {fileID: 11437358}
   imageFazione: {fileID: 11448988}
