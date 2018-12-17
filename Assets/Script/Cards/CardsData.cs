@@ -40,6 +40,7 @@ public enum Fazioni
     Marina,
     Voodoo,
     Kraken,
+    Starter,
 }
 
 public enum Effect
