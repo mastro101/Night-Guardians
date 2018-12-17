@@ -59,6 +59,8 @@ public class CombatManager : MonoBehaviour
         InCombat = true;
         if (zoneSupport.transform.childCount != 0)
             Support = zoneSupport.transform.GetChild(0).gameObject.GetComponent<Card>();
+        else
+            Support = null;
         Enemy = zoneEnemy.transform.GetChild(0).GetComponent<Card>();
         NumberOfCardInField = zoneField.transform.childCount;
         // Prendo i componenti delle carte in campo 
@@ -171,7 +173,7 @@ public class CombatManager : MonoBehaviour
                     }
                 }
             }
-        }
+        } 
 
         if (Support != null)
         {
