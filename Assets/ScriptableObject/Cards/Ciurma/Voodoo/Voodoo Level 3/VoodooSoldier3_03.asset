@@ -9,16 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
-  m_Name: Voodoo2
+  m_Name: VoodooSoldier3_03
   m_EditorClassIdentifier: 
   Type: 0
   Supporto: 0
   Fazione: 4
-  Grado: 2
-  Name: 
-  Attack: 2
-  Life: 2
-  Description: 
+  Grado: 3
+  Name: VoodooSoldier3_03
+  Attack: 5
+  Life: 4
+  Effects: []
+  Description: 'Trample: If this Soldier damages the Enemy, it loses all abilities
+    for the next two attacks.'
   SpriteImage: {fileID: 0}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}
