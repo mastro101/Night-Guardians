@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Don_tDestroyOnLoad : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class Don_tDestroyOnLoad : MonoBehaviour
 
     void Awake()
     {
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+            Destroy(this.gameObject);
+
         if (created)
             Destroy(this);
         if (!created)

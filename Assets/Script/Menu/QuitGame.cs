@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuitGame : MonoBehaviour {
 
@@ -35,5 +36,10 @@ public class QuitGame : MonoBehaviour {
             else
                 quitMenuGO.SetActive(false);
         }
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

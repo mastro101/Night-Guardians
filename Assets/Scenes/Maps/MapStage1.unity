@@ -304,7 +304,7 @@ Prefab:
     - target: {fileID: 224523483674084860, guid: d7c4bbbb4e698b741a0d2fd8a21aba61,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 1.4880066
+      value: 1.4880371
       objectReference: {fileID: 0}
     - target: {fileID: 224523483674084860, guid: d7c4bbbb4e698b741a0d2fd8a21aba61,
         type: 2}
@@ -1391,7 +1391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7758084, y: 0.033215433}
   m_AnchorMax: {x: 0.98700005, y: 0.30582318}
-  m_AnchoredPosition: {x: 0.5, y: 0.22000122}
+  m_AnchoredPosition: {x: 0.5, y: 0.2199707}
   m_SizeDelta: {x: -0.52001953, y: -0.83000183}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1183030617
@@ -2913,7 +2913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
