@@ -18,8 +18,8 @@ MonoBehaviour:
   Name: 
   Attack: 5
   Life: 4
-  Effects: 
+  Effects: []
   Description: 
-  SpriteImage: {fileID: 21300000, guid: aa8cbd1c1ccfc6f4f9d8de4b0cef3d41, type: 3}
+  SpriteImage: {fileID: 21300000, guid: ce5c408936f9bdf488f80af117bcf4ae, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}
