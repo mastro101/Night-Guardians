@@ -13,19 +13,175 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114477972653253298}
-  - {fileID: 114888270035068580}
-  - {fileID: 114430571852522834}
-  - {fileID: 114316712162185468}
+  - {fileID: 114071817032596146}
+  - {fileID: 114167964440506224}
+  - {fileID: 114472946942235272}
+  - {fileID: 114671441843135432}
   EditorEvents:
-  - {fileID: 114525206124297046}
-  - {fileID: 114477639518925788}
+  - {fileID: 114139636389243048}
+  - {fileID: 114133057264089150}
+  - {fileID: 114447218113904590}
+  - {fileID: 114454643159692490}
+  - {fileID: 114469417398182370}
+  - {fileID: 114685744217385186}
+  - {fileID: 114009452201534572}
+  - {fileID: 114249542880345632}
+  - {fileID: 114994400533622388}
+  - {fileID: 114093882330587138}
+  - {fileID: 114773104375364094}
   MasterBanks:
   - {fileID: 114479272717011818}
   - {fileID: 114316712162185468}
   StringsBanks:
   - {fileID: 114477972653253298}
-  stringsBankWriteTime: 636824199607752596
+  stringsBankWriteTime: 636829200343990279
   cacheVersion: 3
+--- !u!114 &114009452201534572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Map/Map_Deck_Click
+  guid: 44f0c02e891f714e906653e3cdf0d509
+  Banks:
+  - {fileID: 114472946942235272}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 344
+--- !u!114 &114071817032596146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Github\Night Guardians\Assets\Soundbanks\Desktop\Main Menu.bank
+  lastModified: 636829200345022868
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2346080
+  Exists: 1
+--- !u!114 &114093882330587138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Map/Map_Menu_Hover
+  guid: a5c16c434d9fb54e991f9e38a2a63b93
+  Banks:
+  - {fileID: 114472946942235272}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114133057264089150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Main_Menu/MM_Menu_Hover
+  guid: 4dfd72f8e12ed94988555e6ad1c17d7d
+  Banks:
+  - {fileID: 114071817032596146}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 39
+--- !u!114 &114139636389243048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Temp/Seagull OneShot
+  guid: 40f9a7c81b20b643960d8d2616370320
+  Banks:
+  - {fileID: 114071817032596146}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 74
+--- !u!114 &114167964440506224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Github\Night Guardians\Assets\Soundbanks\Desktop\Incontro.bank
+  lastModified: 636829200344030265
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 450
+  Exists: 1
+--- !u!114 &114249542880345632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Map/Tavern Ambience
+  guid: 60d16d530e7b3a4fbf40d4d51a607e81
+  Banks:
+  - {fileID: 114472946942235272}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 73000
 --- !u!114 &114316712162185468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,7 +200,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 13290
-  Exists: 1
+  Exists: 0
 --- !u!114 &114430571852522834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +218,90 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 450
+  Exists: 0
+--- !u!114 &114447218113904590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Main_Menu/MM_Menu_Click
+  guid: b6d5a7ebce103041a23ba80ede67b963
+  Banks:
+  - {fileID: 114071817032596146}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 56
+--- !u!114 &114454643159692490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Main_Menu/MM_Incontro_Click
+  guid: cbdd050c07a34741a9aeaf65aaf96cd1
+  Banks:
+  - {fileID: 114071817032596146}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 457
+--- !u!114 &114469417398182370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Main_Menu/Ross Bugden Theme
+  guid: f78a99b7ec97584b83767f7ae0900a1a
+  Banks:
+  - {fileID: 114071817032596146}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 167000
+--- !u!114 &114472946942235272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Github\Night Guardians\Assets\Soundbanks\Desktop\Map.bank
+  lastModified: 636829200346867323
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 3717408
   Exists: 1
 --- !u!114 &114477639518925788
 MonoBehaviour:
@@ -76,8 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/Ross Bugden Theme
   guid: f78a99b7ec97584b83767f7ae0900a1a
-  Banks:
-  - {fileID: 114888270035068580}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -97,11 +336,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Soundbanks\Desktop\Master Bank.strings.bank
-  lastModified: 636824199607752596
+  lastModified: 636829200343990279
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1192
+    Value: 1762
   Exists: 1
 --- !u!114 &114479272717011818
 MonoBehaviour:
@@ -134,8 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/UI/Main Menu/Seagull OneShot
   guid: 40f9a7c81b20b643960d8d2616370320
-  Banks:
-  - {fileID: 114888270035068580}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -143,6 +381,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 74
+--- !u!114 &114671441843135432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Github\Night Guardians\Assets\Soundbanks\Desktop\Master Bank.bank
+  lastModified: 636829200343950406
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 13424
+  Exists: 1
+--- !u!114 &114685744217385186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Map/Map_Incontro_Hover
+  guid: 23d1fc1762f4e44fb8940662be0c40bc
+  Banks:
+  - {fileID: 114472946942235272}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 90
 --- !u!114 &114741922479418280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +439,28 @@ MonoBehaviour:
   - Name: 
     Value: 3694624
   Exists: 1
+--- !u!114 &114773104375364094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Map/Map_Incontro_Click
+  guid: e125a1938082044b8aa7fbe07dcb64b2
+  Banks:
+  - {fileID: 114472946942235272}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 233
 --- !u!114 &114888270035068580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +479,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 3694624
-  Exists: 1
+  Exists: 0
 --- !u!114 &114946355866516186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +498,25 @@ MonoBehaviour:
   - Name: 
     Value: 450
   Exists: 1
+--- !u!114 &114994400533622388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Map/Map_Menu_Click
+  guid: 95af82cd048d404db6a378163dcb9cb4
+  Banks:
+  - {fileID: 114472946942235272}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
