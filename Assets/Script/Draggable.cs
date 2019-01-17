@@ -7,6 +7,9 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 	
 	public Transform parentToReturnTo = null;
 	public Transform placeholderParent = null;
+	public GameObject OutlinePointer = null;
+
+	[Range(0.5f,3)] public float ScaleMultiplier = 2;
 
     CombatManager combatManager;
     Card card = null;
@@ -37,6 +40,9 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             this.transform.SetParent(this.transform.parent.parent);
 
             GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+			transform.localScale = transform.localScale * ScaleMultiplier;
+			OutlinePointer.SetActive(true);
         }
 	}
 	
@@ -106,7 +112,10 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             }
 
             Destroy(placeholder);
-        }
+
+			transform.localScale = transform.localScale / ScaleMultiplier;
+			OutlinePointer.SetActive(false);
+		}
 	}
 	
 	
