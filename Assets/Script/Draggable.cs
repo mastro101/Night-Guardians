@@ -8,11 +8,13 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 	public Transform parentToReturnTo = null;
 	public Transform placeholderParent = null;
 	public GameObject OutlinePointer = null;
-	//private Image cardImage = null;
 
-	[Range(0.5f,3)] public float ScaleMultiplier = 2;
+	[Range(0.5f, 5)] public float ScaleValueOnHand = 1;
+	[Range(0.5f, 5)] public float ScaleValueOnDrag = 2.5f;
+	[Range(0.5f, 5)] public float ScaleValueOnField = 2;
 
-    CombatManager combatManager;
+
+	CombatManager combatManager;
     Card card = null;
 	GameObject placeholder = null;
 
@@ -20,8 +22,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         combatManager = FindObjectOfType<CombatManager>();
         card = GetComponent<Card>();
-		//cardImage = card.imageCover;
-    }
+		//card.positionCard = PositionCard.OnHand;
+	}
 
     public void OnBeginDrag(PointerEventData eventData) {
         if (!combatManager.InCombat && card.Type != CardType.Nave)
@@ -43,7 +45,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
             GetComponent<CanvasGroup>().blocksRaycasts = false;
 
-			transform.localScale = transform.localScale * ScaleMultiplier;
+			transform.localScale = new Vector2(ScaleValueOnDrag, ScaleValueOnDrag);
 			card.imageCard.sprite = card.Data.SpriteImageOnField;
 			OutlinePointer.SetActive(true);
         }
@@ -94,13 +96,16 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                     case DropZoneType.Hand:
 						card.imageCard.sprite = card.Data.SpriteImageHand;
 						card.positionCard = PositionCard.OnHand;
-                        break;
+						transform.localScale = new Vector2(ScaleValueOnHand, ScaleValueOnHand);
+						break;
                     case DropZoneType.Field:
                         card.positionCard = PositionCard.OnField;
-                        break;
+						transform.localScale = new Vector2(ScaleValueOnField, ScaleValueOnField);
+						break;
                     case DropZoneType.Support:
                         card.positionCard = PositionCard.OnField;
-                        break;
+						transform.localScale = new Vector2(ScaleValueOnField, ScaleValueOnField);
+						break;
                     default:
                         break;
                 }
@@ -117,7 +122,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
             Destroy(placeholder);
 
-			transform.localScale = transform.localScale / ScaleMultiplier;
 			OutlinePointer.SetActive(false);
 		}
 	}
