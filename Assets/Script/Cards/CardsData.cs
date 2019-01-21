@@ -15,8 +15,9 @@ public class CardsData : ScriptableObject {
     public int Life;
     public EffectVariable[] Effects;
     public string Description;
-    public Sprite SpriteImage;
-    public AudioClip SoundCreature;
+    public Sprite SpriteImageHand;
+	public Sprite SpriteImageOnField;
+	public AudioClip SoundCreature;
     public CardsData Evolution;
 }
 

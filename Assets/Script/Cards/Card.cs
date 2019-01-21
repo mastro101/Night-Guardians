@@ -145,8 +145,7 @@ public class Card : MonoBehaviour {
     GameObject TextAndImageObject = null, nameObject = null, statisticObject = null, attackObject = null, lifeObject = null, descriptionObject = null, fazioneObject = null;
     [SerializeField]
     Sprite[] Covers = null;
-    [SerializeField]
-    Image imageCard = null, imageCover = null, imageFazione = null;
+    public Image imageCard = null, imageCover = null, imageFazione = null;
     [SerializeField]
     TextMeshProUGUI nameText = null, attackText = null, lifeText = null, descriptionText = null;
 
@@ -188,7 +187,7 @@ public class Card : MonoBehaviour {
             }
         }
         nameText.text = Data.Name;
-        imageCard.sprite = Data.SpriteImage;
+        imageCard.sprite = Data.SpriteImageHand;
         attackText.text = Data.Attack.ToString();
         lifeText.text = Data.Life.ToString();
         descriptionText.text = Data.Description;

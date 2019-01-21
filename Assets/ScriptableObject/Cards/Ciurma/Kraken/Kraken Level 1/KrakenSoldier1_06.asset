@@ -22,6 +22,7 @@ MonoBehaviour:
   - Effect: 4
     Variable: 2
   Description: 'After the first turn, the enemy has -2/-0. '
-  SpriteImage: {fileID: 21300000, guid: 2adb4b4065cd3d948b228de6a25682a1, type: 3}
+  SpriteImageHand: {fileID: 21300000, guid: 39e18326265b855409db5eb1e6bbb9cc, type: 3}
+  SpriteImageOnField: {fileID: 21300000, guid: 96e9ec94b73a44446b50d30fe06c5e7b, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: dde5bf235a3903a418f9ebcb981685a2, type: 2}

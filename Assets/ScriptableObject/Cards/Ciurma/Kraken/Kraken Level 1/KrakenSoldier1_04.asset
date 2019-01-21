@@ -22,6 +22,7 @@ MonoBehaviour:
   - Effect: 3
     Variable: 1
   Description: 'Clumsy: attacks once every two turns.'
-  SpriteImage: {fileID: 21300000, guid: dd8f6efc92ca7124b97f7520d9f1a3db, type: 3}
+  SpriteImageHand: {fileID: 21300000, guid: fe9c893a78038e64086a5a27e037276c, type: 3}
+  SpriteImageOnField: {fileID: 21300000, guid: 6812131260798c349bcbcd6aab3f6d71, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: fd5e554451e1618418d808670d167cb3, type: 2}

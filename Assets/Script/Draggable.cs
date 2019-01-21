@@ -8,6 +8,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 	public Transform parentToReturnTo = null;
 	public Transform placeholderParent = null;
 	public GameObject OutlinePointer = null;
+	//private Image cardImage = null;
 
 	[Range(0.5f,3)] public float ScaleMultiplier = 2;
 
@@ -19,6 +20,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         combatManager = FindObjectOfType<CombatManager>();
         card = GetComponent<Card>();
+		//cardImage = card.imageCover;
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -42,6 +44,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             GetComponent<CanvasGroup>().blocksRaycasts = false;
 
 			transform.localScale = transform.localScale * ScaleMultiplier;
+			card.imageCard.sprite = card.Data.SpriteImageOnField;
 			OutlinePointer.SetActive(true);
         }
 	}
@@ -89,7 +92,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 switch (dropZone.Type)
                 {
                     case DropZoneType.Hand:
-                        card.positionCard = PositionCard.OnHand;
+						card.imageCard.sprite = card.Data.SpriteImageHand;
+						card.positionCard = PositionCard.OnHand;
                         break;
                     case DropZoneType.Field:
                         card.positionCard = PositionCard.OnField;
