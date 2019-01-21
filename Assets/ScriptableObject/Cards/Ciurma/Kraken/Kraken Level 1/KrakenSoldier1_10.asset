@@ -20,7 +20,7 @@ MonoBehaviour:
   Life: 7
   Effects: []
   Description: 'Tough: Immune to damage and debuffs dealt by allies.'
-  SpriteImageHand: {fileID: 21300000, guid: 6a90e31967db64d4f9eb51631a08a53f, type: 3}
-  SpriteImageOnField: {fileID: 21300000, guid: 8bad31ad6c9f5d342823857e334518cb, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 6a90e31967db64d4f9eb51631a08a53f, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 8bad31ad6c9f5d342823857e334518cb, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: e266b3b136d2c734a8173d0e5e954359, type: 2}

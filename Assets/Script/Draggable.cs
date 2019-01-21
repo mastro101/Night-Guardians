@@ -22,7 +22,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         combatManager = FindObjectOfType<CombatManager>();
         card = GetComponent<Card>();
-		//card.positionCard = PositionCard.OnHand;
+		card.positionCard = PositionCard.OnHand;
 	}
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -46,7 +46,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             GetComponent<CanvasGroup>().blocksRaycasts = false;
 
 			transform.localScale = new Vector2(ScaleValueOnDrag, ScaleValueOnDrag);
-			card.imageCard.sprite = card.Data.SpriteImageOnField;
+			card.imageCard.sprite = card.Data.SpriteImageOnDrag;
 			OutlinePointer.SetActive(true);
         }
 	}
@@ -94,16 +94,16 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 switch (dropZone.Type)
                 {
                     case DropZoneType.Hand:
-						card.imageCard.sprite = card.Data.SpriteImageHand;
+						//card.imageCard.sprite = card.Data.SpriteImage;
 						card.positionCard = PositionCard.OnHand;
 						transform.localScale = new Vector2(ScaleValueOnHand, ScaleValueOnHand);
 						break;
                     case DropZoneType.Field:
-                        card.positionCard = PositionCard.OnField;
+                        card.positionCard = PositionCard.OnHand;
 						transform.localScale = new Vector2(ScaleValueOnField, ScaleValueOnField);
 						break;
                     case DropZoneType.Support:
-                        card.positionCard = PositionCard.OnField;
+                        card.positionCard = PositionCard.OnHand;
 						transform.localScale = new Vector2(ScaleValueOnField, ScaleValueOnField);
 						break;
                     default:
@@ -118,7 +118,9 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                     card.transform.rotation = Quaternion.Euler(0, 0, 90);
                 else
                     card.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+
+				card.imageCard.sprite = card.Data.SpriteImage;
+			}
 
             Destroy(placeholder);
 

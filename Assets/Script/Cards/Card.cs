@@ -187,7 +187,7 @@ public class Card : MonoBehaviour {
             }
         }
         nameText.text = Data.Name;
-        imageCard.sprite = Data.SpriteImageHand;
+        imageCard.sprite = Data.SpriteImage;
         attackText.text = Data.Attack.ToString();
         lifeText.text = Data.Life.ToString();
         descriptionText.text = Data.Description;
