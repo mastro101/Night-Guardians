@@ -18,8 +18,9 @@ MonoBehaviour:
   Name: OrientaliSoldier2_01
   Attack: 2
   Life: 3
-  Effects: 
+  Effects: []
   Description: 'Nimble: avoids the first attack each combat.'
-  SpriteImage: {fileID: 21300000, guid: f2bfbfebd686b72449b0ee836efc3ec4, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 9db1708b743aafa46a13d57455265202, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 30d1b81a83eecdf4db43639712adc441, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 9712a11f459ddd84ea97a66d96312088, type: 2}
