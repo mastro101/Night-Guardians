@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier1_05
   Attack: 3
   Life: 1
-  Effects: 
+  Effects: []
   Description: 'Perfect Aim: If this Soldier would kill an Enemy, it brings him to
     0 HP instead.'
-  SpriteImage: {fileID: 21300000, guid: f44dcda3cf18dbf47b23d2b925fdf9d7, type: 3}
+  SpriteImage: {fileID: 21300000, guid: ea8bcbe4f4798ce4dbe02e7e6d3af572, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 393ed5c8524eb1a439ced40dc3a8e3bd, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 8b998c2f6d87fe1499e8765c94783684, type: 2}

@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier1_10
   Attack: 4
   Life: 4
-  Effects: 
+  Effects: []
   Description: '+1/+0 to adjacent Soldiers. \nSupport: Master: Supports both Attack
     and HP'
-  SpriteImage: {fileID: 21300000, guid: 03bbe9dbe6f8c6244ae5421d42f2d62f, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 83af00f398b81a246bffaa411475a585, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: ef0749aeaab633348b910a9d1c0170fe, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 6421fa07d97281e4da3d4736433a2166, type: 2}

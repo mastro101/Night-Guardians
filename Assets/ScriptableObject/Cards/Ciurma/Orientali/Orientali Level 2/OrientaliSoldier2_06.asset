@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier2_06
   Attack: 2
   Life: 5
-  Effects: 
+  Effects: []
   Description: 'Pressure Points: When this Soldier damages an Enemy, the Enemy skips
     his next attack. \nSupport: the Soldier in slot 1 has Pressure Points.'
-  SpriteImage: {fileID: 21300000, guid: 56467cf47c5c4e84d8eb35d4fcc382f1, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 7302669fcbb8d184290f1c54276882ce, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 31e55d607863c2d4fa35830aa43c5d78, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 3853700b67672d14c9fcfa8f4345ef10, type: 2}

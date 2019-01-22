@@ -18,8 +18,9 @@ MonoBehaviour:
   Name: OrientaliSoldier1_04
   Attack: 3
   Life: 1
-  Effects: 
+  Effects: []
   Description: 'Tough: Immune to damage and debuffs dealt by allies'
-  SpriteImage: {fileID: 21300000, guid: 1376786b63d46d84b94da9edf1ff0b7e, type: 3}
+  SpriteImage: {fileID: 21300000, guid: f20283406dfb714408f374eaf92efd6e, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: f001538e1e365bb46b15ee6caa1ca415, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 3ce83ceab8ef79a4d95cb08a37f31152, type: 2}

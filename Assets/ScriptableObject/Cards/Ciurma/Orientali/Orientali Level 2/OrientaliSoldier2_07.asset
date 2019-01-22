@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier2_07
   Attack: 5
   Life: 3
-  Effects: 
+  Effects: []
   Description: 'Death Before Dishonor: If this Soldier is not put in combat when you
     draw it, it has +2/-1 until the end of the stage. \n+1/+0 to adjacent Soldiers.'
-  SpriteImage: {fileID: 21300000, guid: de94e177a97276f418970cc856aeb16e, type: 3}
+  SpriteImage: {fileID: 21300000, guid: b6930401bef8bcd4aa8a82de5aabcb64, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 5fffd6cfd490196489dbec31f4b75291, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 39e586910966ef24e939ec17529c659f, type: 2}
