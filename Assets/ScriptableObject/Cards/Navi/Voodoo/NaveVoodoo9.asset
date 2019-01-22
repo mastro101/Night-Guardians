@@ -21,6 +21,7 @@ MonoBehaviour:
   Effects: []
   Description: +1/+1 per ogni soldato ferito in mano/mazzo/scarti I soldati feriti
     da *** non possono essere curati per 3 scontri
-  SpriteImage: {fileID: 21300000, guid: ce5c408936f9bdf488f80af117bcf4ae, type: 3}
+  SpriteImage: {fileID: 21300000, guid: ca6404bbbb771b440a8a09046d9c4172, type: 3}
+  SpriteImageOnDrag: {fileID: 0}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

@@ -245,8 +245,8 @@ public class Card : MonoBehaviour {
         }
         else if (Type == CardType.Nave)
         {
-            TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 180);
-            statisticObject.transform.rotation = Quaternion.Euler(0, 180, 180);
+            TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            statisticObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCard.transform.rotation = Quaternion.Euler(0, 0, 0);
             nameText.color = Color.white;
             nameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
