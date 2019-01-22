@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier1_09
   Attack: 2
   Life: 4
-  Effects: 
+  Effects: []
   Description: 'Support: New Year: Sacrifice the Soldier in slot 1. Deal damage equal
     to that Soldier''s Attack plus 2 at the start of combat'
-  SpriteImage: {fileID: 21300000, guid: d7c0ac83cd6d3524c95b82776fa65b5d, type: 3}
+  SpriteImage: {fileID: 21300000, guid: a5e8bd7ff260e85409e2f8b0cf3d258f, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 161866f5d4f517542b53eee521c8dc13, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 3b5c919ea7fe3bc4cb6b6e58a568ebc0, type: 2}

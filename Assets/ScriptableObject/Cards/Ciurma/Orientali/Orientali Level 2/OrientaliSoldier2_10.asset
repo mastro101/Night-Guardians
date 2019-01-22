@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier2_10
   Attack: 6
   Life: 5
-  Effects: 
+  Effects: []
   Description: '+1/+1 to adjacent Soldiers. \nSupport: Master: Supports both Attack
     and HP. \nHidden Dragon: promote one additional random Soldier at the end of combat.'
-  SpriteImage: {fileID: 21300000, guid: 03bbe9dbe6f8c6244ae5421d42f2d62f, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 83af00f398b81a246bffaa411475a585, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: ef0749aeaab633348b910a9d1c0170fe, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: b36b993393d00214b8db288954582d4e, type: 2}

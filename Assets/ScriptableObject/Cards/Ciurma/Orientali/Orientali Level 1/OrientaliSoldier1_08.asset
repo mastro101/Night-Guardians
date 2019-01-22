@@ -18,8 +18,9 @@ MonoBehaviour:
   Name: OrientaliSoldier1_08
   Attack: 3
   Life: 3
-  Effects: 
+  Effects: []
   Description: Clumsy \n+0/+1 to adjacent Soldiers
-  SpriteImage: {fileID: 21300000, guid: 470300bd903ee4a40a2eef095b01d0dd, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 560a842aa72b01948b11a9efb18eaf52, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 95cd0d118cdbabc4dbaf1734f9d42515, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: a3ebf427bc383e94dbeb08770d3a776e, type: 2}

@@ -18,10 +18,11 @@ MonoBehaviour:
   Name: OrientaliSoldier3_09
   Attack: 6
   Life: 4
-  Effects: 
+  Effects: []
   Description: 'Explosives+: Deal 4 damage to the Enemy and 2 damage to a random Soldier
     at the start of combat. \nSupport: New Year+: Sacrifice the Soldier in slot 1.
     Deal damage equal to that Soldier''s Attack plus 4 at the start of combat'
-  SpriteImage: {fileID: 21300000, guid: d7c0ac83cd6d3524c95b82776fa65b5d, type: 3}
+  SpriteImage: {fileID: 21300000, guid: a5e8bd7ff260e85409e2f8b0cf3d258f, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 161866f5d4f517542b53eee521c8dc13, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

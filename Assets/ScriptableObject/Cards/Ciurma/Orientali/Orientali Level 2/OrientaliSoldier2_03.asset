@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier2_03
   Attack: 1
   Life: 4
-  Effects: 
+  Effects: []
   Description: 'Explosives: Deal 2 damage to the Enemy and 1 damage to a random Soldier
     at the start of combat.'
-  SpriteImage: {fileID: 21300000, guid: 162a7dde4965253489f58224c984e6d2, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 1525c6462e67921418d7ae9bfcfd7ad1, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: a470ca30ed7c3fc4cb79c5c97db5a883, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: c2c4f0c95bb676645bb5486b7ad06332, type: 2}

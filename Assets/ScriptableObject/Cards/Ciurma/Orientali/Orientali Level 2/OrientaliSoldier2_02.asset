@@ -18,8 +18,9 @@ MonoBehaviour:
   Name: OrientaliSoldier2_02
   Attack: 3
   Life: 3
-  Effects: 
+  Effects: []
   Description: +1/+1 to adjacent Soldiers.
-  SpriteImage: {fileID: 21300000, guid: 393d2673d53fa8d4284e3d0e5569a5c7, type: 3}
+  SpriteImage: {fileID: 21300000, guid: d28563febcbe974449f85eb7a1c1f2fa, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 32b502217d636d244a378c0cf2ae4d87, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: b493c01a1a7ebbf4f9d19a177bc80459, type: 2}
