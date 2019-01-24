@@ -9,7 +9,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 	public Transform placeholderParent = null;
 	public GameObject OutlinePointer = null;
 
-	[Range(0.5f, 5)] public float ScaleValueOnHand = 1;
+	[Range(0.5f, 5)] public float ScaleValueOnHand = 0.8f;
 	[Range(0.5f, 5)] public float ScaleValueOnDrag = 2.5f;
 	[Range(0.5f, 5)] public float ScaleValueOnField = 2;
 
@@ -18,6 +18,10 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     Card card = null;
 	GameObject placeholder = null;
 
+    private void Start()
+    {
+        transform.localScale = new Vector2(ScaleValueOnHand, ScaleValueOnHand);
+    }
     private void Awake()
     {
         combatManager = FindObjectOfType<CombatManager>();
