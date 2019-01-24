@@ -2231,12 +2231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54c4213328b4544f9cc109ac1b9f4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NonMorti: {fileID: 21300000, guid: b304c8ce1e455104ea70fb914f01dbd1, type: 3}
-  Orientali: {fileID: 21300000, guid: 18f8df58b1a358145883279524df2444, type: 3}
-  PiratiVeri: {fileID: 21300000, guid: 12c9e85c610568d4a9e795b1c5a59882, type: 3}
-  Marina: {fileID: 21300000, guid: 660b4f5db3fb6854bb8ee2596fdc7e97, type: 3}
-  Voodoo: {fileID: 21300000, guid: a417c293913b2a44fa428a5288bd816f, type: 3}
-  Kraken: {fileID: 21300000, guid: cbfcdb780b929f04db5f3f32687ad2da, type: 3}
+  NonMorti: {fileID: 21300000, guid: 9eb08ff6124af244a95076265d3d2fca, type: 3}
+  Orientali: {fileID: 21300000, guid: 7ce158fbff7880c45a29363250b3d918, type: 3}
+  PiratiVeri: {fileID: 0}
+  Marina: {fileID: 21300000, guid: 5cd8d0a034c3af544979446b562cf139, type: 3}
+  Voodoo: {fileID: 21300000, guid: 5741b2e8fd323d142b2817fccc0f5399, type: 3}
+  Kraken: {fileID: 21300000, guid: d2ebb0205918a66409bbdad9cca40e7c, type: 3}
 --- !u!1 &1353499609
 GameObject:
   m_ObjectHideFlags: 0

@@ -145,7 +145,7 @@ public class Card : MonoBehaviour {
     GameObject TextAndImageObject = null, nameObject = null, statisticObject = null, attackObject = null, lifeObject = null, descriptionObject = null, fazioneObject = null;
     [SerializeField]
     Sprite[] Covers = null;
-    public Image imageCard = null, imageCover = null, imageFazione = null;
+    public Image imageCard = null, imageCover = null, imageFazione = null, imageFazioneInBasso = null;
     [SerializeField]
     TextMeshProUGUI nameText = null, attackText = null, lifeText = null, descriptionText = null;
 
@@ -196,29 +196,36 @@ public class Card : MonoBehaviour {
         {
             case Fazioni.NonMorti:
                 imageFazione.sprite = fazioniClass.NonMorti;
+                imageFazioneInBasso.sprite = fazioniClass.NonMorti;
                 break;
             case Fazioni.Orientali:
                 imageFazione.sprite = fazioniClass.Orientali;
+                imageFazioneInBasso.sprite = fazioniClass.Orientali;
                 break;
             case Fazioni.PiratiVeri:
                 imageFazione.sprite = fazioniClass.PiratiVeri;
+                imageFazioneInBasso.sprite = fazioniClass.PiratiVeri;
                 break;
             case Fazioni.Marina:
                 imageFazione.sprite = fazioniClass.Marina;
+                imageFazioneInBasso.sprite = fazioniClass.Marina;
                 break;
             case Fazioni.Voodoo:
                 imageFazione.sprite = fazioniClass.Voodoo;
+                imageFazioneInBasso.sprite = fazioniClass.Voodoo;
                 break;
             case Fazioni.Kraken:
                 imageFazione.sprite = fazioniClass.Kraken;
+                imageFazioneInBasso.sprite = fazioniClass.Kraken;
                 break;
             default:
                 imageFazione.sprite = fazioniClass.PiratiVeri;
+                imageFazioneInBasso.sprite = fazioniClass.PiratiVeri;
                 break;
         }
         if (Type == CardType.Pirata)
         {
-            TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            /* TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             statisticObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCard.transform.rotation = Quaternion.Euler(0, 0, 0);
             nameText.color = Color.black;
@@ -229,7 +236,7 @@ public class Card : MonoBehaviour {
             attackObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             lifeText.color = Color.black;
             lifeObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            fazioneObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            fazioneObject.transform.rotation = Quaternion.Euler(0, 0, 0);*/
             imageCover.sprite = Covers[0];
             switch (Data.Supporto)
             {
@@ -245,7 +252,7 @@ public class Card : MonoBehaviour {
         }
         else if (Type == CardType.Nave)
         {
-            TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+           /* TextAndImageObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             statisticObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             imageCard.transform.rotation = Quaternion.Euler(0, 0, 0);
             nameText.color = Color.white;
@@ -256,8 +263,8 @@ public class Card : MonoBehaviour {
             attackObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             lifeText.color = Color.white;
             lifeObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            fazioneObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            imageCover.sprite = Covers[1];
+            fazioneObject.transform.rotation = Quaternion.Euler(0, 0, 0);*/
+            imageCover.sprite = Covers[1]; 
         }
     }
 
