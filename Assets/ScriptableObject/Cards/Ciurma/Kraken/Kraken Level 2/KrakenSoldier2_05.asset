@@ -23,6 +23,7 @@ MonoBehaviour:
     Variable: 1
   Description: 'Breed: At the end of the fight, add 1 Egg to your discard pile. \nSupport:
     for each Egg in combat, draw an additional card at the beginning of the next fight.'
-  SpriteImage: {fileID: 21300000, guid: 361fbfae858483648a87fa7ac518f02c, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 9ffa396b96545824d80d85886f1fbaf9, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 0085b0135f3d0064587a9bced1d37610, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 6e374e74ec441c64db38c3722432a12a, type: 2}

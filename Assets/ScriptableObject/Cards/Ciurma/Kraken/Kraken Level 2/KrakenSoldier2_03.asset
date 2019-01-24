@@ -18,8 +18,9 @@ MonoBehaviour:
   Name: KrakenSoldier2_03
   Attack: 2
   Life: 4
-  Effects: 
+  Effects: []
   Description: 'Allure: enemies always attack this soldier if they can.'
-  SpriteImage: {fileID: 21300000, guid: 0b72cabe8eab0234cb0e9d97e75f9fd8, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 30df720abae12df4988b5ce45d90d252, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 40ec898160212814fb212f68edaffa3f, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: b798741a4cbed354b8122c19109e5c95, type: 2}

@@ -24,6 +24,7 @@ MonoBehaviour:
   Description: 'Breed+: At the end of the fight, add 1 Rank 2 Egg to your discard
     pile. \nSupport: for each Egg in combat, draw an additional card at the beginning
     of the next fight.'
-  SpriteImage: {fileID: 21300000, guid: 361fbfae858483648a87fa7ac518f02c, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 39e18326265b855409db5eb1e6bbb9cc, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 96e9ec94b73a44446b50d30fe06c5e7b, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

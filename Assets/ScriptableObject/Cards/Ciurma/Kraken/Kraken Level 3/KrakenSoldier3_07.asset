@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: KrakenSoldier3_07
   Attack: 5
   Life: 7
-  Effects: 
+  Effects: []
   Description: 'Poison: When hit, it poisons the enemy, dealing 1 damage every time
     the enemy attacks. \nSupport: Soldiers in combat have Poison.'
-  SpriteImage: {fileID: 21300000, guid: f593e73bf2cd0e249aaf11da526c7033, type: 3}
+  SpriteImage: {fileID: 21300000, guid: b2d9ef3a238881847849bb82a427c2d6, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 2dc29751eb1f0974e9a588e7f431e69f, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

@@ -21,6 +21,7 @@ MonoBehaviour:
   Effects: []
   Description: 'Berserk: Whenever this Soldier is dealt damage, it gets +2/+0 until
     the end of combat.'
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: f07049e4748403343b08daa0fa61f882, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 18fa01c91c7909448a65f85a66d9c8a1, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

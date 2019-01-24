@@ -20,6 +20,7 @@ MonoBehaviour:
   Life: 3
   Effects: []
   Description: Triples Attack and HP bonuses received by support.
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: 8ae362e9e9cfc364dade6bf3ad0a1467, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 83ddfdae557ebdd4b9f0f3b73d3f00bd, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

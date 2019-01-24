@@ -21,6 +21,7 @@ MonoBehaviour:
   Effects: []
   Description: 'Trample: If this Soldier damages the Enemy, it loses all abilities
     for the next two attacks.'
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: 9c7ba66db7cc8fa459280dcdb6e7b909, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: a02cdd43bbbc43f40b803543e4e0aa4f, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 1acb9d83baa2d844296365f166c850d7, type: 2}

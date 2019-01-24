@@ -21,6 +21,7 @@ MonoBehaviour:
   Effects: []
   Description: At the end of the stage, this Egg hatches and becomes a random Kraken
     Soldier (depending on its Rank)
-  SpriteImage: {fileID: 21300000, guid: 897394e33d34cb24fb16529574f14b5d, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 640f3b48110b1db4e8d55ca899183605, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 640f3b48110b1db4e8d55ca899183605, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

@@ -20,6 +20,7 @@ MonoBehaviour:
   Life: 13
   Effects: []
   Description: Hangover \nBerserk
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: d175212efb2de2648a6b587766a9b580, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: caf2f029ec110644085544a285d0a152, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 4c391e7941a8a76459663047af1c7c4d, type: 2}

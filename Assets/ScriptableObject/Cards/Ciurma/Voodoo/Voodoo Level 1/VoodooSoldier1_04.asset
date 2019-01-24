@@ -20,6 +20,7 @@ MonoBehaviour:
   Life: 4
   Effects: []
   Description: 
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: f07049e4748403343b08daa0fa61f882, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 18fa01c91c7909448a65f85a66d9c8a1, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 719ee53497ee4144cb19cd234b98115d, type: 2}

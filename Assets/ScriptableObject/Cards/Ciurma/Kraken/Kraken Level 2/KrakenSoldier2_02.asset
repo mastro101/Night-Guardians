@@ -23,6 +23,7 @@ MonoBehaviour:
     Variable: 1
   Description: '+0/+1 for each Egg you own. \nSupport: At the end of the fight, promote
     each Egg in combat.'
-  SpriteImage: {fileID: 21300000, guid: 6c89d41a21361fe4f848ce879f50b436, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 48fd5cc5bc93ff84eb771379ce4bffa6, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 829a256f3a05f744990dd508328f21ad, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 78355dfae2f8094489f6e6ab2e5a7943, type: 2}

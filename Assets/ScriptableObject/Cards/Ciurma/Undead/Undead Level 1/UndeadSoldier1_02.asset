@@ -18,8 +18,9 @@ MonoBehaviour:
   Name: UndeadSoldier1_02
   Attack: 1
   Life: 2
-  Effects: 
+  Effects: []
   Description: 
-  SpriteImage: {fileID: 21300000, guid: 6c89d41a21361fe4f848ce879f50b436, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 0c28c0b3bcfe35348a576f0a1070ddaf, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 1ad5c8ca3ee9027418b77f6d9df40eff, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: d9c741afbb460164da58936721b273da, type: 2}

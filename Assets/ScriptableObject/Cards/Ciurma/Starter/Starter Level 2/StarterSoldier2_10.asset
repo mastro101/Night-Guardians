@@ -20,6 +20,7 @@ MonoBehaviour:
   Life: 3
   Effects: []
   Description: 'Charm: Increases capture margin by +1'
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: 3c848cd13a88ca1418024fb65aa6796c, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 6cc8e03891399dc47b41880c476758d3, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 78c254ebd8dca334686ada82a14e0393, type: 2}

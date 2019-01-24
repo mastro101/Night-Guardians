@@ -21,6 +21,7 @@ MonoBehaviour:
   Effects: []
   Description: 'Poison: When hit, it poisons the enemy, dealing 1 damage every time
     the enemy attacks.'
-  SpriteImage: {fileID: 21300000, guid: d5be21d326a73724aae3fdfc3364a7dd, type: 3}
+  SpriteImage: {fileID: 21300000, guid: b2d9ef3a238881847849bb82a427c2d6, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 2dc29751eb1f0974e9a588e7f431e69f, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 7ad09b34e9742ac408a81434594bf240, type: 2}

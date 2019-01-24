@@ -23,6 +23,7 @@ MonoBehaviour:
     Variable: 2
   Description: 'Tough: Immune to damage and debuffs dealt by allies. \nBreed+: At
     the end of the fight, add 1 Rank 2 Egg to your discard pile.'
-  SpriteImage: {fileID: 21300000, guid: 17a005fbc66deb548964ecbcf15ae45f, type: 3}
+  SpriteImage: {fileID: 21300000, guid: 9baaf6067617bb6428da899b1f25a851, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 2bfd568f9c5de4a48acaeca7e30d46c4, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

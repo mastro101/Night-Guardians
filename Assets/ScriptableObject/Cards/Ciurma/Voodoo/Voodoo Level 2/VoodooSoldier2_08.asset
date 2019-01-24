@@ -20,6 +20,7 @@ MonoBehaviour:
   Life: 6
   Effects: []
   Description: 'Untamed: Can''t support.'
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: 83e5bda7456e1a1429ad994a821e8d97, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 0f7ed5c4c7cb2414f953f7b07a5dcfcd, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 11400000, guid: 7406e52c5d54fdc468476926da23a383, type: 2}

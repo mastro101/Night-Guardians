@@ -20,6 +20,7 @@ MonoBehaviour:
   Life: 5
   Effects: []
   Description: 'Bloodrite: The Enemy can''t regain HP'
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: 938cca3ba2c079344adb7b62c49e6f95, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 4c8af726354a1914fa1813caec0af9e2, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

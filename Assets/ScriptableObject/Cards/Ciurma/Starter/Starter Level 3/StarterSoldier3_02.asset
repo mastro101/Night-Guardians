@@ -22,6 +22,7 @@ MonoBehaviour:
   Description: 'If not put in combat when you draw it, heals 1 HP to all Soldiers
     in your discard pile at the end of combat. \nSupport: Heals 1 HP to all Soldiers
     in combat at the end of each round.'
-  SpriteImage: {fileID: 0}
+  SpriteImage: {fileID: 21300000, guid: d1e7157a546832f46ac5106c04f5e203, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 7518adfd3c1eb1c4293289bbb7acaa0c, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}
