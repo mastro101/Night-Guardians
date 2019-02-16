@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -499,11 +499,11 @@ RectTransform:
   m_Father: {fileID: 1294952943}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.24829629}
-  m_AnchorMax: {x: 0.215, y: 0.42770374}
-  m_AnchoredPosition: {x: 2.1999512, y: 0.15905762}
-  m_SizeDelta: {x: 1, y: 5.0999985}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 14, y: -193}
+  m_SizeDelta: {x: 183.5, y: -943.8}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &392247971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,6 +740,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1792809450547044, guid: 7f9983df1684a6242b8629d602e321e7,
         type: 2}
+    - target: {fileID: 114608174181889622, guid: 959dd932c629d054db0b5ae0d120efc2,
+        type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 959dd932c629d054db0b5ae0d120efc2, type: 2}
   m_IsPrefabParent: 0
@@ -4293,7 +4298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -4606,6 +4611,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1792809450547044, guid: 7f9983df1684a6242b8629d602e321e7,
         type: 2}
+    - target: {fileID: 114143082712554010, guid: a9226d6cfc10fed4c9857de5b5d13f82,
+        type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9226d6cfc10fed4c9857de5b5d13f82, type: 2}
   m_IsPrefabParent: 0
