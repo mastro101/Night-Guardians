@@ -28,15 +28,15 @@ public class EndCondiction : MonoBehaviour
         scarti = FindObjectOfType<Scarti>();
         switch (levelManager.MapSceneName)
         {
-            case "MapStage1":
+            case "MapStage":
                 map = 1;
                 break;
-            case "MapStage2":
+            /*case "MapStage2":
                 map = 2;
                 break;
             case "MapStage3":
                 map = 3;
-                break;
+                break;*/
             default:
                 break;
         }

@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour {
 
     public void StartButton()
     {
-        SceneManager.LoadScene("MapStage1");
+        SceneManager.LoadScene("MapStage");
     }
 
     public void ExitButton()

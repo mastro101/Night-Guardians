@@ -23,8 +23,11 @@ public class CombatManager : MonoBehaviour
     ContenitoreCards contenitoreCards;
     PotenzaFazioni potenzaFazioni;
     EndCondiction endCondiction;
+	GameObject card; 
+	bool endFight;
 
-    public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
+
+	public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
     public event CombatManagerEvent.CombatManagerDelegate OnEndTurn;
     public event CombatManagerEvent.CombatManagerDelegate OnEndFight;
 
@@ -112,9 +115,9 @@ public class CombatManager : MonoBehaviour
 
             if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
                 enemiesSpawn.SpawnEnemy();
-            if (endCondiction.InEnd && !endCondiction.Ended && !chooseCardsPanel.gameObject.activeInHierarchy)
+            /*if (endCondiction.InEnd && !endCondiction.Ended && !chooseCardsPanel.gameObject.activeInHierarchy)
                 endCondiction.EndGame(true);
-            else if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy)
+            else */if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy)
                 endCondiction.EndGame(false);
         }
         else
@@ -153,7 +156,6 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    GameObject card;
 
     void evolveCard()
     {
@@ -285,7 +287,6 @@ public class CombatManager : MonoBehaviour
         endFight = false;
     }
 
-    bool endFight;
     void invokeOnEndFight()
     {
         endFight = true;

@@ -1,13 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CloseWindow : MonoBehaviour
 {
     Transform CardsInWindow;
+	EndCondiction endCondiction;
 
     public event CloseWindowEvent.CloseWindowDelegate OnClose;
 
-    public void CloseTheWindow()
+	public void Awake()
+	{
+		endCondiction = FindObjectOfType<EndCondiction>();
+	}
+
+	public void CloseTheWindow()
     {
         InvockOnClose();
         DestroyCardsClone();
@@ -22,6 +29,10 @@ public class CloseWindow : MonoBehaviour
             Destroy(CardsInWindow.GetChild(i).gameObject);
         }
     }
+
+	public void BackToMap() {
+		endCondiction.EndGame(true);
+	}
 
     #region Event
 

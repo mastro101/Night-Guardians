@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
     {
         if (LevelMap == 0)
             LevelMap = 1;
-        if (SceneManager.GetActiveScene().name == "MapStage1" || SceneManager.GetActiveScene().name == "MapStage2" || SceneManager.GetActiveScene().name == "MapStage3")
+        if (SceneManager.GetActiveScene().name == "MapStage" /*|| SceneManager.GetActiveScene().name == "MapStage2" || SceneManager.GetActiveScene().name == "MapStage3"*/)
         {
             MapSceneName = SceneManager.GetActiveScene().name;
         }

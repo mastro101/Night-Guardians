@@ -196,31 +196,31 @@ public class Card : MonoBehaviour {
         {
             case Fazioni.NonMorti:
                 imageFazione.sprite = fazioniClass.NonMorti;
-                imageFazioneInBasso.sprite = fazioniClass.NonMorti;
+                SetImgLogo(fazioniClass.NonMorti);
                 break;
             case Fazioni.Orientali:
                 imageFazione.sprite = fazioniClass.Orientali;
-                imageFazioneInBasso.sprite = fazioniClass.Orientali;
+				SetImgLogo(fazioniClass.Orientali);
                 break;
             case Fazioni.PiratiVeri:
                 imageFazione.sprite = fazioniClass.PiratiVeri;
-                imageFazioneInBasso.sprite = fazioniClass.PiratiVeri;
+				SetImgLogo(fazioniClass.PiratiVeri);
                 break;
             case Fazioni.Marina:
                 imageFazione.sprite = fazioniClass.Marina;
-                imageFazioneInBasso.sprite = fazioniClass.Marina;
+				SetImgLogo(fazioniClass.Marina);
                 break;
             case Fazioni.Voodoo:
                 imageFazione.sprite = fazioniClass.Voodoo;
-                imageFazioneInBasso.sprite = fazioniClass.Voodoo;
+				SetImgLogo(fazioniClass.Voodoo);
                 break;
             case Fazioni.Kraken:
                 imageFazione.sprite = fazioniClass.Kraken;
-                imageFazioneInBasso.sprite = fazioniClass.Kraken;
+				SetImgLogo(fazioniClass.Kraken);
                 break;
             default:
                 imageFazione.sprite = fazioniClass.PiratiVeri;
-                imageFazioneInBasso.sprite = fazioniClass.PiratiVeri;
+				SetImgLogo(fazioniClass.PiratiVeri);
                 break;
         }
         if (Type == CardType.Pirata)
@@ -318,6 +318,11 @@ public class Card : MonoBehaviour {
         InvokeOnAttack(_enemy);
         _enemy.Life -= Attack;
     }
+
+	public void SetImgLogo(Sprite logo) {
+		if(imageFazioneInBasso != null)
+			imageFazioneInBasso.sprite = logo;
+	}
 
     #region Event
 

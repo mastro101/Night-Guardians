@@ -33,8 +33,8 @@ public class EvolveCard : MonoBehaviour , IPointerDownHandler
             Destroy(parentGO.GetChild(i).gameObject);
         }
 
-        if (endCondiction.InEnd)
-            endCondiction.EndGame(true);
+        /*if (endCondiction.InEnd)*/
+        endCondiction.EndGame(true);
 
         parentGO.parent.gameObject.SetActive(false);
     }
