@@ -35,26 +35,44 @@ public class SelectLevel : MonoBehaviour {
         {
             potenzaFazioni.PossibiliFazioniDaIncontrare[i] = possibiliFazioni[i];
         }
-        switch (SceneManager.GetActiveScene().name)
+        switch (levelManager.LevelMap)
         {
-            case "MapStage":
-                if (levelManager.LevelMap == 1)
-                    levelManager.LevelIncontro = 3;
-                else
-                    levelManager.LevelIncontro = Random.Range(3, 6);
+            case 1:										//primo incontro
+				levelManager.LevelIncontro = 3;
+				break;
+
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:										//tutti gli incontri escluso il primo della prima mappa
+                levelManager.LevelIncontro = Random.Range(3, 6);
                 break;
-            /*case "MapStage2":
-                if (levelManager.LevelMap == 1)
-                    levelManager.LevelIncontro = 5;
-                else
-                    levelManager.LevelIncontro = Random.Range(5, 8);
+
+            case 7:										//primo incontro della seconda mappa
+                levelManager.LevelIncontro = 5;
+				break;
+
+			case 8:
+			case 9:
+			case 10:
+			case 11:
+			case 12:                                    //tutti gli incontri escluso il primo della seconda mappa
+				levelManager.LevelIncontro = Random.Range(5, 8);
                 break;
-            case "MapStage3":
-                if (levelManager.LevelMap == 1)
-                    levelManager.LevelIncontro = 7;
-                else
-                    levelManager.LevelIncontro = Random.Range(7, 10);
-                break;*/
+
+            case 13:                                    //primo incontro della terza mappa
+				levelManager.LevelIncontro = 7;
+				break;
+
+			case 14:
+			case 15:
+			case 16:
+			case 17:
+			case 18:									//tutti gli incontri escluso il primo della terza mappa
+				levelManager.LevelIncontro = Random.Range(7, 10);
+                break;
+
             default:
                 break;
         }

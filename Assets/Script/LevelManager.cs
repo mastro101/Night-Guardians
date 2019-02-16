@@ -4,19 +4,27 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+	public static LevelManager levelManagerPointer;
+
     [HideInInspector]
     public int LevelIncontro;
     public int LevelMap;
-    public string MapSceneName;
-    public bool FinalLevel;
+	[HideInInspector] public string MapSceneName = "MapStage";
+    public bool SpecialLevel;
 
-    private void Awake()
+
+	public bool unlockMap2 = false;
+	public bool unlockMap3 = false;
+
+	private void Awake()
     {
+		if(levelManagerPointer == null)
+			levelManagerPointer = this;
+	
         if (LevelMap == 0)
             LevelMap = 1;
-        if (SceneManager.GetActiveScene().name == "MapStage" /*|| SceneManager.GetActiveScene().name == "MapStage2" || SceneManager.GetActiveScene().name == "MapStage3"*/)
-        {
-            MapSceneName = SceneManager.GetActiveScene().name;
-        }
     }
+
+	
+
 }

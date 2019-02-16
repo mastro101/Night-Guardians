@@ -28,8 +28,10 @@ public class ScoutPopUp : MonoBehaviour
     private void Start()
     {
         WasOpen = false;
-        if (LevelMap != levelManager.LevelMap)
+        if (LevelMap != levelManager.LevelMap) {
             Destroy(GetComponent<Button>());
+			GetComponent<Image>().raycastTarget = false;
+		}
     }
 
     public void OpenPopUp()
@@ -37,9 +39,9 @@ public class ScoutPopUp : MonoBehaviour
         if (!WasOpen)
         {
             if (finalLevel)
-                levelManager.FinalLevel = true;
+                levelManager.SpecialLevel = true;
             else
-                levelManager.FinalLevel = false;
+                levelManager.SpecialLevel = false;
             WasOpen = true;
             PopUpLevel.SetActive(true);
             for (int i = 0; i < incontri.Length; i++)

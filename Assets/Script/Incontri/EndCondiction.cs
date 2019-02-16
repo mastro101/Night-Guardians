@@ -17,7 +17,6 @@ public class EndCondiction : MonoBehaviour
     CardsOfDeck cardsOfDeck;
     Deck deck;
     Scarti scarti;
-    int map = 1;
 
     private void Awake()
     {
@@ -26,20 +25,6 @@ public class EndCondiction : MonoBehaviour
         cardsOfDeck = FindObjectOfType<CardsOfDeck>();
         deck = FindObjectOfType<Deck>();
         scarti = FindObjectOfType<Scarti>();
-        switch (levelManager.MapSceneName)
-        {
-            case "MapStage":
-                map = 1;
-                break;
-            /*case "MapStage2":
-                map = 2;
-                break;
-            case "MapStage3":
-                map = 3;
-                break;*/
-            default:
-                break;
-        }
     }
 
     public void EndGame(bool _win)
@@ -56,23 +41,13 @@ public class EndCondiction : MonoBehaviour
                 cardsOfDeck.Cards = new CardsData[50];
                 cardsOfDeck.FillDeck(deck.Cards);
                 cardsOfDeck.FillDeck(scarti.Cards);
-                if (levelManager.FinalLevel)
-                    levelManager.LevelMap = 1;
-                if (levelManager.FinalLevel && levelManager.MapSceneName == "MapStage3")
+                if (levelManager.SpecialLevel && levelManager.LevelMap >= 18)
                 {
                     Debug.Log("Fine");
                 }
                 else
                 {
-                    if (!levelManager.FinalLevel)
-                        SceneManager.LoadScene(levelManager.MapSceneName);
-                    else
-                    {
-                        map++;
-                        levelManager.MapSceneName = "MapStage" + map.ToString();
-                        SceneManager.LoadScene(levelManager.MapSceneName);
-                        levelManager.FinalLevel = false;
-                    }
+                    SceneManager.LoadScene(levelManager.MapSceneName);
                 }
             }
             else

@@ -4,19 +4,25 @@ using UnityEngine.SceneManagement;
 
 public class Don_tDestroyOnLoad : MonoBehaviour
 {
-    static bool created = false;
+    static bool alreadyExists = false;
 
     void Awake()
     {
-        if (SceneManager.GetActiveScene().name == "MainMenu")
+        if (alreadyExists)
             Destroy(this.gameObject);
-
-        if (created)
-            Destroy(this);
-        if (!created)
-        {
+        else
+		{ 
             DontDestroyOnLoad(gameObject);
-            created = true;
+            alreadyExists = true;
         }
     }
+
+	private void Update()
+	{
+		if (SceneManager.GetActiveScene().name == "MainMenu") {
+			alreadyExists = false;
+			Destroy(this.gameObject);
+		}
+	}
+
 }

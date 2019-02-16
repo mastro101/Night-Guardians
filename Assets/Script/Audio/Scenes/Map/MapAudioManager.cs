@@ -31,12 +31,14 @@ public class MapAudioManager : MonoBehaviour
 
     public void Map_Incontro_Hover()
     {
-        Map_Incontro_Hover_Sound.start();
+		//if(LevelManager.levelManagerPointer.LevelMap == actLevelMap)
+			Map_Incontro_Hover_Sound.start();
     }
 
     public void Map_Incontro_Click()
     {
-        Map_Incontro_Click_Sound.start();
+		//if (LevelManager.levelManagerPointer.LevelMap == actLevelMap)
+			Map_Incontro_Click_Sound.start();
     }
 
     public void Map_Deck_Click()
