@@ -55,9 +55,15 @@ MonoBehaviour:
     Value: 256
   - Platform: 2
     Value: 32
-  Plugins: []
+  Plugins:
+  - audiogaming_audioweather
+  - fmod_distance_filter
+  - fmod_gain
   MasterBanks:
+  - Master Bank
   - Master Bank
   Banks:
   - Main Menu
   - Incontro
+  - Map
+  - Master Bank
