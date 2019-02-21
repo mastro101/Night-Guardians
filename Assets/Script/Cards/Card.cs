@@ -331,9 +331,6 @@ public class Card : MonoBehaviour {
                 case Effect.TentaclesLife:
                     gameObject.AddComponent<TentaclesLife>();
                     break;
-				case Effect.Regeneration:
-					gameObject.AddComponent<Regeneration>();
-					break;
                 default:
                     break;
             }

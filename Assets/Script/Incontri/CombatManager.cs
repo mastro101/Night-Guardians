@@ -28,8 +28,7 @@ public class CombatManager : MonoBehaviour
 
 
 	public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
-	public event CombatManagerEvent.CombatManagerDelegate OnStartTurn;
-	public event CombatManagerEvent.CombatManagerDelegate OnEndTurn;
+    public event CombatManagerEvent.CombatManagerDelegate OnEndTurn;
     public event CombatManagerEvent.CombatManagerDelegate OnEndFight;
 
     private void Awake()
@@ -99,9 +98,8 @@ public class CombatManager : MonoBehaviour
 
             do
             {
-				invokeOnStartTurn();
-				// Il nemico combatte i guardiano a turno
-				for (int i = 0; i < zoneField.CardLimit; i++)
+                // Il nemico combatte i guardiano a turno
+                for (int i = 0; i < zoneField.CardLimit; i++)
                 {
                     if (cardInField[i] != null && InCombat)
                     {
@@ -289,11 +287,6 @@ public class CombatManager : MonoBehaviour
         endFight = false;
     }
 
-	void invokeOnStartTurn() {
-		if (OnStartTurn != null)
-			OnStartTurn();
-	}
-
     void invokeOnEndFight()
     {
         endFight = true;
@@ -326,8 +319,7 @@ public class CombatManager : MonoBehaviour
         OnStartFight = null;
         OnEndTurn = null;
         OnEndFight = null;
-		OnStartTurn = null;
-	}
+    }
     #endregion
 }
 
