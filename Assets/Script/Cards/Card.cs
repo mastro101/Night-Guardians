@@ -49,7 +49,7 @@ public class Card : MonoBehaviour {
                     EggEvent.AddEgg(-1);
                 }
                 deck.RemoveCard(Data.Name);
-                invokOnDeath();
+                invokeOnDeath();
                 Debug.Log(Data.Name + " is death");
             }
         }
@@ -107,31 +107,35 @@ public class Card : MonoBehaviour {
         set
         {
             _positionCard = value;
-            switch (_positionCard)
-            {
-                case PositionCard.OnDeck:
-                    invokOnDeck();
-                    break;
-                case PositionCard.OnHand:
-                    InvokOnHand();
-                    break;
-                case PositionCard.OnField:
-                    InvokOnField();
-                    break;
-                case PositionCard.OnScarti:
-                    InvokeOnScarti(); 
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
+			switch (_positionCard)
+			{
+				case PositionCard.OnDeck:
+					invokeOnDeck();
+					break;
+				case PositionCard.OnHand:
+					InvokeOnHand();
+					break;
+				case PositionCard.OnField:
+					InvokeOnField();
+					break;
+				case PositionCard.OnScarti:
+					InvokeOnScarti();
+					break;
+				case PositionCard.OnSupport:
+					InvokeOnSupport();
+					break;
+				default:
+					break;
+			}
+		}
+	}
 
-    // Position
-    public event CardEvent.CardEventDelegate OnDeck;
+	// Position
+	public event CardEvent.CardEventDelegate OnDeck;
     public event CardEvent.CardEventDelegate OnHand;
     public event CardEvent.CardEventDelegate OnField;
-    public event CardEvent.CardEventDelegate OnScarti;
+	public event CardEvent.CardEventDelegate OnSupport;
+	public event CardEvent.CardEventDelegate OnScarti;
 
     // 
     public event CardEvent.CardEventDelegate OnDeath;
@@ -329,25 +333,31 @@ public class Card : MonoBehaviour {
 
     #region Event
 
-    void invokOnDeck()
+    void invokeOnDeck()
     {
         if (OnDeck != null)
             OnDeck();
     }
 
-    void invokOnDeath()
+    void invokeOnDeath()
     {
         if (OnDeath != null)
             OnDeath();
     }
 
-    void InvokOnField()
+    void InvokeOnField()
     {
         if (OnField != null)
             OnField();
     }
 
-    void InvokOnHand()
+	void InvokeOnSupport()
+	{
+		if (OnSupport != null)
+			OnSupport();
+	}
+
+	void InvokeOnHand()
     {
         if (OnHand != null)
             OnHand();
@@ -385,7 +395,7 @@ public class Card : MonoBehaviour {
         }
     }
 
-    #endregion
+	#endregion
 }
 
 public class CardEvent
