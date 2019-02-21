@@ -46,13 +46,12 @@ public enum Fazioni
 
 public enum Effect
 {
-	Breed = 0,
-    AttackForEgg = 1,
-    LifeForEgg = 2,
-    Clumsy = 3,
-    TentaclesAttack = 4,
-    TentaclesLife = 5,
-	Regeneration = 6
+    Breed,
+    AttackForEgg,
+    LifeForEgg,
+    Clumsy,
+    TentaclesAttack,
+    TentaclesLife,
 }
 
 [Serializable]
