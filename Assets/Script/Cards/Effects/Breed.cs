@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//checked
 public class Breed : CardEffect {
 
     CardsData egg;

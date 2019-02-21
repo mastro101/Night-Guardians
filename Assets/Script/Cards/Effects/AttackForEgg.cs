@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//checked
 public class AttackForEgg : CardEffect
 {
     private void Start()
     {
-        EggEvent.AddedEgg += ApplyEffect;
-    }
+		card.OnField += ApplyEffect;
+		card.OnHand += ApplyEffect;
+	}
 
-    public override void ApplyEffect()
+	public override void ApplyEffect()
     {
         base.ApplyEffect();
-        card.Attack = card.Attack + (Variable * EggEvent.EggInDeck);
+        card.Attack = card.Data.Attack + (Variable * EggEvent.EggInDeck);
     }
 }

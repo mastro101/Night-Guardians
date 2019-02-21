@@ -26,7 +26,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         combatManager = FindObjectOfType<CombatManager>();
         card = GetComponent<Card>();
-		card.positionCard = PositionCard.OnHand;
+		//card.positionCard = PositionCard.OnHand;
 	}
 
     public void OnBeginDrag(PointerEventData eventData) {

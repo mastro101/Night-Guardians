@@ -163,57 +163,46 @@ public class Deck : MonoBehaviour {
     {
         if (drawZone != null)
         {
-            if (playableCardInDeckTR.childCount > 0)
+            if (playableCardInDeckTR.childCount > 0 && playableCardInDeckTR.GetChild(0) != null)
             {
-                if (playableCardInDeckTR.GetChild(0) != null)
+				for (int i = 0; i < _for; i++)
                 {
-                    for (int i = 0; i < _for; i++)
+                    if (playableCardInDeckTR.childCount > 0 && playableCardInDeckTR.GetChild(0) != null)
                     {
-                        if (playableCardInDeckTR.childCount > 0)
+                        Transform currentCardTr = playableCardInDeckTR.GetChild(0);
+						currentCardTr.SetParent(drawZone.transform);
+						CardInDeck--;
+
+						Card currentCard = currentCardTr.GetComponent<Card>();
+
+						if(currentCard != null) //vedere la descrizione dentro la funzione Update di Card per capire i motivi di questa soluzione
+						{
+							currentCard.DrawedNow = true;
+						}
+						
+                        //for (int n = 0; n < Cards.Length; n++)
+                        //{
+                        //    // Per Spostare tutte le carte in cima 
+                        //    if (Cards[n] != null)
+                        //    {
+                        //        if (n != Cards.Length - 1)
+                        //            Cards[n] = Cards[n + 1];
+                        //        else
+                        //            Cards[n] = null;
+                        //    }
+                        //    else
+                        //        break;
+                        //}
+                    }
+                    else
+                    {
+                        InvockOnEmpty();
+                        if (playableCardInDeckTR.GetChild(0) != null)
                         {
-                            if (playableCardInDeckTR.GetChild(0) != null)
-                            {
-                                playableCardInDeckTR.GetChild(0).SetParent(drawZone.transform);
-                                CardInDeck--;
-                                //for (int n = 0; n < Cards.Length; n++)
-                                //{
-                                //    // Per Spostare tutte le carte in cima 
-                                //    if (Cards[n] != null)
-                                //    {
-                                //        if (n != Cards.Length - 1)
-                                //            Cards[n] = Cards[n + 1];
-                                //        else
-                                //            Cards[n] = null;
-                                //    }
-                                //    else
-                                //        break;
-                                //}
-                            }
-                            else
-                            {
-                                InvockOnEmpty();
-                                if (playableCardInDeckTR.GetChild(0) != null)
-                                {
-                                    _for -= i - 1;
-                                    i = 0;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            InvockOnEmpty();
-                            if (playableCardInDeckTR.GetChild(0) != null)
-                            {
-                                _for -= i - 1;
-                                i = 0;
-                            }
+                            _for -= i - 1;
+                            i = 0;
                         }
                     }
-                }
-                else
-                {
-                    InvockOnEmpty();
-                    Draw(_for);
                 }
             }
             else

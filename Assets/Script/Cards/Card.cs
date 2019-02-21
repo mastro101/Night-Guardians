@@ -100,6 +100,8 @@ public class Card : MonoBehaviour {
     public int Grado;
     public Fazioni Fazione;
 
+	[HideInInspector] public bool DrawedNow = false;
+
     PositionCard _positionCard;
     public PositionCard positionCard
     {
@@ -136,9 +138,10 @@ public class Card : MonoBehaviour {
     public event CardEvent.CardEventDelegate OnField;
 	public event CardEvent.CardEventDelegate OnSupport;
 	public event CardEvent.CardEventDelegate OnScarti;
+	public event CardEvent.CardEventDelegate OnDraw;
 
-    // 
-    public event CardEvent.CardEventDelegate OnDeath;
+	// 
+	public event CardEvent.CardEventDelegate OnDeath;
     public event CardEvent.CardEventDelCombat OnAttack;
 
 
@@ -154,8 +157,8 @@ public class Card : MonoBehaviour {
     TextMeshProUGUI nameText = null, attackText = null, lifeText = null, descriptionText = null;
 
     Deck deck;
-
     Scene scene;
+
 
     private void Awake()
     {
@@ -168,11 +171,26 @@ public class Card : MonoBehaviour {
 
     private void Start()
     {
-        if (transform.parent.GetComponent<DropZone>())
-            Zone = transform.parent.GetComponent<DropZone>().Type;
-    }
+        if (transform.parent.GetComponent<DropZone>()) {
+			Zone = transform.parent.GetComponent<DropZone>().Type;
+		}
+	}
 
-    void insertData()
+	private void Update()
+	{
+		/*
+		 * soluzione adottata perchè eseguendo queste operazioni al momento effettivo in cui si pesca la carta,
+		 * dato che alcuni component in quel momento non sono completamente settati non avendo eseguito lo Start,
+		 * altrimenti non vengono lanciati gli eventi relativi al trovarsi in mano
+		 */
+		if(DrawedNow) {
+			DrawedNow = false;
+			positionCard = PositionCard.OnHand;
+			InvokeOnDraw();
+		}
+	}
+
+	void insertData()
     {
         Type = Data.Type;
         Grado = Data.Grado;
@@ -368,6 +386,11 @@ public class Card : MonoBehaviour {
         if (OnScarti != null)
             OnScarti();
     }
+
+	void InvokeOnDraw() {
+		if (OnDraw != null)
+			OnDraw();
+	}
 
     public void InvokeOnAttack(Card _enemy)
     {
