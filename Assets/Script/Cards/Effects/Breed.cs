@@ -46,19 +46,3 @@ public class Breed : CardEffect {
         }
     }
 }
-
-public class EggEvent
-{
-    public static int EggInDeck;
-
-    public delegate void EggDelegate();
-
-    public static EggDelegate AddedEgg;
-
-    public static void AddEgg(int _egg = 1)
-    {
-        EggInDeck += _egg;
-        AddedEgg();
-        Debug.Log(EggInDeck + " Egg in deck");
-    }
-}
