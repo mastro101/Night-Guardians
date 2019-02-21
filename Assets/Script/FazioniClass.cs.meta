@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b54c4213328b4544f9cc109ac1b9f4e2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - NonMorti: {fileID: 21300000, guid: 9eb08ff6124af244a95076265d3d2fca, type: 3}
+  - Orientali: {fileID: 21300000, guid: 7ce158fbff7880c45a29363250b3d918, type: 3}
+  - PiratiVeri: {instanceID: 0}
+  - Marina: {fileID: 21300000, guid: 5cd8d0a034c3af544979446b562cf139, type: 3}
+  - Voodoo: {fileID: 21300000, guid: 5741b2e8fd323d142b2817fccc0f5399, type: 3}
+  - Kraken: {fileID: 21300000, guid: d2ebb0205918a66409bbdad9cca40e7c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

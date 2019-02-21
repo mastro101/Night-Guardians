@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
+  m_Name: NaveNonMorta2
+  m_EditorClassIdentifier: 
+  Type: 1
+  Supporto: 0
+  Fazione: 0
+  Grado: 2
+  Name: 
+  Attack: 2
+  Life: 2
+  Effects: []
+  Description: 
+  SpriteImage: {fileID: 21300000, guid: 83ba6679710e4f54991e8f1a29a3ac60, type: 3}
+  SpriteImageOnDrag: {fileID: 0}
+  SoundCreature: {fileID: 0}
+  Evolution: {fileID: 0}

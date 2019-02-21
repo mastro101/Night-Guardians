@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
+  m_Name: MarineSoldier1_02
+  m_EditorClassIdentifier: 
+  Type: 0
+  Supporto: 1
+  Fazione: 3
+  Grado: 1
+  Name: 
+  Attack: 2
+  Life: 2
+  Effects: []
+  Description: 
+  SpriteImage: {fileID: 21300000, guid: 447aeb14aa5a6b1458778abde56a17b6, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 7990347f192650d48a47a5c38aaaadf0, type: 3}
+  SoundCreature: {fileID: 0}
+  Evolution: {fileID: 11400000, guid: f57a06e12e349114b9c5ae10757552cc, type: 2}

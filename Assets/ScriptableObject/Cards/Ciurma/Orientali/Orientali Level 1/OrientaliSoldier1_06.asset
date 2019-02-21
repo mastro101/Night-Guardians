@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
+  m_Name: OrientaliSoldier1_06
+  m_EditorClassIdentifier: 
+  Type: 0
+  Supporto: 1
+  Fazione: 1
+  Grado: 1
+  Name: OrientaliSoldier1_06
+  Attack: 2
+  Life: 3
+  Effects: []
+  Description: 'Pressure Points: When this Soldier damages an Enemy, the Enemy skips
+    his next attack.'
+  SpriteImage: {fileID: 21300000, guid: 7302669fcbb8d184290f1c54276882ce, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 31e55d607863c2d4fa35830aa43c5d78, type: 3}
+  SoundCreature: {fileID: 0}
+  Evolution: {fileID: 11400000, guid: fd71855ada340cc4489ae09a332c5c76, type: 2}

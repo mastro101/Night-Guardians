@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
+  m_Name: NavePiratiVeri2
+  m_EditorClassIdentifier: 
+  Type: 1
+  Supporto: 0
+  Fazione: 2
+  Grado: 1
+  Name: 
+  Attack: 3
+  Life: 2
+  Description: Gioco sporco(3)
+  SpriteImage: {fileID: 21300000, guid: 8bba5f8acfaa8cc419ea368aec564eeb, type: 3}
+  SoundCreature: {fileID: 0}
+  Evolution: {fileID: 0}

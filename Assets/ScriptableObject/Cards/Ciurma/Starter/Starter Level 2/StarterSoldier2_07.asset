@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
+  m_Name: StarterSoldier2_07
+  m_EditorClassIdentifier: 
+  Type: 0
+  Supporto: 0
+  Fazione: 6
+  Grado: 2
+  Name: StarterSoldier2_07
+  Attack: 4
+  Life: 2
+  Effects: []
+  Description: 'Nimble: avoids the first attack each combat.'
+  SpriteImage: {fileID: 21300000, guid: 5e03a30754accce4888cff1be61b5076, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: c123ca76541c0f14086961edc7a1dac6, type: 3}
+  SoundCreature: {fileID: 0}
+  Evolution: {fileID: 11400000, guid: 67d100109cfb3fb4aba9f77eec0fb9ff, type: 2}

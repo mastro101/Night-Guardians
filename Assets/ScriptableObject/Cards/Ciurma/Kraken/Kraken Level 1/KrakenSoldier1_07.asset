@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477cb9c5cda1c1749944271df6cf4be6, type: 3}
+  m_Name: KrakenSoldier1_07
+  m_EditorClassIdentifier: 
+  Type: 0
+  Supporto: 1
+  Fazione: 5
+  Grado: 1
+  Name: KrakenSoldier1_07
+  Attack: 3
+  Life: 5
+  Effects: []
+  Description: 
+  SpriteImage: {fileID: 21300000, guid: b2d9ef3a238881847849bb82a427c2d6, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 2dc29751eb1f0974e9a588e7f431e69f, type: 3}
+  SoundCreature: {fileID: 0}
+  Evolution: {fileID: 11400000, guid: cc1eaa2ce19984e46adf6884acd2b1f2, type: 2}
