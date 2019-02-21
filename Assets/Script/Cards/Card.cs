@@ -278,8 +278,11 @@ public class Card : MonoBehaviour {
 
     public void PlaySound()
     {
-        soundCreature.clip = Data.SoundCreature;
-        soundCreature.Play();
+		if (soundCreature != null) 
+		{ 
+			soundCreature.clip = Data.SoundCreature;
+			soundCreature.Play();
+		}
     }
 
     void addEffect(int i)
@@ -396,5 +399,6 @@ public enum PositionCard
     OnDeck,
     OnHand,
     OnField,
+	OnSupport,
     OnScarti,
 }

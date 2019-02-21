@@ -25,7 +25,13 @@ public class Breed : CardEffect {
         combatManager.OnEndFight += ApplyEffect;
     }
 
-    public override void ApplyEffect()
+	public override void UnsubscribeEvent()
+	{
+		base.UnsubscribeEvent();
+		combatManager.OnEndFight -= ApplyEffect;
+	}
+
+	public override void ApplyEffect()
     {
         base.ApplyEffect();
         for (int i = 0; i < Variable; i++)

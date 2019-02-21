@@ -103,11 +103,11 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 						transform.localScale = new Vector2(ScaleValueOnHand, ScaleValueOnHand);
 						break;
                     case DropZoneType.Field:
-                        card.positionCard = PositionCard.OnHand;
+                        card.positionCard = PositionCard.OnField;
 						transform.localScale = new Vector2(ScaleValueOnField, ScaleValueOnField);
 						break;
                     case DropZoneType.Support:
-                        card.positionCard = PositionCard.OnHand;
+                        card.positionCard = PositionCard.OnSupport;
 						transform.localScale = new Vector2(ScaleValueOnField, ScaleValueOnField);
 						break;
                     default:
