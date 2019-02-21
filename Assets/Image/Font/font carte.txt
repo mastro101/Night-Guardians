@@ -1,0 +1,4 @@
+font
+statistiche: snubnose
+nome mostro: komforttabel
+descrizione: soft elegance
