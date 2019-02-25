@@ -17,7 +17,6 @@ namespace FMODUnity
     {
         static SystemNotInitializedException initException = null;
         static RuntimeManager instance;
-        static bool isQuitting = false;
 
         [SerializeField]
         FMODPlatform fmodPlatform;
@@ -48,26 +47,26 @@ namespace FMODUnity
                 {
                     throw initException;
                 }
-                if (isQuitting)
-                {
-                    throw new Exception("[FMOD] Attempted access by script to RuntimeManager while application is quitting");
-                }
 
                 if (instance == null)
                 {
                     FMOD.RESULT initResult = FMOD.RESULT.OK; // Initialize can return an error code if it falls back to NO_SOUND, throw it as a non-cached exception
 
-                    var existing = FindObjectOfType(typeof(RuntimeManager)) as RuntimeManager;
-                    if (existing != null)
+
+                    var existing = FindObjectsOfType(typeof(RuntimeManager)) as RuntimeManager[];
+                    foreach (var iter in existing)
                     {
-                        // Older versions of the integration may have leaked the runtime manager game object into the scene,
-                        // which was then serialized. It won't have valid pointers so don't use it.
-                        if (existing.cachedPointers[0] != 0)
+                        if (existing != null)
                         {
-                            instance = existing;
-                            instance.studioSystem.handle = ((IntPtr)instance.cachedPointers[0]);
-                            instance.lowlevelSystem.handle = ((IntPtr)instance.cachedPointers[1]);
-                            return instance;
+                            // Older versions of the integration may have leaked the runtime manager game object into the scene,
+                            // which was then serialized. It won't have valid pointers so don't use it.
+                            if (iter.cachedPointers[0] != 0)
+                            {
+                                instance = iter;
+                                instance.studioSystem.handle = ((IntPtr)instance.cachedPointers[0]);
+                                instance.lowlevelSystem.handle = ((IntPtr)instance.cachedPointers[1]);
+                            }
+                            GameObject.DestroyImmediate(iter);
                         }
                     }
 
@@ -78,7 +77,7 @@ namespace FMODUnity
                     {
                         DontDestroyOnLoad(gameObject);
                     }
-                    gameObject.hideFlags = HideFlags.HideInHierarchy;
+                    gameObject.hideFlags = HideFlags.HideAndDontSave;
 
                     try
                     {
@@ -308,8 +307,6 @@ retry:
         {
             if (studioSystem.isValid())
             {
-                studioSystem.update();
-
                 bool foundListener = false;
                 bool hasAllListeners = false;
                 int numListeners = 0;
@@ -386,11 +383,14 @@ retry:
                     eventPositionWarnings.RemoveAt(i);
                 }
                 #endif
+
+                studioSystem.update();
             }
         }
 
         public static void AttachInstanceToGameObject(FMOD.Studio.EventInstance instance, Transform transform, Rigidbody rigidBody)
         {
+            instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform, rigidBody));
             var attachedInstance = new AttachedInstance();
             attachedInstance.transform = transform;
             attachedInstance.instance = instance;
@@ -400,6 +400,7 @@ retry:
 
         public static void AttachInstanceToGameObject(FMOD.Studio.EventInstance instance, Transform transform, Rigidbody2D rigidBody2D)
         {
+            instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform, rigidBody2D));
             var attachedInstance = new AttachedInstance();
             attachedInstance.transform = transform;
             attachedInstance.instance = instance;
@@ -502,7 +503,6 @@ retry:
             }
             initException = null;
             instance = null;
-            isQuitting = true;
         }
 
 #if UNITY_EDITOR
@@ -516,38 +516,28 @@ retry:
                     instance.studioSystem.clearHandle();
                 }
                 DestroyImmediate(instance.gameObject);
+                initException = null;
+                instance = null;
             }
-
-            initException = null;
-            instance = null;
         }
 
         #if UNITY_2017_2_OR_NEWER
         void HandlePlayModeStateChange(PlayModeStateChange state)
         {
-            if (state == PlayModeStateChange.ExitingEditMode)
+            if (state == PlayModeStateChange.ExitingEditMode || state == PlayModeStateChange.EnteredEditMode)
             {
                 Destroy();
             }
-            else if (state == PlayModeStateChange.EnteredEditMode)
-            {
-                isQuitting = false;
-            }
         }
-        #elif UNITY_2017_1_OR_NEWER
+#elif UNITY_2017_1_OR_NEWER
         void HandleOnPlayModeChanged()
         {
-            if (EditorApplication.isPlayingOrWillChangePlaymode &&
-                !EditorApplication.isPlaying)
+            if (!EditorApplication.isPlaying)
             {
                 Destroy();
             }
-            else if (!EditorApplication.isPlaying)
-            {
-                isQuitting = false;
-            }
         }
-        #endif // UNITY_2017_2_OR_NEWER
+#endif // UNITY_2017_2_OR_NEWER
 #endif
 
 #if UNITY_IOS
@@ -1013,13 +1003,6 @@ retry:
             }
         }
 
-#if UNITY_EDITOR
-        /* Only relavant to protect the Play-In-Editor to Editor transition. */
-        public static bool IsQuitting()
-        {
-            return isQuitting;
-        }
-#endif
 
         public static bool HasBanksLoaded
         {
