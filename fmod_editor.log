@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000004FB9E398 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000004DB648D8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,26 +16,16 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] SoundI::release                          : W 04 Water_19_Splashing, Sailing, Ship_T03 (000000002119D878)
-[LOG] SoundI::release                          :     W 04 Water_19_Splashing, Sailing, Ship_T03 (00000000397D5FF8)
-[LOG] SoundI::release                          :     W 04 Water_19_Splashing, Sailing, Ship_T03 (000000002119E448)
-[LOG] SoundI::release                          :  (00000000211C1DE8)
-[LOG] SoundI::release                          :     action_drop_paper_ball (00000000397D6678)
-[LOG] SoundI::release                          :  (00000000211C10F8)
-[LOG] SoundI::release                          :     Cannon_Blast_PSEM.050 (00000000397D5E58)
-[LOG] SoundI::release                          :  (000000003960E2B8)
-[LOG] SoundI::release                          :     Squeaks and creaks - Trimmed (3) (00000000397D64D8)
-[LOG] SoundI::release                          :  (000000003960C5F8)
-[LOG] SoundI::release                          :     Squeaks and creaks - Trimmed (2) (00000000397D6338)
-[LOG] SoundI::release                          :  (00000000211C16B8)
-[LOG] SoundI::release                          :     Squeaks and creaks - Trimmed (5) (00000000397D69B8)
-[LOG] SoundI::release                          :  (00000000211C1828)
-[LOG] SoundI::release                          :     Squeaks and creaks - Trimmed (4) (00000000397D5B18)
-[LOG] SoundI::release                          :  (000000003960E148)
-[LOG] SoundI::release                          :     Squeaks and creaks - Trimmed (00000000397D5498)
-[LOG] SoundI::release                          :  (00000000399A8C98)
-[LOG] SoundI::release                          :     Card pick up (00000000397D6B58)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[WRN] PluginEffectModel::init                  : Missing DSP plugin 'AudioGaming AudioWeather'
+[WRN] PostLoad::initPluginEffects              : Creating stub DSP plugin model and continuing.
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
