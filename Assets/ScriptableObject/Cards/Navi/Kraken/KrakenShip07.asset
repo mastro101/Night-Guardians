@@ -14,10 +14,10 @@ MonoBehaviour:
   Type: 1
   Supporto: 0
   Fazione: 5
-  Grado: 0
+  Grado: 2
   Name: 
-  Attack: 0
-  Life: 0
+  Attack: 3
+  Life: 7
   Effects: []
   Description: 
   SpriteImage: {fileID: 21300000, guid: 47ca293318cdf294aad205819a965897, type: 3}

@@ -16,8 +16,8 @@ MonoBehaviour:
   Fazione: 1
   Grado: 0
   Name: 
-  Attack: 0
-  Life: 0
+  Attack: 1
+  Life: 1
   Effects: []
   Description: 
   SpriteImage: {fileID: 21300000, guid: aff0fa408498c4741a86a1657fe6faec, type: 3}
