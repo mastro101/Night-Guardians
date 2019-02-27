@@ -15,7 +15,7 @@ public class EggEvent
 		private set { }
 	}
 
-	public delegate void EggDelegate();
+	/*public delegate void EggDelegate();
 
 	public static EggDelegate AddedEgg;
 
@@ -23,5 +23,5 @@ public class EggEvent
 	{
 		AddedEgg();
 		Debug.Log(EggInDeck + " Egg in deck");
-	}
+	}*/
 }

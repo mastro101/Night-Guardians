@@ -44,10 +44,10 @@ public class Card : MonoBehaviour {
             isAlive = value;
             if (!isAlive)
             {
-                if (Data.Name == "KrakenTokenEgg")
+                /*if (Data.Name == "KrakenTokenEgg")
                 {
                     EggEvent.AddEgg(-1);
-                }
+                }*/
                 deck.RemoveCard(Data.Name);
                 invokeOnDeath();
                 Debug.Log(Data.Name + " is death");
