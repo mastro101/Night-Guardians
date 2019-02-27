@@ -812,7 +812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3372549}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -864,6 +864,7 @@ MonoBehaviour:
   Effects: []
   Grado: 0
   Fazione: 0
+  DrawedNow: 0
   TextAndImageObject: {fileID: 1704462828751128}
   nameObject: {fileID: 1178359010709890}
   statisticObject: {fileID: 1491413872156816}
