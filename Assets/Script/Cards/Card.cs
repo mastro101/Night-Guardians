@@ -311,46 +311,49 @@ public class Card : MonoBehaviour {
     {
         if (scene.name == "Incontro")
         {
+			CardEffect addedObject = null;
 			switch (Effects[i].Effect)
 			{
 				case Effect.Breed:
-					gameObject.AddComponent<Breed>();
+					addedObject = gameObject.AddComponent<Breed>();
 					break;
 				case Effect.AttackForEgg:
-					gameObject.AddComponent<AttackForEgg>();
+					addedObject = gameObject.AddComponent<AttackForEgg>();
 					break;
 				case Effect.LifeForEgg:
-					gameObject.AddComponent<LifeForEgg>();
+					addedObject = gameObject.AddComponent<LifeForEgg>();
 					break;
 				case Effect.Clumsy:
-					gameObject.AddComponent<Clumsy>();
+					addedObject = gameObject.AddComponent<Clumsy>();
 					break;
 				case Effect.TentaclesAttack:
-					gameObject.AddComponent<TentaclesAttack>();
+					addedObject = gameObject.AddComponent<TentaclesAttack>();
 					break;
 				case Effect.TentaclesLife:
-					gameObject.AddComponent<TentaclesLife>();
+					addedObject = gameObject.AddComponent<TentaclesLife>();
 					break;
 				case Effect.Regeneration:
-					gameObject.AddComponent<Regeneration>();
+					addedObject = gameObject.AddComponent<Regeneration>();
 					break;
 				case Effect.ExtraSupportAttack:
-					gameObject.AddComponent<ExtraSupportAttack>();
+					addedObject = gameObject.AddComponent<ExtraSupportAttack>();
 					break;
 				case Effect.ExtraSupportLife:
-					gameObject.AddComponent<ExtraSupportLife>();
+					addedObject = gameObject.AddComponent<ExtraSupportLife>();
 					break;
 				default:
 					break;
 			}
-			GetComponent<CardEffect>().Variable = variableEffects[i];
+
+			if(addedObject != null)
+				addedObject.Variable = variableEffects[i];
 		}
 	}
 
 	public void Fight(Card _enemy)
     {
         InvokeOnAttack(_enemy);
-		Debug.LogWarning(data.name + " recive " + Attack + " damage");
+		Debug.LogWarning("recive " + Attack + " damage, life remaining: " + _enemy.Life);
         _enemy.Life -= Attack;
     }
 

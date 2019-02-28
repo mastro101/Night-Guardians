@@ -12,9 +12,9 @@ public class Breed : CardEffect {
     {
         ContenitoreCards cards = FindObjectOfType<ContenitoreCards>();
         egg = cards.FindCard("KrakenTokenEgg");
-		//Debug.LogWarning(egg);
         card.OnField += SubscribeEvent;
-        card.OnScarti += UnsubscribeEvent;
+		card.OnSupport += UnsubscribeEvent;
+		card.OnScarti += UnsubscribeEvent;
         card.OnDeath += UnsubscribeEvent;
         card.OnHand += UnsubscribeEvent;
 
@@ -42,7 +42,6 @@ public class Breed : CardEffect {
             newCard.GetComponent<Card>().Data = egg;
             deck.FillDeck(egg);
             scarti.ScartCard(newCard.GetComponent<Card>());
-            //EggEvent.AddEgg();
         }
     }
 }

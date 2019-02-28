@@ -6,7 +6,23 @@ public abstract class AbsExtraSupportSomething : CardEffect {
 
 	private void Start()
 	{
+		card.OnSupport += SubscribeEvent;
+		card.OnField += UnsubscribeEvent;
+		card.OnScarti += UnsubscribeEvent;
+		card.OnDeath += UnsubscribeEvent;
+		card.OnHand += UnsubscribeEvent;
+	}
+
+	public override void SubscribeEvent()
+	{
+		base.SubscribeEvent();
 		combatManager.OnSupport += ApplyEffect;
+	}
+
+	public override void UnsubscribeEvent()
+	{
+		base.UnsubscribeEvent();
+		combatManager.OnSupport -= ApplyEffect;
 	}
 
 	public override void ApplyEffect()
