@@ -54,7 +54,9 @@ public enum Effect
     TentaclesLife = 5,
 	Regeneration = 6,
 	ExtraSupportAttack = 7,
-	ExtraSupportLife = 8
+	ExtraSupportLife = 8,
+	ChangePurificationThresholdOnField = 9,
+	ChangePurificationThresholdOnSupport = 10
 }
 
 [Serializable]

@@ -26,6 +26,7 @@ public class CombatManager : MonoBehaviour
 	GameObject card; 
 	bool endFight;
 
+	public int purificationThreshold = 0;
 
 	public event CombatManagerEvent.CombatManagerDelegate OnSupport;
 	public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
@@ -236,9 +237,12 @@ public class CombatManager : MonoBehaviour
     {
         if (Enemy.IsAlive)
         {
-            if (Enemy.Life == 0)
-                Enemy.IsPurificato = true;
-        }
+            if (Enemy.Life <= 0 && Enemy.Life >= purificationThreshold)
+			{
+				Enemy.IsPurificato = true;
+				Debug.LogWarning("asd");
+			}
+		}
 
         if (Enemy.IsPurificato)
         {
@@ -316,6 +320,7 @@ public class CombatManager : MonoBehaviour
 		}
         if (OnEndFight != null)
             OnEndFight();
+		purificationThreshold = 0;
         resetDelegate();
     }
 

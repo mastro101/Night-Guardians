@@ -341,11 +341,17 @@ public class Card : MonoBehaviour {
 				case Effect.ExtraSupportLife:
 					addedObject = gameObject.AddComponent<ExtraSupportLife>();
 					break;
+				case Effect.ChangePurificationThresholdOnField:
+					addedObject = gameObject.AddComponent<ChangePurificationThresholdOnField>();
+					break;
+				case Effect.ChangePurificationThresholdOnSupport:
+					addedObject = gameObject.AddComponent<ChangePurificationThresholdOnSupport>();
+					break;
 				default:
 					break;
 			}
 
-			if(addedObject != null)
+			if (addedObject != null)
 				addedObject.Variable = variableEffects[i];
 		}
 	}
