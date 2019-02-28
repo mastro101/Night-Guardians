@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EggEvent
+public class EggUtility
 {
 	private static string EggFileCardName = "KrakenTokenEgg";
 	
@@ -14,14 +14,4 @@ public class EggEvent
 		}
 		private set { }
 	}
-
-	/*public delegate void EggDelegate();
-
-	public static EggDelegate AddedEgg;
-
-	public static void AddEgg(int _egg = 1)
-	{
-		AddedEgg();
-		Debug.Log(EggInDeck + " Egg in deck");
-	}*/
 }

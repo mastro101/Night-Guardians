@@ -2,17 +2,10 @@
 using System.Collections;
 
 //checked
-public class LifeForEgg : CardEffect
+public class LifeForEgg : AbsLifeForSomething
 {
-	private void Start()
+	protected override int EffectMightValue()
 	{
-		card.OnField += ApplyEffect;
-		card.OnHand += ApplyEffect;
-	}
-
-	public override void ApplyEffect()
-	{
-		base.ApplyEffect();
-		card.Life = card.Data.Life + (Variable * EggEvent.EggInDeck);
+		return EggUtility.EggInDeck;
 	}
 }

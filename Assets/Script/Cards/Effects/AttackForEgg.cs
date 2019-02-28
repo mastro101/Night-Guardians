@@ -2,17 +2,10 @@
 using System.Collections;
 
 //checked
-public class AttackForEgg : CardEffect
+public class AttackForEgg : AbsAttackForSomething
 {
-    private void Start()
-    {
-		card.OnField += ApplyEffect;
-		card.OnHand += ApplyEffect;
+	protected override int EffectMightValue()
+	{
+		return EggUtility.EggInDeck;
 	}
-
-	public override void ApplyEffect()
-    {
-        base.ApplyEffect();
-        card.Attack = card.Data.Attack + (Variable * EggEvent.EggInDeck);
-    }
 }

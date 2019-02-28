@@ -311,45 +311,56 @@ public class Card : MonoBehaviour {
     {
         if (scene.name == "Incontro")
         {
-            switch (Effects[i].Effect)
-            {
-                case Effect.Breed:
-                    gameObject.AddComponent<Breed>();
-                    break;
-                case Effect.AttackForEgg:
-                    gameObject.AddComponent<AttackForEgg>();
-                    break;
-                case Effect.LifeForEgg:
-                    gameObject.AddComponent<LifeForEgg>();
-                    break;
-                case Effect.Clumsy:
-                    gameObject.AddComponent<Clumsy>();
-                    break;
-                case Effect.TentaclesAttack:
-                    gameObject.AddComponent<TentaclesAttack>();
-                    break;
-                case Effect.TentaclesLife:
-                    gameObject.AddComponent<TentaclesLife>();
-                    break;
+			switch (Effects[i].Effect)
+			{
+				case Effect.Breed:
+					gameObject.AddComponent<Breed>();
+					break;
+				case Effect.AttackForEgg:
+					gameObject.AddComponent<AttackForEgg>();
+					break;
+				case Effect.LifeForEgg:
+					gameObject.AddComponent<LifeForEgg>();
+					break;
+				case Effect.Clumsy:
+					gameObject.AddComponent<Clumsy>();
+					break;
+				case Effect.TentaclesAttack:
+					gameObject.AddComponent<TentaclesAttack>();
+					break;
+				case Effect.TentaclesLife:
+					gameObject.AddComponent<TentaclesLife>();
+					break;
 				case Effect.Regeneration:
 					gameObject.AddComponent<Regeneration>();
 					break;
-                default:
-                    break;
-            }
-            GetComponent<CardEffect>().Variable = variableEffects[i];
-        }
-    }
+				case Effect.ExtraSupportAttack:
+					gameObject.AddComponent<ExtraSupportAttack>();
+					break;
+				case Effect.ExtraSupportLife:
+					gameObject.AddComponent<ExtraSupportLife>();
+					break;
+				default:
+					break;
+			}
+			GetComponent<CardEffect>().Variable = variableEffects[i];
+		}
+	}
 
-    public void Fight(Card _enemy)
+	public void Fight(Card _enemy)
     {
         InvokeOnAttack(_enemy);
+		Debug.LogWarning(data.name + " recive " + Attack + " damage");
         _enemy.Life -= Attack;
     }
 
 	public void SetImgLogo(Sprite logo) {
 		if(imageFazioneInBasso != null)
 			imageFazioneInBasso.sprite = logo;
+	}
+
+	public void ResetCardAttack() {
+		attack = data.Attack;
 	}
 
     #region Event

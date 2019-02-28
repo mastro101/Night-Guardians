@@ -5,7 +5,7 @@ public class CombatManager : MonoBehaviour
 {
     [SerializeField]
     public DropZone zoneField = null, zoneEnemy = null, zoneSupport = null, hand = null;
-    public Card[] cardInField;
+    public Card[] cardsInField;
     [HideInInspector]
     public Card Enemy;
     [HideInInspector]
@@ -27,14 +27,15 @@ public class CombatManager : MonoBehaviour
 	bool endFight;
 
 
+	public event CombatManagerEvent.CombatManagerDelegate OnSupport;
 	public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
 	public event CombatManagerEvent.CombatManagerDelegate OnStartTurn;
 	public event CombatManagerEvent.CombatManagerDelegate OnEndTurn;
     public event CombatManagerEvent.CombatManagerDelegate OnEndFight;
 
-    private void Awake()
+	private void Awake()
     {
-        cardInField = new Card[zoneField.CardLimit];
+        cardsInField = new Card[zoneField.CardLimit];
         scarti = FindObjectOfType<Scarti>();
         enemiesSpawn = FindObjectOfType<EnemySpawn>();
         deck = FindObjectOfType<Deck>();
@@ -67,30 +68,17 @@ public class CombatManager : MonoBehaviour
             Support = null;
         Enemy = zoneEnemy.transform.GetChild(0).GetComponent<Card>();
         NumberOfCardInField = zoneField.transform.childCount;
-        // Prendo i componenti delle carte in campo 
-        for (int i = 0; i < NumberOfCardInField; i++)
-        {
-            cardInField[i] = zoneField.transform.GetChild(i).gameObject.GetComponent<Card>();
+		// Prendo i componenti delle carte in campo 
+		UpdateCardsInField();
 
-            // Aggiungo il valore del supporto
-            if (Support != null)
-            {
-                switch (Support.Data.Supporto)
-                {
-                    case Buff.Attack:
-                        cardInField[i].Attack++;
-                        break;
-                    case Buff.Life:
-                        cardInField[i].Life++;
-                        break;
-                    default:
-                        Debug.Log("No buff");
-                        break;
-                }
-            }
-        }
+		if(Support != null) 
+		{
+			CalculateSupport(Support.Data.Supporto, 1);
+			invokeOnSupport();
+		}
+		
 
-        if (Enemy != null)
+		if (Enemy != null)
         {
             //conta i guardiani in campo
             CardDestroied = 3 - NumberOfCardInField;
@@ -103,7 +91,7 @@ public class CombatManager : MonoBehaviour
 				// Il nemico combatte i guardiano a turno
 				for (int i = 0; i < zoneField.CardLimit; i++)
                 {
-                    if (cardInField[i] != null && InCombat)
+                    if (cardsInField[i] != null && InCombat)
                     {
                         if (Enemy.IsAlive)
                         {
@@ -117,9 +105,7 @@ public class CombatManager : MonoBehaviour
 
             if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
                 enemiesSpawn.SpawnEnemy();
-            /*if (endCondiction.InEnd && !endCondiction.Ended && !chooseCardsPanel.gameObject.activeInHierarchy)
-                endCondiction.EndGame(true);
-            else */if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy)
+            if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy)
                 endCondiction.EndGame(false);
         }
         else
@@ -132,16 +118,16 @@ public class CombatManager : MonoBehaviour
 
     void Attack(int _cardInField)
     {
-        cardInField[_cardInField].Fight(Enemy);
-        Enemy.Fight(cardInField[_cardInField]);
+        cardsInField[_cardInField].Fight(Enemy);
+        Enemy.Fight(cardsInField[_cardInField]);
         CheckLifeAndDestroy(_cardInField);
     }
 
     public void CheckLifeAndDestroy(int _cardInField)
     {        
-        if (!cardInField[_cardInField].IsAlive)
+        if (!cardsInField[_cardInField].IsAlive)
         {
-            Destroy(cardInField[_cardInField].gameObject);
+            Destroy(cardsInField[_cardInField].gameObject);
             CardDestroied++;
         }
         if (!Enemy.IsAlive)
@@ -158,21 +144,45 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+	public void CalculateSupport(Buff supportType, int value = 1) {
+		for (int i = 0; i < NumberOfCardInField; i++)
+		{
+			switch (supportType)
+			{
+				case Buff.Attack:
+					cardsInField[i].Attack += value;
+					break;
+				case Buff.Life:
+					cardsInField[i].Life += value;
+					break;
+				default:
+					Debug.Log("No buff");
+					break;
+			}
+		}
+	}
+
+	public void UpdateCardsInField() {
+		for (int i = 0; i < NumberOfCardInField; i++)
+		{
+			cardsInField[i] = zoneField.transform.GetChild(i).gameObject.GetComponent<Card>();
+		}
+	}
 
     void evolveCard()
     {
         for (int i = 0; i < (zoneField.CardLimit); i++)
         {
-            if (cardInField[i] != null)
+            if (cardsInField[i] != null)
             {
-                if (cardInField[i].IsAlive)
+                if (cardsInField[i].IsAlive)
                 {
-                    if (cardInField[i].Data.Evolution != null)
+                    if (cardsInField[i].Data.Evolution != null)
                     {
                         if (!chooseCardsPanel.gameObject.activeInHierarchy)
                             chooseCardsPanel.gameObject.SetActive(true);
-                        card = Instantiate(cardInField[i].gameObject, chooseCardsPanel.GetChild(0));
-                        card.AddComponent<EvolveCard>().OriginalCard = cardInField[i];
+                        card = Instantiate(cardsInField[i].gameObject, chooseCardsPanel.GetChild(0));
+                        card.AddComponent<EvolveCard>().OriginalCard = cardsInField[i];
                         Destroy(card.GetComponent<Draggable>());
                     }
                 }
@@ -246,11 +256,11 @@ public class CombatManager : MonoBehaviour
         // Scarta i guardiani sopravvissuti
         for (int i = 0; i < (zoneField.CardLimit); i++)
         {
-            if (cardInField[i] != null)
+            if (cardsInField[i] != null)
             {
-                if (cardInField[i].IsAlive)
+                if (cardsInField[i].IsAlive)
                 {
-                    scarti.ScartCard(cardInField[i]);
+                    scarti.ScartCard(cardsInField[i]);
                 }
             }
         }
@@ -268,6 +278,7 @@ public class CombatManager : MonoBehaviour
         if (!endCondiction.InEnd)
             deck.Draw(5);
     }
+
 
     #region Event
 
@@ -298,35 +309,29 @@ public class CombatManager : MonoBehaviour
     {
         endFight = true;
         Debug.Log("Fine Combattimento");
-        for (int i = 0; i < NumberOfCardInField; i++)
+		UpdateCardsInField();
+		for (int i = 0; i < NumberOfCardInField; i++)
         {
-            cardInField[i] = zoneField.transform.GetChild(i).gameObject.GetComponent<Card>();
-
-            // Aggiungo il valore del supporto
-            if (Support != null)
-            {
-                switch (Support.Data.Supporto)
-                {
-                    case Buff.Attack:
-                        cardInField[i].Attack--;
-                        break;
-                    default:
-                        Debug.Log("No buff");
-                        break;
-                }
-            }
-        }
+			cardsInField[i].ResetCardAttack();
+		}
         if (OnEndFight != null)
             OnEndFight();
         resetDelegate();
     }
 
-    void resetDelegate()
+	void invokeOnSupport() {
+		if (OnSupport != null)
+			OnSupport();
+	}
+
+
+	void resetDelegate()
     {
         OnStartFight = null;
         OnEndTurn = null;
         OnEndFight = null;
 		OnStartTurn = null;
+		OnSupport = null;
 	}
     #endregion
 }

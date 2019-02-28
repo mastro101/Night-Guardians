@@ -52,7 +52,9 @@ public enum Effect
     Clumsy = 3,
     TentaclesAttack = 4,
     TentaclesLife = 5,
-	Regeneration = 6
+	Regeneration = 6,
+	ExtraSupportAttack = 7,
+	ExtraSupportLife = 8
 }
 
 [Serializable]
