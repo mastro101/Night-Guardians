@@ -66,6 +66,14 @@ public abstract class AbsNeighbourChangeStatForSomething : AbsChangeStatForSomet
 
 	protected abstract bool ApplyLeft();
 	protected abstract bool ApplyRight();
+	/// <summary>
+	/// da overridare per aumentare la distanza del potenziamento, con 1 potenzia le carte adiacenti, con 2 le carte a distanza 2
+	/// sotto l'1 l'effetto non si attiva mai
+	/// </summary>
+	/// <returns></returns>
+	protected virtual int Distance() {
+		return 1;
+	}
 }
 
 public abstract class AbsNeighbourLifeForSomething : AbsNeighbourChangeStatForSomething
@@ -75,14 +83,17 @@ public abstract class AbsNeighbourLifeForSomething : AbsNeighbourChangeStatForSo
 		int index = combatManager.GetCardPosition(card);
 		if(index >= 0) 
 		{
-			if (ApplyLeft()) 
+			for (int i = 1; i <= Distance(); i++)
 			{
-				combatManager.ChangeCardLife(index - 1, EffectMightValue());
-			}
+				if (ApplyLeft())
+				{
+					combatManager.ChangeCardLife(index - i, EffectMightValue());
+				}
 
-			if(ApplyRight()) 
-			{
-				combatManager.ChangeCardLife(index + 1, EffectMightValue());
+				if (ApplyRight())
+				{
+					combatManager.ChangeCardLife(index + i, EffectMightValue());
+				}
 			}
 		}
 	}
@@ -95,14 +106,17 @@ public abstract class AbsNeighbourAttackForSomething : AbsNeighbourChangeStatFor
 		int index = combatManager.GetCardPosition(card);
 		if (index >= 0)
 		{
-			if (ApplyLeft())
+			for (int i = 1; i <= Distance(); i++)
 			{
-				combatManager.ChangeCardAttack(index - 1, EffectMightValue());
-			}
+				if (ApplyLeft())
+				{
+					combatManager.ChangeCardAttack(index - i, EffectMightValue());
+				}
 
-			if (ApplyRight())
-			{
-				combatManager.ChangeCardAttack(index + 1, EffectMightValue());
+				if (ApplyRight())
+				{
+					combatManager.ChangeCardAttack(index + i, EffectMightValue());
+				}
 			}
 		}
 	}
