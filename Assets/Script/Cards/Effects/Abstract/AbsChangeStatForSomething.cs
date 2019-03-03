@@ -28,7 +28,7 @@ public abstract class AbsLifeForSomething : AbsChangeStatForSomething
 {
 	protected override void ChangeStat()
 	{
-		card.Life = card.Data.Life + (Variable * EggUtility.EggInDeck);
+		card.Life = card.Data.Life + (Variable * EffectMightValue());
 	}
 }
 
@@ -37,5 +37,73 @@ public abstract class AbsAttackForSomething : AbsChangeStatForSomething
 	protected override void ChangeStat()
 	{
 		card.Attack = card.Data.Attack + (Variable * EffectMightValue());
+	}
+}
+
+
+
+public abstract class AbsNeighbourChangeStatForSomething : AbsChangeStatForSomething {
+	private void Start()
+	{
+		card.OnField += SubscribeEvent;
+		card.OnSupport += UnsubscribeEvent;
+		card.OnScarti += UnsubscribeEvent;
+		card.OnDeath += UnsubscribeEvent;
+		card.OnHand += UnsubscribeEvent;
+	}
+
+	public override void SubscribeEvent()
+	{
+		base.SubscribeEvent();
+		combatManager.OnStartFight += ApplyEffect;
+	}
+
+	public override void UnsubscribeEvent()
+	{
+		base.UnsubscribeEvent();
+		combatManager.OnStartFight -= ApplyEffect;
+	}
+
+	protected abstract bool ApplyLeft();
+	protected abstract bool ApplyRight();
+}
+
+public abstract class AbsNeighbourLifeForSomething : AbsNeighbourChangeStatForSomething
+{
+	protected override void ChangeStat()
+	{
+		int index = combatManager.GetCardPosition(card);
+		if(index >= 0) 
+		{
+			if (ApplyLeft()) 
+			{
+				combatManager.ChangeCardLife(index - 1, EffectMightValue());
+			}
+
+			if(ApplyRight()) 
+			{
+				combatManager.ChangeCardLife(index + 1, EffectMightValue());
+			}
+		}
+	}
+}
+
+public abstract class AbsNeighbourAttackForSomething : AbsNeighbourChangeStatForSomething
+{
+	protected override void ChangeStat()
+	{
+		int index = combatManager.GetCardPosition(card);
+		if (index >= 0)
+		{
+			if (ApplyLeft())
+			{
+				combatManager.ChangeCardAttack(index - 1, EffectMightValue());
+			}
+
+			if (ApplyRight())
+			{
+				combatManager.ChangeCardAttack(index + 1, EffectMightValue());
+			}
+		}
 	}
 }

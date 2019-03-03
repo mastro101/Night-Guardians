@@ -151,16 +151,35 @@ public class CombatManager : MonoBehaviour
 			switch (supportType)
 			{
 				case Buff.Attack:
-					cardsInField[i].Attack += value;
+					ChangeCardAttack(i, value);
 					break;
 				case Buff.Life:
-					cardsInField[i].Life += value;
+					ChangeCardLife(i, value);
 					break;
 				default:
 					Debug.Log("No buff");
 					break;
 			}
 		}
+	}
+
+	public void ChangeCardAttack(int cardPosition, int value) {
+		if (cardPosition >= 0 && cardPosition < cardsInField.Length && cardsInField[cardPosition] != null)
+			cardsInField[cardPosition].Attack += value;
+	}
+
+	public void ChangeCardLife(int cardPosition, int value) {
+		if (cardPosition >= 0 && cardPosition < cardsInField.Length && cardsInField[cardPosition] != null)
+			cardsInField[cardPosition].Life += value;
+	}
+
+	public int GetCardPosition(Card card) {
+		for(int i = 0; i < cardsInField.Length; i++) {
+			if(cardsInField[i] == card) {
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	public void UpdateCardsInField() {
@@ -239,9 +258,7 @@ public class CombatManager : MonoBehaviour
         {
             if (Enemy.Life <= 0 && Enemy.Life >= purificationThreshold)
 			{
-				Enemy.IsPurificato = true;
-				Debug.LogWarning("asd");
-			}
+				Enemy.IsPurificato = true;			}
 		}
 
         if (Enemy.IsPurificato)

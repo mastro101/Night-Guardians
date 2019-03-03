@@ -56,7 +56,11 @@ public enum Effect
 	ExtraSupportAttack = 7,
 	ExtraSupportLife = 8,
 	ChangePurificationThresholdOnField = 9,
-	ChangePurificationThresholdOnSupport = 10
+	ChangePurificationThresholdOnSupport = 10,
+	LeftNeighbourAttackGeneric = 11,
+	RightNeighbourAttackGeneric = 12,
+	LeftNeighbourLifeGeneric = 13,
+	RightNeighbourLifeGeneric = 14
 }
 
 [Serializable]

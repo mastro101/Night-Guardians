@@ -347,6 +347,18 @@ public class Card : MonoBehaviour {
 				case Effect.ChangePurificationThresholdOnSupport:
 					addedObject = gameObject.AddComponent<ChangePurificationThresholdOnSupport>();
 					break;
+				case Effect.LeftNeighbourAttackGeneric:
+					addedObject = gameObject.AddComponent<LeftNeighbourAttackGeneric>();
+					break;
+				case Effect.RightNeighbourAttackGeneric:
+					addedObject = gameObject.AddComponent<RightNeighbourAttackGeneric>();
+					break;
+				case Effect.LeftNeighbourLifeGeneric:
+					addedObject = gameObject.AddComponent<LeftNeighbourLifeGeneric>();
+					break;
+				case Effect.RightNeighbourLifeGeneric:
+					addedObject = gameObject.AddComponent<RightNeighbourLifeGeneric>();
+					break;
 				default:
 					break;
 			}
