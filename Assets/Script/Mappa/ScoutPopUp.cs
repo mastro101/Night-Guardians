@@ -16,6 +16,9 @@ public class ScoutPopUp : MonoBehaviour
     PotenzaFazioni potenzaFazioni;
     LevelManager levelManager;
 
+	[SerializeField] private Color disabledColor;
+	[SerializeField] private Image completed;
+
     Fazioni fazione;
     Fazioni[] fazioni;
 
@@ -30,7 +33,16 @@ public class ScoutPopUp : MonoBehaviour
         WasOpen = false;
         if (LevelMap != levelManager.LevelMap) {
             Destroy(GetComponent<Button>());
-			GetComponent<Image>().raycastTarget = false;
+			Image pointer = GetComponent<Image>();
+			pointer.raycastTarget = false;
+			if(LevelMap < levelManager.LevelMap) {
+				if(completed != null) {
+					completed.gameObject.SetActive(true);
+				}
+			}
+			else {
+				pointer.color = disabledColor;
+			}
 		}
     }
 
