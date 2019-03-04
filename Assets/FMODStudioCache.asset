@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114477972653253298}
-  - {fileID: 114591230744590834}
-  - {fileID: 114021064488379134}
-  - {fileID: 114198588896766014}
-  - {fileID: 114212474817330836}
+  - {fileID: 114048778018030868}
+  - {fileID: 114302081303514768}
+  - {fileID: 114949341526105424}
+  - {fileID: 114284899308569234}
   EditorEvents:
   - {fileID: 114139636389243048}
   - {fileID: 114133057264089150}
@@ -38,9 +38,10 @@ MonoBehaviour:
   - {fileID: 114479272717011818}
   - {fileID: 114316712162185468}
   - {fileID: 114212474817330836}
+  - {fileID: 114284899308569234}
   StringsBanks:
   - {fileID: 114477972653253298}
-  stringsBankWriteTime: 636867008124255369
+  stringsBankWriteTime: 636863681693566751
   cacheVersion: 3
 --- !u!114 &114009452201534572
 MonoBehaviour:
@@ -56,7 +57,7 @@ MonoBehaviour:
   Path: event:/UI/Map/Map_Deck_Click
   guid: 44f0c02e891f714e906653e3cdf0d509
   Banks:
-  - {fileID: 114198588896766014}
+  - {fileID: 114949341526105424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -81,6 +82,24 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 2275744
+  Exists: 1
+--- !u!114 &114048778018030868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\OctoBeet Studio\Capsize\Assets\Soundbanks\Desktop\Main Menu.bank
+  lastModified: 636863681692848649
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2346656
   Exists: 1
 --- !u!114 &114071817032596146
 MonoBehaviour:
@@ -114,7 +133,7 @@ MonoBehaviour:
   Path: event:/UI/Map/Map_Menu_Hover
   guid: a5c16c434d9fb54e991f9e38a2a63b93
   Banks:
-  - {fileID: 114198588896766014}
+  - {fileID: 114949341526105424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -190,7 +209,7 @@ MonoBehaviour:
   Path: event:/UI/Main_Menu/MM_Menu_Hover
   guid: 4dfd72f8e12ed94988555e6ad1c17d7d
   Banks:
-  - {fileID: 114591230744590834}
+  - {fileID: 114048778018030868}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -212,7 +231,7 @@ MonoBehaviour:
   Path: event:/Temp/Seagull OneShot
   guid: 40f9a7c81b20b643960d8d2616370320
   Banks:
-  - {fileID: 114591230744590834}
+  - {fileID: 114048778018030868}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -291,7 +310,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 13424
-  Exists: 1
+  Exists: 0
 --- !u!114 &114222555039168262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +344,7 @@ MonoBehaviour:
   Path: event:/Music/Map/Tavern Ambience
   guid: 60d16d530e7b3a4fbf40d4d51a607e81
   Banks:
-  - {fileID: 114198588896766014}
+  - {fileID: 114949341526105424}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -333,6 +352,43 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 73000
+--- !u!114 &114284899308569234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\OctoBeet Studio\Capsize\Assets\Soundbanks\Desktop\Master
+    Bank.bank
+  lastModified: 636830002237315501
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 13424
+  Exists: 1
+--- !u!114 &114302081303514768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\OctoBeet Studio\Capsize\Assets\Soundbanks\Desktop\Incontro.bank
+  lastModified: 636863681692429783
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2275744
+  Exists: 1
 --- !u!114 &114316712162185468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +458,7 @@ MonoBehaviour:
   Path: event:/UI/Incontro/Cannone/Fight_Cannon_Explosion
   guid: 4d9c84c47b3ba24988feb868b23f3fac
   Banks:
-  - {fileID: 114021064488379134}
+  - {fileID: 114302081303514768}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -424,7 +480,7 @@ MonoBehaviour:
   Path: event:/UI/Incontro/Menu
   guid: 27719bdef837794a8e07cf23406b8010
   Banks:
-  - {fileID: 114021064488379134}
+  - {fileID: 114302081303514768}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -464,7 +520,7 @@ MonoBehaviour:
   Path: event:/UI/Main_Menu/MM_Menu_Click
   guid: b6d5a7ebce103041a23ba80ede67b963
   Banks:
-  - {fileID: 114591230744590834}
+  - {fileID: 114048778018030868}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -486,7 +542,7 @@ MonoBehaviour:
   Path: event:/UI/Incontro/Carte/Generici/Play
   guid: 80a1833b91df444caba4cabdcc2b5c6e
   Banks:
-  - {fileID: 114021064488379134}
+  - {fileID: 114302081303514768}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -508,7 +564,7 @@ MonoBehaviour:
   Path: event:/UI/Main_Menu/MM_Incontro_Click
   guid: cbdd050c07a34741a9aeaf65aaf96cd1
   Banks:
-  - {fileID: 114591230744590834}
+  - {fileID: 114048778018030868}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -530,7 +586,7 @@ MonoBehaviour:
   Path: event:/Music/Main_Menu/Ross Bugden Theme
   guid: f78a99b7ec97584b83767f7ae0900a1a
   Banks:
-  - {fileID: 114591230744590834}
+  - {fileID: 114048778018030868}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -589,7 +645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Soundbanks\Desktop\Master Bank.strings.bank
-  lastModified: 636867008124255369
+  lastModified: 636863681693566751
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -685,7 +741,7 @@ MonoBehaviour:
   Path: event:/UI/Incontro/Cannone/Fight_Cannon_Fuse
   guid: 5db9588f76cdc24cbe621a8a8536d84d
   Banks:
-  - {fileID: 114021064488379134}
+  - {fileID: 114302081303514768}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -725,7 +781,7 @@ MonoBehaviour:
   Path: event:/UI/Map/Map_Incontro_Hover
   guid: 23d1fc1762f4e44fb8940662be0c40bc
   Banks:
-  - {fileID: 114198588896766014}
+  - {fileID: 114949341526105424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -765,7 +821,7 @@ MonoBehaviour:
   Path: event:/Music/Incontro/Fight Ambience
   guid: 4c12e441a7725e4db89a8b90cc026598
   Banks:
-  - {fileID: 114021064488379134}
+  - {fileID: 114302081303514768}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -787,7 +843,7 @@ MonoBehaviour:
   Path: event:/UI/Map/Map_Incontro_Click
   guid: e125a1938082044b8aa7fbe07dcb64b2
   Banks:
-  - {fileID: 114198588896766014}
+  - {fileID: 114949341526105424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -853,6 +909,24 @@ MonoBehaviour:
   - Name: 
     Value: 450
   Exists: 1
+--- !u!114 &114949341526105424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\OctoBeet Studio\Capsize\Assets\Soundbanks\Desktop\Map.bank
+  lastModified: 636863681693546791
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 3729344
+  Exists: 1
 --- !u!114 &114973659892207738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,7 +963,7 @@ MonoBehaviour:
   Path: event:/UI/Map/Map_Menu_Click
   guid: 95af82cd048d404db6a378163dcb9cb4
   Banks:
-  - {fileID: 114198588896766014}
+  - {fileID: 114949341526105424}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

@@ -18,13 +18,14 @@ public class CombatManager : MonoBehaviour
     public bool InCombat = false;
     public int NumberOfCardInField;
     int CardDestroied;
-    [SerializeField]
-    Transform chooseCardsPanel;
+    public Transform chooseCardsPanel;
     ContenitoreCards contenitoreCards;
     PotenzaFazioni potenzaFazioni;
     EndCondiction endCondiction;
 	GameObject card; 
 	bool endFight;
+    Card[] playedCards;
+    public Transform recapPanel;
 
 	public int purificationThreshold = 0;
 
@@ -44,6 +45,7 @@ public class CombatManager : MonoBehaviour
         contenitoreCards = FindObjectOfType<ContenitoreCards>();
         potenzaFazioni = FindObjectOfType<PotenzaFazioni>();
         endCondiction = FindObjectOfType<EndCondiction>();
+        playedCards = new Card[4];
     }
 
     private void Start()
@@ -83,7 +85,8 @@ public class CombatManager : MonoBehaviour
         {
             //conta i guardiani in campo
             CardDestroied = 3 - NumberOfCardInField;
-
+            GameObject c = Instantiate(Support.gameObject, recapPanel.GetChild(0));
+            Destroy(c.GetComponent<Draggable>());
             invokeOnStartFight();
 
             do
@@ -106,7 +109,7 @@ public class CombatManager : MonoBehaviour
 
             if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
                 enemiesSpawn.SpawnEnemy();
-            if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy)
+            if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy && !recapPanel.gameObject.activeInHierarchy)
                 endCondiction.EndGame(false);
         }
         else
@@ -128,6 +131,7 @@ public class CombatManager : MonoBehaviour
     {        
         if (!cardsInField[_cardInField].IsAlive)
         {
+            cardsInField[_cardInField].transform.SetParent(recapPanel.GetChild(0));
             Destroy(cardsInField[_cardInField].gameObject);
             CardDestroied++;
         }
@@ -199,11 +203,13 @@ public class CombatManager : MonoBehaviour
                 {
                     if (cardsInField[i].Data.Evolution != null)
                     {
+                        recapPanel.gameObject.SetActive(true);
                         if (!chooseCardsPanel.gameObject.activeInHierarchy)
                             chooseCardsPanel.gameObject.SetActive(true);
                         card = Instantiate(cardsInField[i].gameObject, chooseCardsPanel.GetChild(0));
                         card.AddComponent<EvolveCard>().OriginalCard = cardsInField[i];
                         Destroy(card.GetComponent<Draggable>());
+                        chooseCardsPanel.gameObject.SetActive(false);
                     }
                 }
             }
@@ -213,18 +219,21 @@ public class CombatManager : MonoBehaviour
         {
             if (Support.Data.Evolution != null)
             {
+                recapPanel.gameObject.SetActive(true);
                 if (!chooseCardsPanel.gameObject.activeInHierarchy)
                     chooseCardsPanel.gameObject.SetActive(true);
                 Support.transform.rotation = Quaternion.Euler(0, 0, 0);
                 card = Instantiate(Support.gameObject, chooseCardsPanel.GetChild(0));
                 card.AddComponent<EvolveCard>().OriginalCard = Support;
                 Destroy(card.GetComponent<Draggable>());
+                chooseCardsPanel.gameObject.SetActive(false);
             }
         }
     }
 
     void choosePurificatedCard()
     {
+        recapPanel.gameObject.SetActive(true);
         chooseCardsPanel.gameObject.SetActive(true);
         int i;
         int card1 = -1, card2 = -1;
@@ -250,6 +259,7 @@ public class CombatManager : MonoBehaviour
             card.AddComponent<ChoosePurification>().OriginalCard = Enemy;
             Destroy(card.GetComponent<Draggable>());
         }
+        chooseCardsPanel.gameObject.SetActive(false);
     }
 
     void Purifica (int _cardInField)
@@ -258,7 +268,8 @@ public class CombatManager : MonoBehaviour
         {
             if (Enemy.Life <= 0 && Enemy.Life >= purificationThreshold)
 			{
-				Enemy.IsPurificato = true;			}
+				Enemy.IsPurificato = true;
+            }
 		}
 
         if (Enemy.IsPurificato)
@@ -330,11 +341,19 @@ public class CombatManager : MonoBehaviour
     {
         endFight = true;
         Debug.Log("Fine Combattimento");
-		UpdateCardsInField();
+		//UpdateCardsInField();
 		for (int i = 0; i < NumberOfCardInField; i++)
         {
 			cardsInField[i].ResetCardAttack();
 		}
+        for (int i = 0; i < 3; i++)
+        {
+            if (cardsInField[i] != null)
+            {
+                GameObject c = Instantiate(cardsInField[i].gameObject, recapPanel.GetChild(0));
+                Destroy(c.GetComponent<Draggable>());
+            }
+        }
         if (OnEndFight != null)
             OnEndFight();
 		purificationThreshold = 0;

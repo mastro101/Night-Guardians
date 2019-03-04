@@ -30,6 +30,17 @@ public class CloseWindow : MonoBehaviour
         }
     }
 
+    public void OpenChooseCardPanel()
+    {
+        FindObjectOfType<CombatManager>().chooseCardsPanel.gameObject.SetActive(true);
+        CardsInWindow = transform.parent.GetChild(0);
+        for (int i = 0; i < CardsInWindow.childCount; i++)
+        {
+            Destroy(CardsInWindow.GetChild(i).gameObject);
+        }
+        transform.parent.gameObject.SetActive(false);
+    }
+
 	public void BackToMap() {
 		endCondiction.EndGame(true);
 	}
