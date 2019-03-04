@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -41,8 +42,14 @@ public class EnemySpawn : MonoBehaviour
             }
         }
     }
+	public void FillEnemyCards(List<CardsData> cardsData) {
+		foreach(CardsData tmpCardsData in cardsData) {
+			FillEnemyCards(tmpCardsData);
+		}
+	}
 
-    public void SpawnEnemy()
+
+	public void SpawnEnemy()
     {
         if (enemies[0] != null)
         {

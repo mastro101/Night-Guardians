@@ -37,7 +37,7 @@ public class SelectLevel : MonoBehaviour {
         }
         switch (levelManager.LevelMap)
         {
-            case 1:										//primo incontro
+            case 1:                                     //primo incontro
 				levelManager.LevelIncontro = 3;
 				break;
 
@@ -49,7 +49,8 @@ public class SelectLevel : MonoBehaviour {
                 levelManager.LevelIncontro = Random.Range(3, 6);
                 break;
 
-            case 7:										//primo incontro della seconda mappa
+            case 7:                                     //primo incontro della seconda mappa
+				potenzaFazioni.unlockedTier3 = true;
                 levelManager.LevelIncontro = 5;
 				break;
 

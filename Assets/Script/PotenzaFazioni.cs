@@ -7,7 +7,7 @@ public class PotenzaFazioni : MonoBehaviour
 
     public int[] PotenzeFazioni = new int[6];
     public Fazioni[] PossibiliFazioniDaIncontrare;
-
+	public bool unlockedTier3 = false;
 
     public void AddPotenza(Fazioni fazione)
     {
@@ -84,4 +84,5 @@ public class PotenzaFazioni : MonoBehaviour
         }
         return range;
     }
+
 }
