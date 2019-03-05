@@ -18,9 +18,15 @@ MonoBehaviour:
   Name: OrientaliSoldier1_10
   Attack: 4
   Life: 4
-  Effects: []
-  Description: '+1/+0 to adjacent Soldiers. \nSupport: Master: Supports both Attack
-    and HP'
+  Effects:
+  - Effect: 13
+    Variable: 1
+  - Effect: 14
+    Variable: 1
+  - Effect: 7
+    Variable: 1
+  Description: '+0/+1 ai pirati adiacenti. \nSupporto - Master: Supporta sia attacco
+    che difesa'
   SpriteImage: {fileID: 21300000, guid: 83af00f398b81a246bffaa411475a585, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: ef0749aeaab633348b910a9d1c0170fe, type: 3}
   SoundCreature: {fileID: 0}

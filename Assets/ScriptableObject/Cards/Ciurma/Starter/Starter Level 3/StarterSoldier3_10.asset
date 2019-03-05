@@ -18,8 +18,10 @@ MonoBehaviour:
   Name: StarterSoldier3_10
   Attack: 3
   Life: 4
-  Effects: []
-  Description: 'Charm: Increases capture margin by +1'
+  Effects:
+  - Effect: 7
+    Variable: 1
+  Description: 'Supporto - Maestro: supporta sia in attacco che in vita'
   SpriteImage: {fileID: 21300000, guid: 3c848cd13a88ca1418024fb65aa6796c, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 6cc8e03891399dc47b41880c476758d3, type: 3}
   SoundCreature: {fileID: 0}

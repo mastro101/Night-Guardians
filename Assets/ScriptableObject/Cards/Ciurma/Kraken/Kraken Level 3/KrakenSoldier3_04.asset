@@ -21,8 +21,8 @@ MonoBehaviour:
   Effects:
   - Effect: 4
     Variable: 2
-  Description: 'Tentacles: After the first turn, the enemy has -2/-0.  \nSupport:
-    Tentacles.'
-  SpriteImage: {fileID: 21300000, guid: 33a4b5edef39fd1438bc979ce369761f, type: 3}
+  Description: 'Tentacles: Dopo il primo turno, da -2/-0 al nemico'
+  SpriteImage: {fileID: 21300000, guid: fe9c893a78038e64086a5a27e037276c, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 6812131260798c349bcbcd6aab3f6d71, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

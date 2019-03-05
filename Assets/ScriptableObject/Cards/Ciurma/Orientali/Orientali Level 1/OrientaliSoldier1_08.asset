@@ -18,8 +18,14 @@ MonoBehaviour:
   Name: OrientaliSoldier1_08
   Attack: 3
   Life: 3
-  Effects: []
-  Description: Clumsy \n+0/+1 to adjacent Soldiers
+  Effects:
+  - Effect: 3
+    Variable: 1
+  - Effect: 13
+    Variable: 1
+  - Effect: 14
+    Variable: 1
+  Description: Clumsy \n +0/+1 ai pirati adiacenti
   SpriteImage: {fileID: 21300000, guid: 560a842aa72b01948b11a9efb18eaf52, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 95cd0d118cdbabc4dbaf1734f9d42515, type: 3}
   SoundCreature: {fileID: 0}

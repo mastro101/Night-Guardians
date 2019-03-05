@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Name: VoodooSoldier2_01
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 0
+  Supporto: 1
   Fazione: 4
   Grado: 2
   Name: VoodooSoldier2_01
   Attack: 3
   Life: 2
-  Effects: []
-  Description: 'Support: MEDIC: heals 2 HP to all Soldiers in combat at the end of
-    combat.'
+  Effects:
+  - Effect: 8
+    Variable: 1
+  Description: Supporta 2 volte in vita
   SpriteImage: {fileID: 21300000, guid: eb1181fde8287bd43a349faeef604497, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 2f39e2f25410f96458f7942ad4d5528e, type: 3}
   SoundCreature: {fileID: 0}

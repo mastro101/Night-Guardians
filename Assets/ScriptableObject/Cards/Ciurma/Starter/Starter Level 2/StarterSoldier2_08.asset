@@ -18,8 +18,10 @@ MonoBehaviour:
   Name: StarterSoldier2_08
   Attack: 2
   Life: 4
-  Effects: []
-  Description: 'Support: Heals 1 HP to all Soldiers in combat at the end of each round.'
+  Effects:
+  - Effect: 11
+    Variable: 1
+  Description: +1/+0 al pirata a sinistra
   SpriteImage: {fileID: 21300000, guid: 9af143d2ef37a28478ddea0fbbda5d10, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: c119ce5127fb03d4f88db458b193c7eb, type: 3}
   SoundCreature: {fileID: 0}

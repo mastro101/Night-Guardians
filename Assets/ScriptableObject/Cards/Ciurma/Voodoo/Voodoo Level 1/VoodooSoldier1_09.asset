@@ -18,8 +18,12 @@ MonoBehaviour:
   Name: VoodooSoldier1_09
   Attack: 2
   Life: 6
-  Effects: []
-  Description: 
+  Effects:
+  - Effect: 11
+    Variable: -2
+  - Effect: 13
+    Variable: -2
+  Description: -2/-2 al pirata a sinistra
   SpriteImage: {fileID: 21300000, guid: 302890925db20154a81cdd13f125a7ca, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 1ae61a97f48498d4c8a291211f1f7ed6, type: 3}
   SoundCreature: {fileID: 0}

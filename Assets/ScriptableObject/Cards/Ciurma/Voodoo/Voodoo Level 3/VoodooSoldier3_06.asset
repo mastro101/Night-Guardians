@@ -18,8 +18,10 @@ MonoBehaviour:
   Name: VoodooSoldier3_06
   Attack: 5
   Life: 5
-  Effects: []
-  Description: 'Support: +1/+0 to all Soldiers in combat for each wound on this Soldier.'
+  Effects:
+  - Effect: 9
+    Variable: 2
+  Description: La nave nemica si arrende a +2
   SpriteImage: {fileID: 21300000, guid: 97c7323160ac8a04fa9e9e7d9ce04040, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: c6303ca299aba5441a8473ad31305ee3, type: 3}
   SoundCreature: {fileID: 0}

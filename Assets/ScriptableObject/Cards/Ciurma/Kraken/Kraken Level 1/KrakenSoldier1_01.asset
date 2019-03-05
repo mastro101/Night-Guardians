@@ -21,7 +21,7 @@ MonoBehaviour:
   Effects:
   - Effect: 0
     Variable: 1
-  Description: 'Breed: At the end of the fight, add 1 Egg to your discard pile.'
+  Description: 'Breed: Alla fine del combattimento, aggiungi 1 carta uovo agli scarti'
   SpriteImage: {fileID: 21300000, guid: 9baaf6067617bb6428da899b1f25a851, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 2bfd568f9c5de4a48acaeca7e30d46c4, type: 3}
   SoundCreature: {fileID: 0}

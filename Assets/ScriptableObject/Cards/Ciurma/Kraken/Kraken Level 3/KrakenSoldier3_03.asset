@@ -18,9 +18,9 @@ MonoBehaviour:
   Name: KrakenSoldier3_03
   Attack: 2
   Life: 6
-  Effects: 
-  Description: 'Allure: enemies always attack this soldier if they can. \nPoison:
-    When hit, it poisons the enemy, dealing 1 damage every time the enemy attacks.'
-  SpriteImage: {fileID: 21300000, guid: 0b72cabe8eab0234cb0e9d97e75f9fd8, type: 3}
+  Effects: []
+  Description: 
+  SpriteImage: {fileID: 21300000, guid: 30df720abae12df4988b5ce45d90d252, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 40ec898160212814fb212f68edaffa3f, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

@@ -19,7 +19,7 @@ MonoBehaviour:
   Attack: 2
   Life: 3
   Effects: []
-  Description: 'Fear: Enemies don''t attack during the first round'
+  Description: 
   SpriteImage: {fileID: 21300000, guid: f4b9dc944eec3de4585e6fe0414ca3c0, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 3acf25ae64e22fa4a9473241bd9ade90, type: 3}
   SoundCreature: {fileID: 0}

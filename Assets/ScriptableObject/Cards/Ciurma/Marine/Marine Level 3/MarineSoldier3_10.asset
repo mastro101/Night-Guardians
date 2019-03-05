@@ -18,8 +18,16 @@ MonoBehaviour:
   Name: 
   Attack: 9
   Life: 9
-  Effects: []
-  Description: 
+  Effects:
+  - Effect: 11
+    Variable: -1
+  - Effect: 12
+    Variable: -1
+  - Effect: 13
+    Variable: 5
+  - Effect: 14
+    Variable: 5
+  Description: +5/+5 al pirata a sinistra e -1/-1 a quello a destra
   SpriteImage: {fileID: 21300000, guid: 47420d07d560223439a4f58e442170cf, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 321af906ab2e6a540a7ccfb85d28123f, type: 3}
   SoundCreature: {fileID: 0}

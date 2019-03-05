@@ -18,8 +18,16 @@ MonoBehaviour:
   Name: UndeadSoldier1_05
   Attack: 3
   Life: 5
-  Effects: []
-  Description: 
+  Effects:
+  - Effect: 11
+    Variable: -1
+  - Effect: 12
+    Variable: -1
+  - Effect: 13
+    Variable: -1
+  - Effect: 14
+    Variable: -1
+  Description: -1/-1 ai pirati adiacenti
   SpriteImage: {fileID: 21300000, guid: 350538029e5e7ef4f97c67babf10cb2d, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 7f26d64ed01f0f14aab007e92a014ca9, type: 3}
   SoundCreature: {fileID: 0}

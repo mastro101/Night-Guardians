@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier3_01
   Attack: 3
   Life: 4
-  Effects: []
-  Description: 'Nimble: avoids the first attack each combat. \nSupport: Master: Supports
-    both Attack and HP.'
+  Effects:
+  - Effect: 7
+    Variable: 1
+  Description: 'Supporto - Maestro: supporto sia attacco che vita'
   SpriteImage: {fileID: 21300000, guid: cfef76ab69187ae4c860f9d93e6bd42d, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: c2c7bdb7ae4e1264981f3a2c58220151, type: 3}
   SoundCreature: {fileID: 0}

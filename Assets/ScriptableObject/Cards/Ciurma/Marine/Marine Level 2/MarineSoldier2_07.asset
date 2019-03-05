@@ -16,10 +16,18 @@ MonoBehaviour:
   Fazione: 3
   Grado: 2
   Name: 
-  Attack: 4
+  Attack: 3
   Life: 4
-  Effects: []
-  Description: 
+  Effects:
+  - Effect: 11
+    Variable: 1
+  - Effect: 12
+    Variable: 1
+  - Effect: 13
+    Variable: 1
+  - Effect: 14
+    Variable: 1
+  Description: +1/+1 ai pirati adiacenti
   SpriteImage: {fileID: 21300000, guid: 8bc8ef1ab471e2f408d7865bde176f96, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: befcf3adf0ae9f442a9c5dbd32f25fe0, type: 3}
   SoundCreature: {fileID: 0}

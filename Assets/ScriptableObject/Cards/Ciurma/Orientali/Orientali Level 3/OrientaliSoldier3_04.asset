@@ -17,10 +17,9 @@ MonoBehaviour:
   Grado: 3
   Name: OrientaliSoldier3_04
   Attack: 5
-  Life: 4
+  Life: 5
   Effects: []
-  Description: 'Tough: Immune to damage and debuffs dealt by allies. \nAt the end
-    of combat, heal 3 HP. \nSupport: Soldiers in combat have Tough for the first round.'
+  Description: 
   SpriteImage: {fileID: 21300000, guid: f20283406dfb714408f374eaf92efd6e, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: f001538e1e365bb46b15ee6caa1ca415, type: 3}
   SoundCreature: {fileID: 0}

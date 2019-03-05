@@ -16,12 +16,10 @@ MonoBehaviour:
   Fazione: 1
   Grado: 3
   Name: OrientaliSoldier3_06
-  Attack: 2
-  Life: 7
+  Attack: 3
+  Life: 6
   Effects: []
-  Description: 'Nimble: avoids the first attack each combat. \nPressure Points: When
-    this Soldier damages an Enemy, the Enemy skips his next attack. \nSupport: the
-    Soldier in slot 1 has Nimble and Pressure Points.'
+  Description: 
   SpriteImage: {fileID: 21300000, guid: 7302669fcbb8d184290f1c54276882ce, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 31e55d607863c2d4fa35830aa43c5d78, type: 3}
   SoundCreature: {fileID: 0}

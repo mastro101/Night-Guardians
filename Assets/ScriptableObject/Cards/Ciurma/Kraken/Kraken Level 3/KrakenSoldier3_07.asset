@@ -19,8 +19,7 @@ MonoBehaviour:
   Attack: 5
   Life: 7
   Effects: []
-  Description: 'Poison: When hit, it poisons the enemy, dealing 1 damage every time
-    the enemy attacks. \nSupport: Soldiers in combat have Poison.'
+  Description: 
   SpriteImage: {fileID: 21300000, guid: b2d9ef3a238881847849bb82a427c2d6, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 2dc29751eb1f0974e9a588e7f431e69f, type: 3}
   SoundCreature: {fileID: 0}

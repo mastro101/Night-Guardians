@@ -18,8 +18,10 @@ MonoBehaviour:
   Name: VoodooSoldier3_07
   Attack: 6
   Life: 7
-  Effects: []
-  Description: 'Hangover: This Soldier doesn''t attack during the first turn.'
+  Effects:
+  - Effect: 3
+    Variable: 1
+  Description: 'Clumsy: non attacca il primo turno'
   SpriteImage: {fileID: 21300000, guid: 24e854755326e3a48b8db16f13615d28, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: ca761522a6eac6742a773a3a3ee36796, type: 3}
   SoundCreature: {fileID: 0}

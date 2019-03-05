@@ -18,8 +18,12 @@ MonoBehaviour:
   Name: 
   Attack: 1
   Life: 3
-  Effects: []
-  Description: 
+  Effects:
+  - Effect: 12
+    Variable: 1
+  - Effect: 14
+    Variable: 1
+  Description: +1/+1 al pirata a destra
   SpriteImage: {fileID: 21300000, guid: ddd17c0e7f7eba94cb2d41ac745265cc, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 3335060ff3d0fc147b09f49f53cf74c2, type: 3}
   SoundCreature: {fileID: 0}

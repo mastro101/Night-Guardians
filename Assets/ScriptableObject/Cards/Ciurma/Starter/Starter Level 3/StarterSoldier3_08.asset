@@ -18,10 +18,10 @@ MonoBehaviour:
   Name: StarterSoldier3_08
   Attack: 3
   Life: 5
-  Effects: []
-  Description: 'If not put in combat when you draw it, heals 1 HP to all Soldiers
-    in your discard pile at the end of combat. \nSupport: Heals 1 HP to all Soldiers
-    in combat at the end of each round.'
+  Effects:
+  - Effect: 11
+    Variable: 1
+  Description: +1/+0 al pirata a sinistra
   SpriteImage: {fileID: 21300000, guid: f51fbbf3cebbddf43bf021386f2e1e12, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: e135c50659322034aa15e14ab9620660, type: 3}
   SoundCreature: {fileID: 0}

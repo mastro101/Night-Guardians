@@ -18,8 +18,10 @@ MonoBehaviour:
   Name: UndeadSoldier3_04
   Attack: 5
   Life: 5
-  Effects: []
-  Description: 
+  Effects:
+  - Effect: 8
+    Variable: 1
+  Description: Supporta 2 volte in difesa
   SpriteImage: {fileID: 21300000, guid: f2185230bffc0b344b1c7443773ce819, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 6826435b19c14fa4090c516ee52c3c11, type: 3}
   SoundCreature: {fileID: 0}

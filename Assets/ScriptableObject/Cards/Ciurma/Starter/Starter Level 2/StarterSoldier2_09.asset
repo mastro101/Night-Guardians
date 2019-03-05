@@ -18,8 +18,10 @@ MonoBehaviour:
   Name: StarterSoldier2_09
   Attack: 3
   Life: 3
-  Effects: []
-  Description: 'Support: +1 Attack to the Soldier in slot 1 until the end of the stage.'
+  Effects:
+  - Effect: 12
+    Variable: 1
+  Description: +1/+0 al pirata a destra
   SpriteImage: {fileID: 21300000, guid: 9af143d2ef37a28478ddea0fbbda5d10, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: c119ce5127fb03d4f88db458b193c7eb, type: 3}
   SoundCreature: {fileID: 0}

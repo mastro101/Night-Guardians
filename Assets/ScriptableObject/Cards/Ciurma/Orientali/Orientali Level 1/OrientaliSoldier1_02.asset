@@ -16,10 +16,14 @@ MonoBehaviour:
   Fazione: 1
   Grado: 1
   Name: OrientaliSoldier1_02
-  Attack: 3
-  Life: 2
-  Effects: []
-  Description: +0/+1 to adjacent Soldiers
+  Attack: 2
+  Life: 1
+  Effects:
+  - Effect: 13
+    Variable: 1
+  - Effect: 14
+    Variable: 1
+  Description: +0/+1 ai pirati adiacenti
   SpriteImage: {fileID: 21300000, guid: d28563febcbe974449f85eb7a1c1f2fa, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 32b502217d636d244a378c0cf2ae4d87, type: 3}
   SoundCreature: {fileID: 0}

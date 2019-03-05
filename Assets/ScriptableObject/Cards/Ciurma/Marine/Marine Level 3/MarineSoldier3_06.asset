@@ -16,10 +16,12 @@ MonoBehaviour:
   Fazione: 3
   Grado: 3
   Name: 
-  Attack: 4
-  Life: 4
-  Effects: []
-  Description: 
+  Attack: 3
+  Life: 3
+  Effects:
+  - Effect: 8
+    Variable: 1
+  Description: 'Supporto - Maestro: Supporta sia in attacco che in difesa'
   SpriteImage: {fileID: 21300000, guid: 670aa0e592b60c14cb70a17836bb5bf2, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 7274e9f4d8e63e446869301257291dd8, type: 3}
   SoundCreature: {fileID: 0}

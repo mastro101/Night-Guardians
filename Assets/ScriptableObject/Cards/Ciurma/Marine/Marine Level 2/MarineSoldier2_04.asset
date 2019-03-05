@@ -16,10 +16,12 @@ MonoBehaviour:
   Fazione: 3
   Grado: 2
   Name: 
-  Attack: 2
-  Life: 4
-  Effects: []
-  Description: 
+  Attack: 1
+  Life: 3
+  Effects:
+  - Effect: 8
+    Variable: 1
+  Description: Supporta 2 volte la statistica vita
   SpriteImage: {fileID: 21300000, guid: dc2d131982e0a134f9c1647bddcba64d, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 78a16faffcf0a2f4a984bf2d1d070085, type: 3}
   SoundCreature: {fileID: 0}

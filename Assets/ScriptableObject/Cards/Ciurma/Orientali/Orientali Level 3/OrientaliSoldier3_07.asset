@@ -16,11 +16,12 @@ MonoBehaviour:
   Fazione: 1
   Grado: 3
   Name: OrientaliSoldier3_07
-  Attack: 6
-  Life: 4
-  Effects: []
-  Description: 'Death Before Dishonor+: If this Soldier is not put in combat when
-    you draw it, it has +4/-2 until the end of the stage. \n+1/+1 to adjacent Soldiers.'
+  Attack: 4
+  Life: 2
+  Effects:
+  - Effect: 12
+    Variable: 3
+  Description: +3/+0 al pirata a destra
   SpriteImage: {fileID: 21300000, guid: b6930401bef8bcd4aa8a82de5aabcb64, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 5fffd6cfd490196489dbec31f4b75291, type: 3}
   SoundCreature: {fileID: 0}

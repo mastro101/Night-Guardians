@@ -18,8 +18,12 @@ MonoBehaviour:
   Name: VoodooSoldier2_02
   Attack: 2
   Life: 4
-  Effects: []
-  Description: 'Bloodrite: The Enemy can''t regain HP'
+  Effects:
+  - Effect: 11
+    Variable: 1
+  - Effect: 12
+    Variable: 1
+  Description: +1/+0 ai pirati adiacenti
   SpriteImage: {fileID: 21300000, guid: 938cca3ba2c079344adb7b62c49e6f95, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 4c8af726354a1914fa1813caec0af9e2, type: 3}
   SoundCreature: {fileID: 0}

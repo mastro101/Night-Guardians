@@ -25,8 +25,8 @@ MonoBehaviour:
     Variable: 1
   - Effect: 0
     Variable: 2
-  Description: '''+1/+1 for each Egg you own. \nBreed+: At the end of the fight, add
-    1 Rank 2 Egg to your discard pile. \nSupport: Eggs in combat have +1/+2 and Poison.'
-  SpriteImage: {fileID: 21300000, guid: 33a5639f0911e4a49b6882771106bf9d, type: 3}
+  Description: +1/+1 per ogni uovo che possiedi. \n Breed
+  SpriteImage: {fileID: 21300000, guid: 3a48602897975d04eb682b263c2ec74c, type: 3}
+  SpriteImageOnDrag: {fileID: 21300000, guid: 959493a59150755468c3568af52492e7, type: 3}
   SoundCreature: {fileID: 0}
   Evolution: {fileID: 0}

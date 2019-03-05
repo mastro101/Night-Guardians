@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Name: UndeadSoldier1_07
   m_EditorClassIdentifier: 
   Type: 0
-  Supporto: 1
+  Supporto: 0
   Fazione: 0
   Grado: 2
   Name: UndeadSoldier1_07
   Attack: 1
   Life: 2
-  Effects: []
-  Description: 
+  Effects:
+  - Effect: 7
+    Variable: 1
+  Description: Supporta 2 volte in attacco
   SpriteImage: {fileID: 21300000, guid: 3cf513dbe06c9424189711e2faeb022f, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: e9620970f874a3b4fa9175e4facd5225, type: 3}
   SoundCreature: {fileID: 0}

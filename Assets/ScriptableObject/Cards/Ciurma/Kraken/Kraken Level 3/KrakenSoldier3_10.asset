@@ -18,9 +18,12 @@ MonoBehaviour:
   Name: KrakenSoldier3_10
   Attack: 12
   Life: 12
-  Effects: []
-  Description: 'Tough: Immune to damage and debuffs dealt by allies \nHeals 5 HP at
-    the end of the fight.'
+  Effects:
+  - Effect: 13
+    Variable: 4
+  - Effect: 14
+    Variable: 4
+  Description: +0+4 ai pirati adiacenti
   SpriteImage: {fileID: 21300000, guid: 6a90e31967db64d4f9eb51631a08a53f, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 8bad31ad6c9f5d342823857e334518cb, type: 3}
   SoundCreature: {fileID: 0}

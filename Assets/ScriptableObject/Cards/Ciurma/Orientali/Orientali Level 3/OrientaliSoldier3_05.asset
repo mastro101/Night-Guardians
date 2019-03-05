@@ -18,9 +18,10 @@ MonoBehaviour:
   Name: OrientaliSoldier3_05
   Attack: 5
   Life: 3
-  Effects: []
-  Description: 'Perfect Aim: If this Soldier would kill an Enemy, it brings him to
-    0 HP instead. \nSupport: the Soldier in slot 3 has Perfect Aim.'
+  Effects:
+  - Effect: 9
+    Variable: -1
+  Description: La nave nemica si arrende anche con risultato -1
   SpriteImage: {fileID: 21300000, guid: ea8bcbe4f4798ce4dbe02e7e6d3af572, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 393ed5c8524eb1a439ced40dc3a8e3bd, type: 3}
   SoundCreature: {fileID: 0}

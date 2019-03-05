@@ -18,10 +18,10 @@ MonoBehaviour:
   Name: StarterSoldier3_03
   Attack: 4
   Life: 3
-  Effects: []
-  Description: 'If not put in combat when you draw it, heals 1 HP to all Soldiers
-    in your discard pile at the end of combat. Support: Heals 1 HP to all Soldiers
-    in combat at the end of each round.'
+  Effects:
+  - Effect: 9
+    Variable: 1
+  Description: "La nave nemica si arrender\xE0 anche con risultato +1"
   SpriteImage: {fileID: 21300000, guid: 12cd6b56c63ae67469a72a6ba59954ac, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 7d006b812d812b3459487c6b7eb36a1d, type: 3}
   SoundCreature: {fileID: 0}

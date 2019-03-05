@@ -18,8 +18,10 @@ MonoBehaviour:
   Name: 
   Attack: 4
   Life: 4
-  Effects: []
-  Description: 
+  Effects:
+  - Effect: 9
+    Variable: -1
+  Description: La nave avversaria si arrende anche con vita -1
   SpriteImage: {fileID: 21300000, guid: 447aeb14aa5a6b1458778abde56a17b6, type: 3}
   SpriteImageOnDrag: {fileID: 21300000, guid: 7990347f192650d48a47a5c38aaaadf0, type: 3}
   SoundCreature: {fileID: 0}
