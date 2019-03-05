@@ -85,8 +85,12 @@ public class CombatManager : MonoBehaviour
         {
             //conta i guardiani in campo
             CardDestroied = 3 - NumberOfCardInField;
-            GameObject c = Instantiate(Support.gameObject, recapPanel.GetChild(0));
-            Destroy(c.GetComponent<Draggable>());
+            if( Support != null)
+            {
+                GameObject c = Instantiate(Support.gameObject, recapPanel.GetChild(0));
+                Destroy(c.GetComponent<Draggable>());
+
+            }
             invokeOnStartFight();
 
             do
