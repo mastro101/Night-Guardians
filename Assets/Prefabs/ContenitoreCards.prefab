@@ -174,27 +174,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed41b3d86f81d2043bfffe90e33cc590, type: 2}
   - {fileID: 11400000, guid: 93e487dfdda25064ab25c6c6d5eda976, type: 2}
   - {fileID: 11400000, guid: 71b4cfb84bb05b84489a401fabeff27f, type: 2}
-  EnemyCards:
-  - {fileID: 11400000, guid: 6d5f91ed2473e284e9618b5c412b8e3e, type: 2}
-  - {fileID: 11400000, guid: 832a24f6b5a3bf5428662f67364e0206, type: 2}
-  - {fileID: 11400000, guid: eea3806c54ab5ec4eb53f6852cf494a3, type: 2}
-  - {fileID: 11400000, guid: 2628c299008825d488f9e762c039c111, type: 2}
-  - {fileID: 11400000, guid: 7a976606898ac094b95da54f3c9d8b11, type: 2}
-  - {fileID: 11400000, guid: 913b24d8d67de144fa72a0ebeeddbc97, type: 2}
-  - {fileID: 11400000, guid: 9898a94a50ee34941aa520c1da61f86e, type: 2}
-  - {fileID: 11400000, guid: 3528ef01a6cc8dd4bb1df815b454e137, type: 2}
-  - {fileID: 11400000, guid: 2ad047fe4f79ee142a25276deda1e03b, type: 2}
-  - {fileID: 11400000, guid: 51c6a9324d413e244ad0aa6c83869f27, type: 2}
-  - {fileID: 11400000, guid: ee65b52102c16424095a9ea65548068a, type: 2}
-  - {fileID: 11400000, guid: db27541b02bb56443af31a4468a16104, type: 2}
-  - {fileID: 11400000, guid: adaeb9a8270063942a8a2e4d1333991c, type: 2}
-  - {fileID: 11400000, guid: de01b901f0511cb4c9c6bab6cf1e825b, type: 2}
-  - {fileID: 11400000, guid: d65c9f61e8e7af6489656b04dcd0ebc1, type: 2}
-  - {fileID: 11400000, guid: 9c75f7000bd5f3c4b982f31c275fe236, type: 2}
-  - {fileID: 11400000, guid: 003427e7f9fede74682ea5477ec5fbe3, type: 2}
-  - {fileID: 11400000, guid: 4b206b6522f369f4b893e3e943a0c8e5, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
   enemyFactions:
   - faction: 5
     level:
@@ -220,14 +199,6 @@ MonoBehaviour:
       - {fileID: 11400000, guid: ee65b52102c16424095a9ea65548068a, type: 2}
     - Ships:
       - {fileID: 11400000, guid: db27541b02bb56443af31a4468a16104, type: 2}
-  - faction: 2
-    level:
-    - Ships:
-      - {fileID: 11400000, guid: adaeb9a8270063942a8a2e4d1333991c, type: 2}
-    - Ships:
-      - {fileID: 11400000, guid: de01b901f0511cb4c9c6bab6cf1e825b, type: 2}
-    - Ships:
-      - {fileID: 11400000, guid: d65c9f61e8e7af6489656b04dcd0ebc1, type: 2}
   - faction: 4
     level:
     - Ships:
