@@ -9,11 +9,14 @@ public class EvolveCard : MonoBehaviour , IPointerDownHandler
     public Card OriginalCard;
     Transform parentGO;
     EndCondiction endCondiction;
+	CombatManager combatManager;
 
     private void Awake()
     {
         endCondiction = FindObjectOfType<EndCondiction>();
-    }
+		combatManager = FindObjectOfType<CombatManager>();
+
+	}
 
     private void Start()
     {
@@ -34,5 +37,7 @@ public class EvolveCard : MonoBehaviour , IPointerDownHandler
         }
 		endCondiction.endSelect = true;
 		parentGO.parent.gameObject.SetActive(false);
-    }
+		combatManager.DestroyOldEnemy();
+
+	}
 }

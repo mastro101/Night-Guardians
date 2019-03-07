@@ -28,6 +28,7 @@ public class CombatManager : MonoBehaviour
     public Transform recapPanel;
 
 	public int purificationThreshold = 0;
+	[HideInInspector] public Card oldEnemy = null;
 
 	public event CombatManagerEvent.CombatManagerDelegate OnSupport;
 	public event CombatManagerEvent.CombatManagerDelegate OnStartFight;
@@ -116,7 +117,8 @@ public class CombatManager : MonoBehaviour
             if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
 			{
 				enemiesSpawn.RemoveLastEnemy();
-				Destroy(Enemy.gameObject);
+				//Destroy(Enemy.gameObject);
+				oldEnemy = Enemy;
 				enemiesSpawn.SpawnEnemy();
 			}
 
@@ -327,6 +329,11 @@ public class CombatManager : MonoBehaviour
 		InCombat = false;
 		invokeOnEndFight();
 		endCondiction.EndGame(true);
+	}
+
+	public void DestroyOldEnemy() {
+		if(oldEnemy != null)
+			Destroy(oldEnemy.gameObject);
 	}
 
     #region Event

@@ -314,7 +314,7 @@ public class Card : MonoBehaviour {
         if (scene.name == "Incontro")
         {
 			CardEffect addedObject = null;
-			Debug.Log(gameObject.name);	//c'è un errore probabilmente nella schermata di evoluzione delle carte
+			Debug.Log(gameObject.name);	//c'è un errore probabilmente nella schermata di purificazione delle carte
 			switch (Effects[i].Effect)
 			{
 				case Effect.Breed:

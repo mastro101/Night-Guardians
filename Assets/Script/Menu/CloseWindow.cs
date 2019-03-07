@@ -6,12 +6,14 @@ public class CloseWindow : MonoBehaviour
 {
     Transform CardsInWindow;
 	EndCondiction endCondiction;
+	CombatManager combatManager;
 
     public event CloseWindowEvent.CloseWindowDelegate OnClose;
 
 	public void Awake()
 	{
 		endCondiction = FindObjectOfType<EndCondiction>();
+		combatManager = FindObjectOfType<CombatManager>();
 	}
 
 	public void CloseTheWindow()
@@ -43,7 +45,7 @@ public class CloseWindow : MonoBehaviour
 
 	public void EndSelection() {
 		endCondiction.endSelect = true;
-		//endCondiction.EndGame(true);
+		combatManager.DestroyOldEnemy();
 	}
 
     #region Event

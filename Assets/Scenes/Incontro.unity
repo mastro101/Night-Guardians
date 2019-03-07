@@ -1620,6 +1620,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1081866510832004, guid: 1a0a85b439551d941969e9bc6e51f155, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a0a85b439551d941969e9bc6e51f155, type: 2}
   m_IsPrefabParent: 0
@@ -2678,6 +2682,7 @@ MonoBehaviour:
   chooseCardsPanel: {fileID: 787451176}
   recapPanel: {fileID: 1968531167}
   purificationThreshold: 0
+  oldEnemy: {fileID: 0}
 --- !u!4 &1186588150
 Transform:
   m_ObjectHideFlags: 0
@@ -4231,7 +4236,7 @@ Prefab:
     - target: {fileID: 114661067830464348, guid: 4bb352a2c013c094c907edc3e75b5e8e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224411018261702574, guid: 4bb352a2c013c094c907edc3e75b5e8e,
         type: 2}
@@ -4347,6 +4352,16 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114661067830464348, guid: 4bb352a2c013c094c907edc3e75b5e8e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114661067830464348, guid: 4bb352a2c013c094c907edc3e75b5e8e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bb352a2c013c094c907edc3e75b5e8e, type: 2}
