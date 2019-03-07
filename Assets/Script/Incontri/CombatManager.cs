@@ -47,7 +47,7 @@ public class CombatManager : MonoBehaviour
         potenzaFazioni = FindObjectOfType<PotenzaFazioni>();
         endCondiction = FindObjectOfType<EndCondiction>();
         playedCards = new Card[4];
-    }
+	}
 
     private void Start()
     {
@@ -209,6 +209,7 @@ public class CombatManager : MonoBehaviour
 
     void evolveCard()
     {
+		bool evolvingCardFlag = false;
         for (int i = 0; i < (zoneField.CardLimit); i++)
         {
             if (cardsInField[i] != null)
@@ -224,7 +225,8 @@ public class CombatManager : MonoBehaviour
                         card.AddComponent<EvolveCard>().OriginalCard = cardsInField[i];
                         Destroy(card.GetComponent<Draggable>());
                         chooseCardsPanel.gameObject.SetActive(false);
-                    }
+						evolvingCardFlag = true;
+					}
                 }
             }
         } 
@@ -241,8 +243,27 @@ public class CombatManager : MonoBehaviour
                 card.AddComponent<EvolveCard>().OriginalCard = Support;
                 Destroy(card.GetComponent<Draggable>());
                 chooseCardsPanel.gameObject.SetActive(false);
-            }
+				evolvingCardFlag = true;
+
+			}
         }
+
+		if(!evolvingCardFlag) {
+			recapPanel.gameObject.SetActive(true);
+			GameObject tmp = GameObject.FindGameObjectWithTag("RecapSelectButton");
+			if(tmp != null) {
+				tmp.SetActive(false);
+			}
+			if (!chooseCardsPanel.gameObject.activeInHierarchy)
+				chooseCardsPanel.gameObject.SetActive(true);
+			//Support.transform.rotation = Quaternion.Euler(0, 0, 0);
+			//card = Instantiate(Support.gameObject, chooseCardsPanel.GetChild(0));
+			//card.AddComponent<EvolveCard>().OriginalCard = Support;
+			//Destroy(card.GetComponent<Draggable>());
+			chooseCardsPanel.gameObject.SetActive(false);
+			evolvingCardFlag = true;
+		}
+
     }
 
     void choosePurificatedCard()
