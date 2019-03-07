@@ -54,7 +54,8 @@ public class CombatManager : MonoBehaviour
             Enemy = zoneEnemy.transform.GetChild(0).GetComponent<Card>();
     }
 
-    public void ButtonCombat()
+
+	public void ButtonCombat()
     {
         if (zoneEnemy.transform.childCount != 0 && zoneField.transform.childCount != 0)
             Combat();
@@ -111,16 +112,23 @@ public class CombatManager : MonoBehaviour
                 invokeOnEndTurn(endFight);
             } while (InCombat && CardDestroied < 3);
 
+			//probabilmente c'è un problema in questo if
             if (!Enemy.IsAlive || Enemy.Type == CardType.Pirata)
-                enemiesSpawn.SpawnEnemy();
-            if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy && !recapPanel.gameObject.activeInHierarchy)
+			{
+				enemiesSpawn.RemoveLastEnemy();
+				Destroy(Enemy.gameObject);
+				enemiesSpawn.SpawnEnemy();
+			}
+
+			if(enemiesSpawn.EnemyLeft <= 0) 
+			{
+				Debug.Log("You Win");
+				endCondiction.EndGame(true);
+			}
+			else if (CardDestroied == 3 && Enemy.IsAlive && !chooseCardsPanel.gameObject.activeInHierarchy && !recapPanel.gameObject.activeInHierarchy)
+			{
                 endCondiction.EndGame(false);
-        }
-        else
-        {
-            InCombat = false;
-            invokeOnEndFight();
-            Debug.Log("Non ci sono nemici");
+			}
         }
     }
 
@@ -141,13 +149,13 @@ public class CombatManager : MonoBehaviour
         }
         if (!Enemy.IsAlive)
         {
+			//probabilmente non entra mai in questo if
             InCombat = false;
             invokeOnEndFight();
 
-
             potenzaFazioni.RemovePotenza(Enemy.Fazione, Enemy.Grado);
             scartGuardian();
-            Destroy(Enemy.gameObject);
+			
             resources.AddCoin(1);
             evolveCard();
         }
@@ -311,10 +319,15 @@ public class CombatManager : MonoBehaviour
         {
             scarti.ScartCard(hand.transform.GetChild(0).GetComponent<Card>());
         }
-        if (!endCondiction.InEnd)
+        if (enemiesSpawn.EnemyLeft > 0)
             deck.Draw(5);
     }
 
+	public void WinGame() {
+		InCombat = false;
+		invokeOnEndFight();
+		endCondiction.EndGame(true);
+	}
 
     #region Event
 

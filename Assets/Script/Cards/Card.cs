@@ -159,6 +159,8 @@ public class Card : MonoBehaviour {
     Deck deck;
     Scene scene;
 
+	[HideInInspector] public bool addEffectScript = true;
+
 
     private void Awake()
     {
@@ -312,6 +314,7 @@ public class Card : MonoBehaviour {
         if (scene.name == "Incontro")
         {
 			CardEffect addedObject = null;
+			Debug.Log(gameObject.name);	//c'è un errore probabilmente nella schermata di evoluzione delle carte
 			switch (Effects[i].Effect)
 			{
 				case Effect.Breed:

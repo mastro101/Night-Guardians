@@ -6,44 +6,45 @@ using System.Collections.Generic;
 public class EnemySpawn : MonoBehaviour
 {
 
-    [SerializeField]
-    CardsData[] enemies;
+    List<CardsData> enemies = new List<CardsData>();
     [SerializeField]
     DropZone spawnZone;
     [SerializeField]
     GameObject card = null;
     public Text TextEnemyLeft;
 
-    int enemyLeft;
+    //int enemyLeft;
     public int EnemyLeft
     {
-        get { return enemyLeft; }
-        set
-        {
-            enemyLeft = value;
-            TextEnemyLeft.text = "\n" + enemyLeft;
-        }
+        get { return enemies.Count; }
+        private set { }
     }
 
     private void Start()
     {
-        SpawnEnemy();
-    }
+		if(enemies == null) {
+			enemies = new List<CardsData>();
+		}
+		SpawnEnemy();
+	}
 
     public void FillEnemyCards(CardsData cardsData)
     {
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            if (enemies[i] == null)
-            {
-                enemies[i] = cardsData;
-                EnemyLeft++;
-                break;
-            }
-        }
+		Debug.LogWarning("Nemico: " + cardsData.name);
+		if (enemies == null)
+		{
+			enemies = new List<CardsData>();
+		}
+
+		enemies.Add(cardsData);
     }
 	public void FillEnemyCards(List<CardsData> cardsData) {
-		foreach(CardsData tmpCardsData in cardsData) {
+		if (enemies == null)
+		{
+			enemies = new List<CardsData>();
+		}
+
+		foreach (CardsData tmpCardsData in cardsData) {
 			FillEnemyCards(tmpCardsData);
 		}
 	}
@@ -51,26 +52,18 @@ public class EnemySpawn : MonoBehaviour
 
 	public void SpawnEnemy()
     {
-        if (enemies[0] != null)
+        if (enemies.Count > 0)
         {
-            Instantiate(card, spawnZone.transform).GetComponent<Card>().Data = enemies[0];
-            EnemyLeft--;
-            for (int n = 0; n < enemies.Length; n++)
-            {
-                if (enemies[n] != null)
-                {
-                    if (n != enemies.Length - 1)
-                        enemies[n] = enemies[n + 1];
-                    else
-                        enemies[n] = null;
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("You Win");
-            FindObjectOfType<EndCondiction>().InEnd = true;
+			Debug.LogWarning(enemies.Count);
+			Debug.LogWarning("Nemico: " + enemies[enemies.Count - 1]);
+			Instantiate(card, spawnZone.transform).GetComponent<Card>().Data = enemies[enemies.Count-1];
         }
     }
+
+	public void RemoveLastEnemy()
+	{
+		if(enemies != null && enemies.Count > 0)
+			enemies.RemoveAt(enemies.Count - 1);
+	}
 
 }

@@ -33,10 +33,7 @@ public class ChoosePurification : MonoBehaviour, IPointerDownHandler
         {
             Destroy(parentGO.GetChild(i).gameObject);
         }
-
-        /*if (endCondiction.InEnd)*/
-        endCondiction.EndGame(true);
-
+		endCondiction.endSelect = true;
         parentGO.parent.gameObject.SetActive(false);
     }
 

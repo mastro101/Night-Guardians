@@ -41,8 +41,9 @@ public class CloseWindow : MonoBehaviour
         transform.parent.gameObject.SetActive(false);
     }
 
-	public void BackToMap() {
-		endCondiction.EndGame(true);
+	public void EndSelection() {
+		endCondiction.endSelect = true;
+		//endCondiction.EndGame(true);
 	}
 
     #region Event
