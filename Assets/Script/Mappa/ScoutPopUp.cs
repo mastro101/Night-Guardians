@@ -73,8 +73,8 @@ public class ScoutPopUp : MonoBehaviour
                       //  fazione = Fazioni.PiratiVeri;
                     else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Marina))
                         fazione = Fazioni.Marina;
-                    //else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Voodoo))
-                      //  fazione = Fazioni.Voodoo;
+                    else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Voodoo))
+						fazione = Fazioni.Voodoo;
                     else if (IntRandomFazione < potenzaFazioni.GetRangePotenza(Fazioni.Kraken))
                         fazione = Fazioni.Kraken;
 
