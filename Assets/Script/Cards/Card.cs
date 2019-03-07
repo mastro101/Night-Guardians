@@ -19,6 +19,9 @@ public class Card : MonoBehaviour {
             insertData();
         }
     }
+    public Color injuredcolor;
+    public Color supportcolor;
+
     public AudioSource soundCreature;
     public DropZoneType Zone;
     [HideInInspector]
@@ -79,7 +82,7 @@ public class Card : MonoBehaviour {
             life = value;
             lifeText.text = life.ToString();
             if (life < Data.Life)
-                lifeText.color = Color.red;
+                lifeText.color = injuredcolor;
             if (Type == CardType.Pirata)
             {
                 if (life <= 0)
@@ -265,10 +268,10 @@ public class Card : MonoBehaviour {
             switch (Data.Supporto)
             {
                 case Buff.Attack:
-                    attackText.color = Color.blue;
+                    attackText.color = supportcolor;
                     break;
                 case Buff.Life:
-                    lifeText.color = Color.blue;
+                    lifeText.color = supportcolor;
                     break;
                 default:
                     break;
